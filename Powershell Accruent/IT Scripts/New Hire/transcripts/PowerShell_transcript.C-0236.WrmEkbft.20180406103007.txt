@@ -1,0 +1,75 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180406103007
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 21308
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.WrmEkbft.20180406103007.txt
+WARNING: The names of some imported commands from the module 'tmp_qjlk1grv.qum' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_qjlk1grv.qum                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Matthew
+Middle Initial:
+Last Name:  Jazwiec
+Full Name:  Matthew Jazwiec
+Username:  Matthew.Jazwiec
+UserID:  matthew.jazwiec
+Email Address:  matthew.jazwiec@accruent.com
+Office Location:  Remote
+Job Title:  Account Executive
+Department:  Sales - Retail
+Manager:  michael.kowalski
+Product:  Lucernex
+
+Creating AD User Account
+**********************
+Command start time: 20180406103029
+**********************
+PS>TerminatingError(New-ADUser): "The specified account already exists"
+New-ADUser : The specified account already exists
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:89 char:2
++     New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=acc_D ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (CN=Matthew Jazw...accruent,DC=com:String) [New-ADUser], 
+ADIdentityAlreadyExistsException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:1316,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+New-ADUser : The specified account already exists
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:89 char:2
++     New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=acc_D ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (CN=Matthew Jazw...accruent,DC=com:String) [New-ADUser], ADIdentityAlrea
+   dyExistsException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:1316,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+
+Name              : Matthew Jazwiec
+sAMAccountName    : matthew.jazwiec
+userPrincipalName : matthew.jazwiec@accruent.com
+mail              : matthew.jazwiec@accruent.com
+Description       : Account Executive
+title             : Account Executive
+manager           : CN=Michael Kowalski,OU=Sales,OU=Work@Home,OU=_Remote,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes

@@ -1,0 +1,93 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180313170401
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 11516
+PSVersion: 5.1.16299.248
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.248
+BuildVersion: 10.0.16299.248
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.VSAde2Pt.20180313170401.txt
+WARNING: The names of some imported commands from the module 'tmp_vejop512.3pj' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_vejop512.3pj                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Brian
+Middle Initial:
+Last Name:  Castelli
+Full Name:  Brian Castelli
+Username:  Brian.Castelli
+UserID:  brian.castelli
+Email Address:  brian.castelli@accruent.com
+Office Location:  Austin
+Job Title:  Event Marketing Intern
+Department:  Product Marketing Overhead
+Manager:  brooke.swindle
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Get-MsolUser : User Not Found.  User: brian.castelli@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a 
+System.Management.Automation.PSCredential.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:14
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : 
+Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.GetUser
+Get-MsolUser : User Not Found.  User: brian.castelli@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a
+System.Management.Automation.PSCredential.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:14
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Admini
+   stration.Automation.GetUser
+
+**********************
+Command start time: 20180313170430
+**********************
+PS>TerminatingError(Add-MsolGroupMember): "Cannot bind argument to parameter 'GroupObjectId' because it is null."
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automation.AddGroupMember
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automatio
+   n.AddGroupMember
+
+Added brian.castelli@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a System.Management.Automation.PSCredential to the group
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Brian Castelli
+sAMAccountName    : brian.castelli
+userPrincipalName : brian.castelli@accruent.com
+mail              : brian.castelli@accruent.com
+Description       : Event Marketing Intern
+title             : Event Marketing Intern
+manager           : CN=Brooke Swindle,OU=Product Marketing,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Syncing Changes

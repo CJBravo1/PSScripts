@@ -1,0 +1,67 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170908081609
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Machine: C-0236 (Microsoft Windows NT 10.0.15063.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1'
+Process ID: 10384
+PSVersion: 5.1.15063.502
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.502
+BuildVersion: 10.0.15063.502
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Dropbox (Accruent)\1. IT\New Hires\Transcripts\PowerShell_transcript.C-0236.22QGJ5TZ.20170908081609.txt
+WARNING: The names of some imported commands from the module 'tmp_omhcjoli.kco' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_omhcjoli.kco                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Danielle
+Middle Initial:
+Last Name:  Soto
+Full Name:  Danielle Soto
+Username:  Danielle.Soto
+UserID:  danielle.soto
+Email Address:  danielle.soto@accruent.com
+Office Location:  Domain
+Job Title:  Customer Success Manager
+Department:  Customer Success Retail - Legacy
+Manager:  maggie.e.key
+Product:  Lucernex
+
+
+Name              : Danielle Soto
+sAMAccountName    : danielle.soto
+userPrincipalName : danielle.soto@accruent.com
+mail              : danielle.soto@accruent.com
+Description       : Customer Success Manager
+title             : Customer Success Manager
+manager           : CN=Maggie Key,OU=Customer Success,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Anna
+Middle Initial:
+Last Name:  Lanier
+Full Name:  Anna Lanier
+Username:  Anna.Lanier
+UserID:  anna.lanier
+Email Address:  anna.lanier@accruent.com
+Office Location:  Domain
+Job Title:  Support Associate
+Department:  Support Retail - Legacy
+Manager:  dave.d.young
+Product:  Lucernex
+
+
+Name              : Anna Lanier
+sAMAccountName    : anna.lanier
+userPrincipalName : anna.lanier@accruent.com
+mail              : anna.lanier@accruent.com
+Description       : Support Associate
+title             : Support Associate
+manager           : CN=Dave Young,OU=Support,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+

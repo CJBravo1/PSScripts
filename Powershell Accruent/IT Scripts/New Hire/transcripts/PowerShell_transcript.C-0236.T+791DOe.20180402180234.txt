@@ -1,0 +1,47 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180402180234
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 30320
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.T+791DOe.20180402180234.txt
+**********************
+Command start time: 20180402180256
+**********************
+PS>TerminatingError(New-PSSession): "Cannot bind argument to parameter 'Credential' because it is null."
+New-PSSession : Cannot bind argument to parameter 'Credential' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:26 char:141
++ ... .office365.com/powershell-liveid/ -Credential $UserCredential -Authen ...
++                                                   ~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [New-PSSession], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.NewPSSessionCommand
+New-PSSession : Cannot bind argument to parameter 'Credential' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:26 char:141
++ ... .office365.com/powershell-liveid/ -Credential $UserCredential -Authen ...
++                                                   ~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [New-PSSession], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.NewPSSessio
+   nCommand
+
+**********************
+Command start time: 20180402180258
+**********************
+PS>$global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20180402180258
+**********************

@@ -1,0 +1,8 @@
+Import-CSV c:\scripts\quest.csv | ForEach{
+New-QADUser -displayname $_.display -Name $_.display -ParentContainer Fairview.org/Exchange/Resources -UserPrincipalName $_.upn -SamAccountName $_.Sam -LastName $_.display -UserPassword $_.password}
+
+Start-Sleep -Seconds 3
+
+
+Import-CSV c:\scripts\quest.csv | ForEach{
+enable-mailbox -Identity $_.display -Database $_.DB}

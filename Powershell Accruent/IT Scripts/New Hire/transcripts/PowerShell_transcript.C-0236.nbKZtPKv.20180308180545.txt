@@ -1,0 +1,442 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180308180545
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 19996
+PSVersion: 5.1.16299.248
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.248
+BuildVersion: 10.0.16299.248
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.nbKZtPKv.20180308180545.txt
+WARNING: The names of some imported commands from the module 'tmp_jqmsemdy.rzl' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_jqmsemdy.rzl                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Bill
+Middle Initial:
+Last Name:  Mercer
+Full Name:  Bill Mercer
+Username:  Bill.Mercer
+UserID:  bill.mercer
+Email Address:  bill.mercer@accruent.com
+Office Location:  NOLA
+Job Title:  Software Engineer in Test
+Department:  Engineering Healthcare
+Manager:  wcole
+Product:  Mainspring
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Bill Mercer
+sAMAccountName    : bill.mercer
+userPrincipalName : bill.mercer@accruent.com
+mail              : bill.mercer@accruent.com
+Description       : Software Engineer in Test
+title             : Software Engineer in Test
+manager           : CN=William Cole,OU=Engineering,OU=Work@Home,OU=_Remote,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Patric
+Middle Initial:
+Last Name:  Holderfield
+Full Name:  Patric Holderfield
+Username:  Patric.Holderfield
+UserID:  patric.holderfield
+Email Address:  patric.holderfield@accruent.com
+Office Location:  Austin
+Job Title:  Consultant I
+Department:  Professional Services Retail - Legacy
+Manager:  smaguire
+Product:  Lucernex
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Patric Holderfield
+sAMAccountName    : patric.holderfield
+userPrincipalName : patric.holderfield@accruent.com
+mail              : patric.holderfield@accruent.com
+Description       : Consultant I
+title             : Consultant I
+manager           : CN=Sean Maguire,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Shelley
+Middle Initial:
+Last Name:  Adams
+Full Name:  Shelley Adams
+Username:  Shelley.Adams
+UserID:  shelley.adams
+Email Address:  shelley.adams@accruent.com
+Office Location:  MSP
+Job Title:  Senior Consultant
+Department:  Professional Services Retail - Verisae
+Manager:  bpaulson
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Shelley Adams
+sAMAccountName    : shelley.adams
+userPrincipalName : shelley.adams@accruent.com
+mail              : shelley.adams@accruent.com
+Description       : Senior Consultant
+title             : Senior Consultant
+manager           : CN=Bruce Paulson,OU=Professional Services,OU=2nd.
+                    Avenue,OU=MSP,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Jefferey
+Middle Initial:
+Last Name:  Grider
+Full Name:  Jefferey Grider
+Username:  Jefferey.Grider
+UserID:  jefferey.grider
+Email Address:  jefferey.grider@accruent.com
+Office Location:  Plano
+Job Title:  Senior Consultant
+Department:  Professional Services Retail - Legacy
+Manager:  smaguire
+Product:  Lucernex
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Jefferey Grider
+sAMAccountName    : jefferey.grider
+userPrincipalName : jefferey.grider@accruent.com
+mail              : jefferey.grider@accruent.com
+Description       : Senior Consultant
+title             : Senior Consultant
+manager           : CN=Sean Maguire,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Warren
+Middle Initial:
+Last Name:  Bush
+Full Name:  Warren Bush
+Username:  Warren.Bush
+UserID:  warren.bush
+Email Address:  warren.bush@accruent.com
+Office Location:  Austin
+Job Title:  Project Manager I
+Department:  Professional Services Retail - Legacy
+Manager:  josh.pierson
+Product:  Lucernex
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Warren Bush
+sAMAccountName    : warren.bush
+userPrincipalName : warren.bush@accruent.com
+mail              : warren.bush@accruent.com
+Description       : Project Manager I
+title             : Project Manager I
+manager           : CN=Josh Pierson,OU=Professional Services,OU=Windcrest,OU=DFW,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Andrew
+Middle Initial:
+Last Name:  Montgomery
+Full Name:  Andrew Montgomery
+Username:  Andrew.Montgomery
+UserID:  andrew.montgomery
+Email Address:  andrew.montgomery@accruent.com
+Office Location:  Austin
+Job Title:  Senior Consultant
+Department:  Professional Services Retail - Legacy
+Manager:  smaguire
+Product:  Lucernex
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Andrew Montgomery
+sAMAccountName    : andrew.montgomery
+userPrincipalName : andrew.montgomery@accruent.com
+mail              : andrew.montgomery@accruent.com
+Description       : Senior Consultant
+title             : Senior Consultant
+manager           : CN=Sean Maguire,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Hanru
+Middle Initial:
+Last Name:  Shen
+Full Name:  Hanru Shen
+Username:  Hanru.Shen
+UserID:  hanru.shen
+Email Address:  hanru.shen@accruent.com
+Office Location:  Austin
+Job Title:  North America Controller
+Department:  Accounting - US
+Manager:  nancy.milhous
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Hanru Shen
+sAMAccountName    : hanru.shen
+userPrincipalName : hanru.shen@accruent.com
+mail              : hanru.shen@accruent.com
+Description       : North America Controller
+title             : North America Controller
+manager           : CN=Nancy Milhous,OU=Accounting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Heather
+Middle Initial:
+Last Name:  Goff
+Full Name:  Heather Goff
+Username:  Heather.Goff
+UserID:  heather.goff
+Email Address:  heather.goff@accruent.com
+Office Location:  Austin
+Job Title:  HR Business Partner
+Department:  HR Operations
+Manager:  cgoins-craig
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Heather Goff
+sAMAccountName    : heather.goff
+userPrincipalName : heather.goff@accruent.com
+mail              : heather.goff@accruent.com
+Description       : HR Business Partner
+title             : HR Business Partner
+manager           : CN=Christy Goins-Craig,OU=HR Operations,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Benjamin
+Middle Initial:
+Last Name:  Bragdon
+Full Name:  Benjamin Bragdon
+Username:  Benjamin.Bragdon
+UserID:  benjamin.bragdon
+Email Address:  benjamin.bragdon@accruent.com
+Office Location:  Remote
+Job Title:  Senior Consultant
+Department:  Professional Services Retail - Legacy
+Manager:  smaguire
+Product:  Lucernex
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Benjamin Bragdon
+sAMAccountName    : benjamin.bragdon
+userPrincipalName : benjamin.bragdon@accruent.com
+mail              : benjamin.bragdon@accruent.com
+Description       : Senior Consultant
+title             : Senior Consultant
+manager           : CN=Sean Maguire,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Alexander
+Middle Initial:
+Last Name:  Kaitiff
+Full Name:  Alexander Kaitiff
+Username:  Alexander.Kaitiff
+UserID:  alexander.kaitiff
+Email Address:  alexander.kaitiff@accruent.com
+Office Location:  London
+Job Title:  Business Development Representative
+Department:  Business Development EMEA
+Manager:  ediamond
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+**********************
+Command start time: 20180308180630
+**********************
+PS>TerminatingError(Set-ADUser): "A value for the attribute was not in the acceptable range of values"
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:202 char:13
++             Set-ADUser -Identity $UID -StreetAddress "Golden Cross Ho ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (alexander.kaitiff:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:202 char:13
++             Set-ADUser -Identity $UID -StreetAddress "Golden Cross Ho ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (alexander.kaitiff:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+
+Adding User to Department based AD Groups
+**********************
+Command start time: 20180308180631
+**********************
+PS>TerminatingError(Get-MsolUser): "Cannot convert 'System.Object[]' to the type 'System.String' required by parameter 'UserPrincipalName'. Specified method is not supported."
+Get-MsolUser : Cannot convert 'System.Object[]' to the type 'System.String' required by parameter 'UserPrincipalName'. 
+Specified method is not supported.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:46
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                                                 ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-MsolUser], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgument,Microsoft.Online.Administration.Automation.GetUser
+Get-MsolUser : Cannot convert 'System.Object[]' to the type 'System.String' required by parameter 'UserPrincipalName'.
+Specified method is not supported.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:46
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                                                 ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-MsolUser], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgument,Microsoft.Online.Administration.Automation.GetUser
+
+>> TerminatingError(Add-MsolGroupMember): "Cannot bind argument to parameter 'GroupObjectId' because it is null."
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automation.AddGroupMember
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automatio
+   n.AddGroupMember
+
+Added alexander.kaitiff@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a System.Management.Automation.PSCredential to the group
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Alexander Kaitiff
+sAMAccountName    : alexander.kaitiff
+userPrincipalName : alexander.kaitiff@accruent.com
+mail              : alexander.kaitiff@accruent.com
+Description       : Business Development Representative
+title             : Business Development Representative
+manager           : CN=Ethan Daimond,OU=Business Development,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Toby
+Middle Initial:
+Last Name:  Masters
+Full Name:  Toby Masters
+Username:  Toby.Masters
+UserID:  toby.masters
+Email Address:  toby.masters@accruent.com
+Office Location:  London
+Job Title:  Support Associate
+Department:  Suport Retail - Verisae
+Manager:  kentrekin
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+**********************
+Command start time: 20180308180633
+**********************
+PS>TerminatingError(Set-ADUser): "A value for the attribute was not in the acceptable range of values"
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:202 char:13
++             Set-ADUser -Identity $UID -StreetAddress "Golden Cross Ho ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (toby.masters:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:202 char:13
++             Set-ADUser -Identity $UID -StreetAddress "Golden Cross Ho ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (toby.masters:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Toby Masters
+sAMAccountName    : toby.masters
+userPrincipalName : toby.masters@accruent.com
+mail              : toby.masters@accruent.com
+Description       : Support Associate
+title             : Support Associate
+manager           : CN=Kenneth Entrekin,OU=Support,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Syncing Changes

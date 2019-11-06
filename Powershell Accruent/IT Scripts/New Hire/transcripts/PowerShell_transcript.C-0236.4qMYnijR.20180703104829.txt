@@ -1,0 +1,334 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180703104829
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 13148
+PSVersion: 5.1.16299.492
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.492
+BuildVersion: 10.0.16299.492
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.4qMYnijR.20180703104829.txt
+WARNING: The names of some imported commands from the module 'tmp_dxeec5so.ahb' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_dxeec5so.ahb                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Mandi
+Middle Initial:
+Last Name:  Butynski
+Full Name:  Mandi Butynski
+Username:  Mandi.Butynski
+UserID:  mandi.butynski
+Email Address:  mandi.butynski@accruent.com
+Office Location:  Remote
+Job Title:  UX Designer
+Department:  Fabric
+Manager:  acataldo
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Mandi Butynski
+sAMAccountName    : mandi.butynski
+userPrincipalName : mandi.butynski@accruent.com
+mail              : mandi.butynski@accruent.com
+Description       : UX Designer
+title             : UX Designer
+manager           : CN=Abbie Cataldo,OU=Product Management,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Britain
+Middle Initial:
+Last Name:  Westbrook
+Full Name:  Britain Westbrook
+Username:  Britain.Westbrook
+UserID:  britain.westbrook
+Email Address:  britain.westbrook@accruent.com
+Office Location:  NOLA
+Job Title:  Support Associate
+Department:  Support Public Sector
+Manager:  creeves
+Product:  VFA
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Britain Westbrook
+sAMAccountName    : britain.westbrook
+userPrincipalName : britain.westbrook@accruent.com
+mail              : britain.westbrook@accruent.com
+Description       : Support Associate
+title             : Support Associate
+manager           : CN=Cory Reeves,OU=Support,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Rob
+Middle Initial:
+Last Name:  Bryant
+Full Name:  Rob Bryant
+Username:  Rob.Bryant
+UserID:  rob.bryant
+Email Address:  rob.bryant@accruent.com
+Office Location:  Remote
+Job Title:  Account Executive
+Department:  Sales CRE
+Manager:  jbonebright
+Product:  360Facility
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+**********************
+Command start time: 20180703104858
+**********************
+PS>TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: '_ALL_ Ring the Bell Emailers' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: '_ALL_ Ring the Bell Emailers' under: 'DC=accruent,DC=com'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:417 char:4
++             Add-ADGroupMember "_ALL_ Ring the Bell Emailers" $UID
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (_ALL_ Ring the Bell Emailers:ADGroup) [Add-ADGroupMember], 
+ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: '_ALL_ Ring the Bell Emailers' under: 'DC=accruent,DC=com'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:417 char:4
++             Add-ADGroupMember "_ALL_ Ring the Bell Emailers" $UID
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (_ALL_ Ring the Bell Emailers:ADGroup) [Add-ADGroupMember], ADIdentityNo
+   tFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.AddADGroupMember
+
+
+Name              : Rob Bryant
+sAMAccountName    : rob.bryant
+userPrincipalName : rob.bryant@accruent.com
+mail              : rob.bryant@accruent.com
+Description       : Account Executive
+title             : Account Executive
+manager           : CN=Jeff Bonebright,OU=Sales,OU=Warner Rd.,OU=PHX,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Samuel
+Middle Initial:
+Last Name:  Gomez
+Full Name:  Samuel Gomez
+Username:  Samuel.Gomez
+UserID:  samuel.gomez
+Email Address:  samuel.gomez@accruent.com
+Office Location:  Austin
+Job Title:  IT Intern
+Department:  IT-US
+Manager:  jbatson
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Samuel Gomez
+sAMAccountName    : samuel.gomez
+userPrincipalName : samuel.gomez@accruent.com
+mail              : samuel.gomez@accruent.com
+Description       : IT Intern
+title             : IT Intern
+manager           : CN=Josh Batson,OU=IT,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Vicky
+Middle Initial:
+Last Name:  Nelson
+Full Name:  Vicky Nelson
+Username:  Vicky.Nelson
+UserID:  vicky.nelson
+Email Address:  vicky.nelson@accruent.com
+Office Location:  Phoenix
+Job Title:  Facilities Service Representative
+Department:  Business Services CRE
+Manager:  arichey
+Product:  BIGCenter
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Vicky Nelson
+sAMAccountName    : vicky.nelson
+userPrincipalName : vicky.nelson@accruent.com
+mail              : vicky.nelson@accruent.com
+Description       : Facilities Service Representative
+title             : Facilities Service Representative
+manager           : CN=Aaron Richey,OU=Business Services,OU=Warner Rd.,OU=PHX,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Lisa
+Middle Initial:
+Last Name:  Wu
+Full Name:  Lisa Wu
+Username:  Lisa.Wu
+UserID:  lisa.wu
+Email Address:  lisa.wu@accruent.com
+Office Location:  Austin
+Job Title:  Accounts Receivable Specialist
+Department:  Accounting US
+Manager:  eric.durham
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Lisa Wu
+sAMAccountName    : lisa.wu
+userPrincipalName : lisa.wu@accruent.com
+mail              : lisa.wu@accruent.com
+Description       : Accounts Receivable Specialist
+title             : Accounts Receivable Specialist
+manager           : CN=Eric Durham,OU=Accounting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Robyn
+Middle Initial:
+Last Name:  Dahl
+Full Name:  Robyn Dahl
+Username:  Robyn.Dahl
+UserID:  robyn.dahl
+Email Address:  robyn.dahl@accruent.com
+Office Location:  Austin
+Job Title:  HR Business Partner
+Department:  HR Operations
+Manager:  cgoins-craig
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Robyn Dahl
+sAMAccountName    : robyn.dahl
+userPrincipalName : robyn.dahl@accruent.com
+mail              : robyn.dahl@accruent.com
+Description       : HR Business Partner
+title             : HR Business Partner
+manager           : CN=Christy Goins-Craig,OU=HR Operations,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Bill
+Middle Initial:
+Last Name:  Muscato
+Full Name:  Bill Muscato
+Username:  Bill.Muscato
+UserID:  bill.muscato
+Email Address:  bill.muscato@accruent.com
+Office Location:  Austin
+Job Title:  Senior Product Manager
+Department:  Fabric
+Manager:  lcook
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Bill Muscato
+sAMAccountName    : bill.muscato
+userPrincipalName : bill.muscato@accruent.com
+mail              : bill.muscato@accruent.com
+Description       : Senior Product Manager
+title             : Senior Product Manager
+manager           : CN=Laura Cook,OU=Fabric,OU=Bedford,OU=BOS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Meagan
+Middle Initial:
+Last Name:  Miller
+Full Name:  Meagan Miller
+Username:  Meagan.Miller
+UserID:  meagan.miller
+Email Address:  meagan.miller@accruent.com
+Office Location:  Austin
+Job Title:  Events Marketing Specialist
+Department:  Product Marketing
+Manager:  asquires
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Meagan Miller
+sAMAccountName    : meagan.miller
+userPrincipalName : meagan.miller@accruent.com
+mail              : meagan.miller@accruent.com
+Description       : Events Marketing Specialist
+title             : Events Marketing Specialist
+manager           : CN=Alex Squires,OU=Product Marketing,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes

@@ -1,0 +1,23 @@
+This script is for creating a Contractor Accounts in ADUC for VFA contractors.
+
+How do you use it?
+-Will have to RDP into one of the VFA servers.
+-Create a folder called Scripts on the root of C:\. So it should be C:\Scripts, if not already created.
+-Download Contractors.csv from Confluence, and place in this folder. This is where the script will pull the user info from. 
+-Enter in the relevant user's information, then save and close. 
+
+-FirstName
+-LastName
+-Department
+-Manager
+
+
+-Go to C:\Dropbox (Accruent)\IT\Scripts. Copy it to the VFA server machine.  "Contractor Account Creation VFA", and select "Run with PowerShell".
+
+
+WHAT IT DO DO DO:
+-Sets variables.
+-Creates user account.
+-Sets Name, Email Address, UPN, Description, Title, Department, Company
+-Add users to VPN group.
+

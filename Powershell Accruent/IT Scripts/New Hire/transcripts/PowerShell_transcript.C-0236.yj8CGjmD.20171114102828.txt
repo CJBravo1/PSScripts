@@ -1,0 +1,235 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20171114102828
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Machine: C-0236 (Microsoft Windows NT 10.0.15063.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1'
+Process ID: 12744
+PSVersion: 5.1.15063.674
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.674
+BuildVersion: 10.0.15063.674
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Dropbox (Accruent)\1. IT\New Hires\Transcripts\PowerShell_transcript.C-0236.yj8CGjmD.20171114102828.txt
+WARNING: The names of some imported commands from the module 'tmp_eydio1xs.dxq' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_eydio1xs.dxq                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Saikiran
+Middle Initial:
+Last Name:  Parupally
+Full Name:  Saikiran Parupally
+Username:  SParupally
+UserID:  sparupally
+Email Address:  sparupally@accruent.com
+Office Location:  India
+Job Title:  Software Engineer
+Department:  Professional Services
+Manager:  ssladowsky
+Product:  VFA
+
+**********************
+Command start time: 20171114102846
+**********************
+PS>TerminatingError(New-ADUser): "An attempt was made to add an object to the directory with a name that is already in use"
+New-ADUser : An attempt was made to add an object to the directory with a name that is already in use
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:78 char:3
++         New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=a ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CN=Saikiran Par...accruent,DC=com:String) [New-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8305,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+New-ADUser : An attempt was made to add an object to the directory with a name that is already in use
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:78 char:3
++         New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=a ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CN=Saikiran Par...accruent,DC=com:String) [New-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8305,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+
+>> TerminatingError(Set-ADUser): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:82 char:3
++         Set-ADUser -identity $UID -EmailAddress $Email -userPrincipal ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:82 char:3
++         Set-ADUser -identity $UID -EmailAddress $Email -userPrincipal ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.SetADUser
+
+>> TerminatingError(Set-ADUser): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:85 char:9
++         Set-ADUser -Identity $UID -Add @{ProxyAddresses="SMTP:$UID@ac ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:85 char:9
++         Set-ADUser -Identity $UID -Add @{ProxyAddresses="SMTP:$UID@ac ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.SetADUser
+
+>> TerminatingError(Set-ADUser): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:86 char:9
++         Set-ADUser -Identity $UID -Add @{TargetAddress="SMTP:$UID@acc ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:86 char:9
++         Set-ADUser -Identity $UID -Add @{TargetAddress="SMTP:$UID@acc ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.SetADUser
+
+>> TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:89 char:9
++         Add-ADGroupMember "HRBenefits" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:89 char:9
++         Add-ADGroupMember "HRBenefits" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.
+   AddADGroupMember
+
+>> TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:90 char:9
++         Add-ADGroupMember "_ALL_ Ring The Bell" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:90 char:9
++         Add-ADGroupMember "_ALL_ Ring The Bell" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.
+   AddADGroupMember
+
+>> TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:91 char:9
++         Add-ADGroupMember "VPN_General" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:91 char:9
++         Add-ADGroupMember "VPN_General" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.
+   AddADGroupMember
+
+>> TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:92 char:3
++         Add-ADGroupMember "_ALL_ Dropbox Access" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:92 char:3
++         Add-ADGroupMember "_ALL_ Dropbox Access" $UID
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.
+   AddADGroupMember
+
+>> TerminatingError(Set-ADUser): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:136 char:13
++             Set-ADUser -Identity $UID -Office "India" -StreetAddress  ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:136 char:13
++             Set-ADUser -Identity $UID -Office "India" -StreetAddress  ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Set-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.SetADUser
+
+>> TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:137 char:13
++             Add-ADGroupMember "_ALL_ Mainspring FTE India" $UID
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:137 char:13
++             Add-ADGroupMember "_ALL_ Mainspring FTE India" $UID
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.
+   AddADGroupMember
+
+>> TerminatingError(Add-ADGroupMember): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:191 char:13
++             Add-ADGroupMember "All of PS" $UID
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:191 char:13
++             Add-ADGroupMember "All of PS" $UID
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.
+   AddADGroupMember
+
+>> TerminatingError(Get-ADUser): "Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'."
+Get-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:243 char:9
++         Get-ADUser $UID -Properties * | Select Name,sAMAccountName,us ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.GetADUser
+Get-ADUser : Cannot find an object with identity: 'sparupally' under: 'DC=accruent,DC=com'.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:243 char:9
++         Get-ADUser $UID -Properties * | Select Name,sAMAccountName,us ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sparupally:ADUser) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.GetADUser
+

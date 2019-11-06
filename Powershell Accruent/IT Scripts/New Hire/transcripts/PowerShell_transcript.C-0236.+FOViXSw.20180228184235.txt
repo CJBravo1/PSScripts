@@ -1,0 +1,205 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180228184235
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 13792
+PSVersion: 5.1.16299.248
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.248
+BuildVersion: 10.0.16299.248
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.+FOViXSw.20180228184235.txt
+WARNING: The names of some imported commands from the module 'tmp_ujt2i23l.sso' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_ujt2i23l.sso                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Jennifer
+Middle Initial:
+Last Name:  Steinley
+Full Name:  Jennifer Steinley
+Username:  Jennifer.Steinley
+UserID:  jennifer.steinley
+Email Address:  jennifer.steinley@accruent.com
+Office Location:  Austin
+Job Title:  Business Development Representative
+Department:  Business Development Retail - Legacy
+Manager:  iszilagyi
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Jennifer Steinley
+sAMAccountName    : jennifer.steinley
+userPrincipalName : jennifer.steinley@accruent.com
+mail              : jennifer.steinley@accruent.com
+Description       : Business Development Representative
+title             : Business Development Representative
+manager           : CN=Ian Szilagyi,OU=Business Development,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Adam
+Middle Initial:
+Last Name:  Bednar
+Full Name:  Adam Bednar
+Username:  Adam.Bednar
+UserID:  adam.bednar
+Email Address:  adam.bednar@accruent.com
+Office Location:  Remote
+Job Title:  Senior Consultant
+Department:  Professional Services Retail - Legacy
+Manager:  smagurie
+Product:  Lucernex
+
+Creating AD User Account
+**********************
+Command start time: 20180228184729
+**********************
+PS>TerminatingError(New-ADUser): "The specified account already exists"
+New-ADUser : The specified account already exists
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:91 char:2
++     New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=acc_D ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (CN=Adam Bednar,...accruent,DC=com:String) [New-ADUser], 
+ADIdentityAlreadyExistsException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:1316,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+New-ADUser : The specified account already exists
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:91 char:2
++     New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=acc_D ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (CN=Adam Bednar,...accruent,DC=com:String) [New-ADUser], ADIdentityAlrea
+   dyExistsException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:1316,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+
+>> TerminatingError(Set-ADUser): "Identity info provided in the extended attribute: 'Manager' could not be resolved. Reason: 'Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'.'."
+Set-ADUser : Identity info provided in the extended attribute: 'Manager' could not be resolved. Reason: 'Cannot find an 
+object with identity: 'smagurie' under: 'DC=accruent,DC=com'.'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:103 char:3
++         Set-ADUser -identity $UID -EmailAddress $Email -userPrincipal ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (adam.bednar:ADUser) [Set-ADUser], ADIdentityResolutionException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityResolutionException,M
+icrosoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : Identity info provided in the extended attribute: 'Manager' could not be resolved. Reason: 'Cannot find
+an object with identity: 'smagurie' under: 'DC=accruent,DC=com'.'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:103 char:3
++         Set-ADUser -identity $UID -EmailAddress $Email -userPrincipal ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (adam.bednar:ADUser) [Set-ADUser], ADIdentityResolutionException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityResolutionException
+   ,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Adam Bednar
+sAMAccountName    : adam.bednar
+userPrincipalName : adam.bednar@contractors.accruent.com
+mail              : adam.bednar@contractors.accruent.com
+Description       : MGR: jeff.adcock
+title             :
+manager           :
+
+Writing Email
+**********************
+Command start time: 20180228184730
+**********************
+PS>TerminatingError(Get-ADUser): "Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'."
+Get-ADUser : Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:370 char:26
++ ...    $ManagerFirst = (Get-ADUser $Manager -Properties givenName).givenN ...
++                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (smagurie:ADUser) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.GetADUser
+Get-ADUser : Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:370 char:26
++ ...    $ManagerFirst = (Get-ADUser $Manager -Properties givenName).givenN ...
++                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (smagurie:ADUser) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.GetADUser
+
+>> TerminatingError(Get-ADUser): "Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'."
+Get-ADUser : Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:371 char:26
++ ... gerEmail = (Get-ADUser $Manager -Properties userPrincipalName).userPr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (smagurie:ADUser) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Mic
+rosoft.ActiveDirectory.Management.Commands.GetADUser
+Get-ADUser : Cannot find an object with identity: 'smagurie' under: 'DC=accruent,DC=com'.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:371 char:26
++ ... gerEmail = (Get-ADUser $Manager -Properties userPrincipalName).userPr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (smagurie:ADUser) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,M
+   icrosoft.ActiveDirectory.Management.Commands.GetADUser
+
+First Name:  Vanessa
+Middle Initial:
+Last Name:  Tamayo
+Full Name:  Vanessa Tamayo
+Username:  Vanessa.Tamayo
+UserID:  vanessa.tamayo
+Email Address:  vanessa.tamayo@accruent.com
+Office Location:  Austin
+Job Title:  Benefits/Payroll Specialist
+Department:  HR Operations
+Manager:  cgoins-craig
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Vanessa Tamayo
+sAMAccountName    : vanessa.tamayo
+userPrincipalName : vanessa.tamayo@accruent.com
+mail              : vanessa.tamayo@accruent.com
+Description       : Benefits/Payroll Specialist
+title             : Benefits/Payroll Specialist
+manager           : CN=Christy Goins-Craig,OU=HR Operations,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Thai
+Middle Initial:
+Last Name:  Brideson
+Full Name:  Thai Brideson
+Username:  Thai.Brideson
+UserID:  thai.brideson
+Email Address:  thai.brideson@accruent.com
+Office Location:  Austin
+Job Title:  Front Desk Coordinator
+Department:  Facilities - US
+Manager:  reagan.vanmatre
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Thai Brideson
+sAMAccountName    : thai.brideson
+userPrincipalName : thai.brideson@accruent.com
+mail              : thai.brideson@accruent.com
+Description       : Front Desk Coordinator
+title             : Front Desk Coordinator
+manager           : CN=Reagan Vanmatre,OU=Facilities,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Syncing Changes

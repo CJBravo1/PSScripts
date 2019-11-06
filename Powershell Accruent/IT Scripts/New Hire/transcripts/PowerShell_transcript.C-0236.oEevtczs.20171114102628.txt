@@ -1,0 +1,76 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20171114102628
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Machine: C-0236 (Microsoft Windows NT 10.0.15063.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1'
+Process ID: 17000
+PSVersion: 5.1.15063.674
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.15063.674
+BuildVersion: 10.0.15063.674
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Dropbox (Accruent)\1. IT\New Hires\Transcripts\PowerShell_transcript.C-0236.oEevtczs.20171114102628.txt
+WARNING: The names of some imported commands from the module 'tmp_z5lkpn0i.15x' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_z5lkpn0i.15x                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Saikiran
+Middle Initial:
+Last Name:  Parupally
+Full Name:  Saikiran Parupally
+Username:  S.Parupally
+UserID:  s.parupally
+Email Address:  s.parupally@accruent.com
+Office Location:  India
+Job Title:  Software Engineer
+Department:  Professional Services
+Manager:  ssladowsky
+Product:  VFA
+
+**********************
+Command start time: 20171114102649
+**********************
+PS>TerminatingError(Set-ADUser): "A value for the attribute was not in the acceptable range of values"
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:135 char:13
++             Set-ADUser -Identity $UID -Office "India" -StreetAddress  ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (s.parupally:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:135 char:13
++             Set-ADUser -Identity $UID -Office "India" -StreetAddress  ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (s.parupally:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+
+
+Name              : Saikiran Parupally
+sAMAccountName    : s.parupally
+userPrincipalName : s.parupally@accruent.com
+mail              : s.parupally@accruent.com
+Description       : Software Engineer
+title             : Software Engineer
+manager           : CN=Shaul Sladowsky,OU=Hosting,OU=Trendset Towers,OU=JRS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Syncing all NC's held on AUSITDC02.
+Syncing partition: DC=ForestDnsZones,DC=accruent,DC=com
+**********************
+Command start time: 20171114102713
+**********************
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+False
+**********************
+Windows PowerShell transcript end
+End time: 20171114102713
+**********************

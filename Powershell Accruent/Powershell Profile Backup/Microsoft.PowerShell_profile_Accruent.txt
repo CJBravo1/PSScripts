@@ -1,0 +1,59 @@
+#Change Window Title
+$host.ui.RawUI.WindowTitle = "Accruent.com"
+
+#Aliases
+$AccDomainUsers = "OU=acc_Domain_Users,DC=accruent,DC=com"
+$distributionList = "OU=acc_Distribution_Groups,DC=accruent,DC=com"
+$dropboxAD = "CN=[ALL] Dropbox Access,OU=acc_Security_Groups,DC=accruent,DC=com"
+$laptopsOU = "OU=Laptops,OU=Computers,DC=accruent,DC=com"
+$sharedMailboxes = "OU=Shared Mailboxes,DC=accruent,Dc=com"
+$TestOU = "OU=Test-OU,DC=accruent,Dc=com"
+$userlist = cat C:\temp\userlist.txt
+$verisaeWorkstations = "OU=Verisae Workstations,DC=accruent,DC=com"
+$virtualMachines = "OU=Virtual Machines,OU=!New Computers,DC=accruent,DC=com"
+$VPNGeneral = "VPN_General"
+$VPNMSP = "VPN_MSP_GENERAL"
+$VPNUK = "VPN_UK"
+
+
+$pass = ConvertTo-SecureString "Ver_Cruent16!" -AsPlainText -Force
+
+#Map Network Drives
+#New-PSDrive -Name W -PSProvider FileSystem -Root \\fs02.accruent.com\departments -Persist
+
+
+#Import Accruent.com Powershell Session
+Import-Module ActiveDirectory
+
+#Exchange
+$msolcred = Get-Credential cjorenby@accruent.com -Message "Enter Office 365 Admin Password"
+
+#Microsoft Teams
+Import-Module MicrosoftTeams
+
+#PSSessions
+$CloudExchangeSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell-liveid/ -Credential $msolcred -Authentication Basic -AllowRedirection
+Connect-MsolService -Credential $msolcred -WarningAction SilentlyContinue
+Connect-MicrosoftTeams -Credential $msolcred
+
+#$ExchangeSession = New-PSSession -ConfigurationName microsoft.exchange -ConnectionUri http://exs41.accruent.com/powershell
+#$ComplianceSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $MSOLcred -Authentication Basic -AllowRedirection
+#$protectionsession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ -Credential $msolcred -Authentication Basic -AllowRedirection
+#Connect to Azure AD and Office 365
+
+Connect-AzureAD -Credential $msolcred
+
+
+#Import PSSessions
+
+Import-PSSession $CloudExchangeSession -DisableNameChecking -WarningAction SilentlyContinue | out-null
+#Import-PSSession $ComplianceSession -DisableNameChecking -WarningAction SilentlyContinue | out-null
+#Import-PSSession $protectionsession -DisableNameChecking -WarningAction SilentlyContinue | out-null
+$domainInfo = Get-WMIObject Win32_NTDomain
+
+#Launch Active Directory Users and Computers
+dsa.msc
+
+Write-Host "Welcome to Accruent.com" -ForegroundColor Cyan
+Write-Host "Domain Controller:$($domainInfo.domaincontrollername)" -ForeGroundColor Cyan
+Write-Host "Have a lot of fun..." -ForegroundColor Green

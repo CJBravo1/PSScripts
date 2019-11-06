@@ -1,0 +1,2 @@
+import-csv "c:\CalSet.csv" | foreach{
+Set-MailboxCalendarSettings -Identity $_.identity -AutomateProcessing:AutoAccept -AllBookInPolicy:$True -AllRequestOutOfPolicy:$False -AllRequestInPolicy:$False -AllowConflicts:$False -BookingWindowInDays:730  -ConflictPercentageAllowed:5 -MaximumConflictInstances:25 -DeleteSubject:$False -AddAdditionalResponse:$True -AdditionalResponse:"Please contact the owner of the room to report any problems.”}

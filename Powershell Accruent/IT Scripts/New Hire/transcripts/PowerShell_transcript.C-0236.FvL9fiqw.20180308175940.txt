@@ -1,0 +1,50 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180308175940
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 18740
+PSVersion: 5.1.16299.248
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.248
+BuildVersion: 10.0.16299.248
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.FvL9fiqw.20180308175940.txt
+WARNING: The names of some imported commands from the module 'tmp_hxk31v5r.wwd' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_hxk31v5r.wwd                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Bill
+Middle Initial:
+Last Name:  Mercer
+Full Name:  Bill  Mercer
+Username:  Bill .Mercer
+UserID:  bill .mercer
+Email Address:  bill .mercer@accruent.com
+Office Location:  NOLA
+Job Title:  Software Engineer in Test
+Department:  Engineering Healthcare
+Manager:  wcole
+Product:  Mainspring
+
+Creating AD User Account
+**********************
+Command start time: 20180308180128
+**********************
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> $global:?
+False
+**********************
+Windows PowerShell transcript end
+End time: 20180308180128
+**********************

@@ -1,0 +1,5 @@
+Details 10.215.1.143 : eg-ehfs-a01 : Does not respond to ping (since 102213)
+Details 10.215.1.152 : eg-eheds-a26 : Does not respond to ping (since 102213)
+Details 10.215.1.153 : eg-eheds-a27 : Does not respond to ping (since 102213)
+Details 10.220.49.18 : RA_EG-BOLSQLDV-B01 : Does not respond to ping (since 110513)
+Details 10.220.49.19 : RA_EG-BOLSQLDV-B02 : Does not respond to ping (since 110513)

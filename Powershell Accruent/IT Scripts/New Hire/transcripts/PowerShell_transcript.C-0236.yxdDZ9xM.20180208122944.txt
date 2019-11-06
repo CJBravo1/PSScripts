@@ -1,0 +1,176 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180208122944
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 3224
+PSVersion: 5.1.16299.98
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.98
+BuildVersion: 10.0.16299.98
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.yxdDZ9xM.20180208122944.txt
+WARNING: The names of some imported commands from the module 'tmp_b4u3n5la.ntj' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_b4u3n5la.ntj                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Darius
+Middle Initial:
+Last Name:  Meherhomji
+Full Name:  Darius Meherhomji
+Username:  Darius.Meherhomji
+UserID:  darius.meherhomji
+Email Address:  darius.meherhomji@accruent.com
+Office Location:  Domain
+Job Title:  Consultant I
+Department:  Professional Services Retail - Legacy
+Manager:  smaguire
+Product:  LX
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Darius Meherhomji
+sAMAccountName    : darius.meherhomji
+userPrincipalName : darius.meherhomji@accruent.com
+mail              : darius.meherhomji@accruent.com
+Description       : Consultant I
+title             : Consultant I
+manager           : CN=Sean Maguire,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Addie
+Middle Initial:
+Last Name:  Woods
+Full Name:  Addie Woods
+Username:  Addie.Woods
+UserID:  addie.woods
+Email Address:  addie.woods@accruent.com
+Office Location:  Domain
+Job Title:  Associate Recruiter
+Department:  Recruiting US
+Manager:  aosuna
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Addie Woods
+sAMAccountName    : addie.woods
+userPrincipalName : addie.woods@accruent.com
+mail              : addie.woods@accruent.com
+Description       : Associate Recruiter
+title             : Associate Recruiter
+manager           : CN=Amanda Osuna,OU=Recruiting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Preeti
+Middle Initial:
+Last Name:  Ugra
+Full Name:  Preeti Ugra
+Username:  Preeti.Ugra
+UserID:  preeti.ugra
+Email Address:  preeti.ugra@accruent.com
+Office Location:  Plano
+Job Title:  Quality Assurance Engineer
+Department:  QA Retail - Legacy
+Manager:  rupi.kaur
+Product:  LX
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Preeti Ugra
+sAMAccountName    : preeti.ugra
+userPrincipalName : preeti.ugra@accruent.com
+mail              : preeti.ugra@accruent.com
+Description       : Quality Assurance Engineer
+title             : Quality Assurance Engineer
+manager           : CN=Rupi Kaur,OU=Engineering,OU=Windcrest,OU=DFW,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Sheyna
+Middle Initial:
+Last Name:  Webster
+Full Name:  Sheyna Webster
+Username:  Sheyna.Webster
+UserID:  sheyna.webster
+Email Address:  sheyna.webster@accruent.com
+Office Location:  Domain
+Job Title:  Content Marketing Manager
+Department:  Product Marketing Overhead
+Manager:  dfallon
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Sheyna Webster
+sAMAccountName    : sheyna.webster
+userPrincipalName : sheyna.webster@accruent.com
+mail              : sheyna.webster@accruent.com
+Description       : Content Marketing Manager
+title             : Content Marketing Manager
+manager           : CN=Dolores Fallon,OU=Product
+                    Marketing,OU=Work@Home,OU=_Remote,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Sarah
+Middle Initial:
+Last Name:  Lautenschlager
+Full Name:  Sarah Lautenschlager
+Username:  Sarah.Lautenschlager
+UserID:  sarah.lautenschlager
+Email Address:  sarah.lautenschlager@accruent.com
+Office Location:  Domain
+Job Title:  Collections Representative
+Department:  Accounting - US
+Manager:  sherrie.smith
+Product:  Accruent
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Sarah Lautenschlager
+sAMAccountName    : sarah.lautenschlager
+userPrincipalName : sarah.lautenschlager@accruent.com
+mail              : sarah.lautenschlager@accruent.com
+Description       : Collections Representative
+title             : Collections Representative
+manager           : CN=Sherrie Smith,OU=Accounting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Syncing Changes
+DsBindWithCred to AUSITDC02 failed with status 1722 (0x6ba):
+    The RPC server is unavailable.
+[BOSCORPAADC.accruent.com] Connecting to remote server BOSCORPAADC.accruent.com failed with the following error message 
+: Access is denied. For more information, see the about_Remote_Troubleshooting Help topic.
+    + CategoryInfo          : OpenError: (BOSCORPAADC.accruent.com:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : AccessDenied,PSSessionStateBroken
+[BOSCORPAADC.accruent.com] Connecting to remote server BOSCORPAADC.accruent.com failed with the following error
+message : Access is denied. For more information, see the about_Remote_Troubleshooting Help topic.
+    + CategoryInfo          : OpenError: (BOSCORPAADC.accruent.com:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : AccessDenied,PSSessionStateBroken
+**********************
+Windows PowerShell transcript end
+End time: 20180208123117
+**********************

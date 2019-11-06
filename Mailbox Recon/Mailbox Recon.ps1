@@ -1,0 +1,113 @@
+﻿#Change Window Title
+$host.ui.RawUI.WindowTitle = "Mailbox Recon"
+Clear-Host
+cat .\planetexpress.txt
+Write-Host "Mailbox Recon" -ForegroundColor Green
+Write-Host "Use this script to gather all Office 365 resources"
+
+#Get Login Credentials
+$UserCredential = Get-Credential -Message "Enter your Office 365 Credentials"
+
+#Make new session
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+
+#Connect to PsSession
+Import-PSSession $Session -WarningAction SilentlyContinue
+Connect-MsolService -Credential $UserCredential
+
+#Write-Host "Clearing ALL current csv files in this directory" -ForegroundColor Yellow -BackgroundColor Red
+Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
+rm .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
+rm .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
+
+#Get Mailboxes
+Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
+$mailboxes = get-Mailbox -ResultSize Unlimited
+
+#Separate Mailboxes
+Write-Host "Separating Mailboxes" -ForegroundColor Yellow
+mkdir .\ReconMailboxes
+$UserMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "UserMailbox"}
+$SharedMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "SharedMailbox"}
+$RoomMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "RoomMailbox"}
+
+$UserMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails | Export-Csv .\ReconMailboxes\UserMailboxes.csv -NoTypeInformation
+$SharedMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails | Export-Csv .\ReconMailboxes\SharedMailboxes.csv -NoTypeInformation
+$RoomMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails | Export-Csv .\ReconMailboxes\RoomMailboxes.csv -NoTypeInformation
+
+#Gather Shared Mailbox Members
+Write-host "Gathering Shared Mailbox and their members" -foregroundcolor Cyan
+$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | where {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
+
+#Gather Shared Mailbox Members
+$csvLine = New-Object PSObject
+$csvTable = @()
+$SharedMailboxes | foreach {
+    $mailbox = Get-Mailbox -Identity $_.Alias -ResultSize Unlimited
+    $Members = Get-MailboxPermission -Identity $mailbox.Alias
+    $Members = $Members | where {$_.User -like "*@*.com"}
+    
+    #Separate each User in the mailbox and add to the table
+    foreach ($user in $Members) {
+        $csvLine | Add-Member -NotePropertyName "MailboxName" -NotePropertyValue $mailbox.Alias
+        $csvLine | Add-Member -NotePropertyName "Member" -NotePropertyValue $User.User
+        $csvLine | Add-Member -NotePropertyName "AccessRights" -NotePropertyValue $user.AccessRights
+        $csvTable += @($csvLine)
+        $csvLine = New-Object PSObject
+        }
+    
+    #Export the Table to a CSV file    
+    $csvTable | Export-Csv -NoTypeInformation .\ReconMailboxes\SharedMailboxMembers.csv -Append
+    }
+
+#Get Distribution Groups
+Write-Host "Gathering Distribution Groups"
+mkdir .\ReconGroups
+$distroGroups = Get-DistributionGroup -ResultSize unlimited
+$distroGroups | select name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
+Write-Host "Use the Get-DistributionGroupMembers.ps1 script to get Group Members" -ForegroundColor Yellow
+
+#Get Dynamic Distribution Groups
+mkdir .\ReconGroups\DynamicDistributionGroupMembers
+Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Cyan
+$ddGroup = Get-DynamicDistributionGroup
+
+#Get Group Members and Export as separate CSV Files
+foreach ($group in $ddGroup) 
+    {
+    $groupAlias = $group.Alias
+    Write-Host "Processing $groupAlias" -ForegroundColor Yellow
+    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | select Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation .\ReconGroups\DynamicDistributionGroupMembers\"$groupAlias.csv"
+    }
+
+
+#Gather Office 365 Groups
+Write-Host "Gathering Office 365 Groups" -ForegroundColor Cyan
+$unifiedGroups = Get-UnifiedGroup -Resultsize Unlimited
+
+#Create Blank Table
+
+$CSV = New-Object PSObject
+$csvTable = @()
+
+foreach ($group in $unifiedGroups)
+    {
+    #Write-Host "Processing $group" -ForegroundColor Yellow
+    #Get Group's Members
+    $members = Get-UnifiedGroupLinks -LinkType Member -Identity $group.PrimarySmtpAddress
+    #Process Each Member for each group"
+    foreach ($member in $members)
+        {
+        $CSV | Add-Member -NotePropertyName 'GroupName' -NotePropertyValue $group.DisplayName -Force
+        $CSV | Add-Member -NotePropertyName 'GroupEmail' -NotePropertyValue $group.PrimarySmtpAddress -Force
+        $CSV | Add-Member -NotePropertyName 'MemberName' -NotePropertyValue $member.Name -Force
+        $CSV | Add-Member -NotePropertyName 'MemberEmail' -NotePropertyValue $member.PrimarySmtpAddress -Force
+
+        #Export Data to table
+        $csvTable += @($CSV)
+        $CSV = New-Object PSObject
+        }
+    }
+#Export Table to CSV File
+Write-Host "Exporting Data to Office365Groups.csv" -ForegroundColor Cyan
+$csvTable | Export-Csv -NoTypeInformation .\ReconGroups\Office365Groups.csv

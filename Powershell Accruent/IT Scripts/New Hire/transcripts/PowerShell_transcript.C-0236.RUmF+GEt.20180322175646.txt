@@ -1,0 +1,210 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180322175646
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 20468
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.RUmF+GEt.20180322175646.txt
+WARNING: The names of some imported commands from the module 'tmp_1535fbap.tbn' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_1535fbap.tbn                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Deepthi
+Middle Initial:
+Last Name:  Chaganti
+Full Name:  Deepthi Chaganti
+Username:  Deepthi.Chaganti
+UserID:  deepthi.chaganti
+Email Address:  deepthi.chaganti@accruent.com
+Office Location:  Plano
+Job Title:  Quality Assurance Associate
+Department:  Engineering Retail - Legacy
+Manager:  rupi.kaur
+Product:  LX
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Deepthi Chaganti
+sAMAccountName    : deepthi.chaganti
+userPrincipalName : deepthi.chaganti@accruent.com
+mail              : deepthi.chaganti@accruent.com
+Description       : Quality Assurance Associate
+title             : Quality Assurance Associate
+manager           : CN=Rupi Kaur,OU=Engineering,OU=Windcrest,OU=DFW,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Christa
+Middle Initial:
+Last Name:  Seeberger
+Full Name:  Christa Seeberger
+Username:  Christa.Seeberger
+UserID:  christa.seeberger
+Email Address:  christa.seeberger@accruent.com
+Office Location:  London
+Job Title:  Director, Product Marketing
+Department:  Product Marketing Overhead
+Manager:  meg.swanson
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+**********************
+Command start time: 20180322175727
+**********************
+PS>TerminatingError(Set-ADUser): "A value for the attribute was not in the acceptable range of values"
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:202 char:13
++             Set-ADUser -Identity $UID -StreetAddress "Golden Cross Ho ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (christa.seeberger:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+Set-ADUser : A value for the attribute was not in the acceptable range of values
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:202 char:13
++             Set-ADUser -Identity $UID -StreetAddress "Golden Cross Ho ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (christa.seeberger:ADUser) [Set-ADUser], ADException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8322,Microsoft.ActiveDirectory.Management.Commands.SetADUser
+
+Adding User to Department based AD Groups
+Get-MsolUser : User Not Found.  User: christa.seeberger@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a 
+System.Management.Automation.PSCredential.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:14
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : 
+Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.GetUser
+Get-MsolUser : User Not Found.  User: christa.seeberger@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a
+System.Management.Automation.PSCredential.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:14
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Admini
+   stration.Automation.GetUser
+
+**********************
+Command start time: 20180322175727
+**********************
+PS>TerminatingError(Add-MsolGroupMember): "Cannot bind argument to parameter 'GroupObjectId' because it is null."
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automation.AddGroupMember
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automatio
+   n.AddGroupMember
+
+Added christa.seeberger@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a System.Management.Automation.PSCredential to the group
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Christa Seeberger
+sAMAccountName    : christa.seeberger
+userPrincipalName : christa.seeberger@accruent.com
+mail              : christa.seeberger@accruent.com
+Description       : Director, Product Marketing
+title             : Director, Product Marketing
+manager           : CN=Meg Swanson,OU=Executives,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Kathleen
+Middle Initial:
+Last Name:  Frazier
+Full Name:  Kathleen Frazier
+Username:  Kathleen.Frazier
+UserID:  kathleen.frazier
+Email Address:  kathleen.frazier@accruent.com
+Office Location:  Austin
+Job Title:  Consultant I
+Department:  Professional Services Retail - Legacy
+Manager:  smaguire
+Product:  LX
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Get-MsolUser : User Not Found.  User: kathleen.frazier@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a 
+System.Management.Automation.PSCredential.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:14
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : 
+Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.GetUser
+Get-MsolUser : User Not Found.  User: kathleen.frazier@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a
+System.Management.Automation.PSCredential.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:4 char:14
++     $msoluser = Get-MsolUser -UserPrincipalName $email
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Admini
+   stration.Automation.GetUser
+
+**********************
+Command start time: 20180322175729
+**********************
+PS>TerminatingError(Add-MsolGroupMember): "Cannot bind argument to parameter 'GroupObjectId' because it is null."
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automation.AddGroupMember
+Add-MsolGroupMember : Cannot bind argument to parameter 'GroupObjectId' because it is null.
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:5 char:37
++     Add-MsolGroupMember -GroupObjectId $groupname -GroupMemberType Us ...
++                                        ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Add-MsolGroupMember], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.Online.Administration.Automatio
+   n.AddGroupMember
+
+Added kathleen.frazier@accruent.com cbcbd9da-65aa-4efc-a331-19410235c35a System.Management.Automation.PSCredential to the group
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Kathleen Frazier
+sAMAccountName    : kathleen.frazier
+userPrincipalName : kathleen.frazier@accruent.com
+mail              : kathleen.frazier@accruent.com
+Description       : Consultant I
+title             : Consultant I
+manager           : CN=Sean Maguire,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Syncing Changes

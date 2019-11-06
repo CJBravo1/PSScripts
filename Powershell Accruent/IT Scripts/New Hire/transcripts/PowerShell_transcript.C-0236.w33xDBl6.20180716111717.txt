@@ -1,0 +1,964 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180716111717
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 26244
+PSVersion: 5.1.16299.547
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.547
+BuildVersion: 10.0.16299.547
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.w33xDBl6.20180716111717.txt
+WARNING: The names of some imported commands from the module 'tmp_233g5lvy.dpr' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_233g5lvy.dpr                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Michael
+Middle Initial:
+Last Name:  DeMarco
+Full Name:  Michael DeMarco
+Username:  Michael.DeMarco
+UserID:  michael.demarco
+Email Address:  michael.demarco@accruent.com
+Office Location:  MSP
+Job Title:  Project Manager
+Department:  Professional Services Retail - Verisae
+Manager:  bpaulson
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Michael DeMarco
+sAMAccountName    : michael.demarco
+userPrincipalName : michael.demarco@accruent.com
+mail              : michael.demarco@accruent.com
+Description       : Project Manager
+title             : Project Manager
+manager           : CN=Bruce Paulson,OU=Professional Services,OU=2nd.
+                    Avenue,OU=MSP,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Kyle
+Middle Initial:
+Last Name:  Thomas
+Full Name:  Kyle Thomas
+Username:  Kyle.Thomas
+UserID:  kyle.thomas
+Email Address:  kyle.thomas@accruent.com
+Office Location:  Austin
+Job Title:  Associate Systems Engineer
+Department:  IT-US
+Manager:  jbatson
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Kyle Thomas
+sAMAccountName    : kyle.thomas
+userPrincipalName : kyle.thomas@accruent.com
+mail              : kyle.thomas@accruent.com
+Description       : Associate Systems Engineer
+title             : Associate Systems Engineer
+manager           : CN=Josh Batson,OU=IT,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Reham
+Middle Initial:
+Last Name:  Akel
+Full Name:  Reham Akel
+Username:  Reham.Akel
+UserID:  reham.akel
+Email Address:  reham.akel@accruent.com
+Office Location:  NOLA
+Job Title:  Manager, Cloud Operations
+Department:  Hosting Telecom
+Manager:  brooks.borden
+Product:  Siterra
+
+Creating AD User Account
+**********************
+Command start time: 20180716112015
+**********************
+PS>TerminatingError(New-ADUser): "The specified account already exists"
+New-ADUser : The specified account already exists
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:89 char:2
++     New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=acc_D ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (CN=Reham Akel,O...accruent,DC=com:String) [New-ADUser], 
+ADIdentityAlreadyExistsException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:1316,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+New-ADUser : The specified account already exists
+At C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1:89 char:2
++     New-ADUser -Name $FullName -DisplayName $FullName -Path "OU=acc_D ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (CN=Reham Akel,O...accruent,DC=com:String) [New-ADUser], ADIdentityAlrea
+   dyExistsException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:1316,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Reham Akel
+sAMAccountName    : reham.akel
+userPrincipalName : reham.akel@accruent.com
+mail              : reham.akel@accruent.com
+Description       : Manager, Cloud Operations
+title             : Manager, Cloud Operations
+manager           : CN=Brooks Borden,OU=Hosting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Brandon
+Middle Initial:
+Last Name:  Lechner
+Full Name:  Brandon Lechner
+Username:  Brandon.Lechner
+UserID:  brandon.lechner
+Email Address:  brandon.lechner@accruent.com
+Office Location:  Austin
+Job Title:  Business Systems Analyst
+Department:  Business Systems
+Manager:  toni.huang
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Brandon Lechner
+sAMAccountName    : brandon.lechner
+userPrincipalName : brandon.lechner@accruent.com
+mail              : brandon.lechner@accruent.com
+Description       : Business Systems Analyst
+title             : Business Systems Analyst
+manager           : CN=Toni Huang,OU=Business Systems,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+First Name:  Jordan
+Middle Initial:
+Last Name:  Taylor
+Full Name:  Jordan Taylor
+Username:  Jordan.Taylor
+UserID:  jordan.taylor
+Email Address:  jordan.taylor@accruent.com
+Office Location:  Austin
+Job Title:  IT Intern
+Department:  IT-US
+Manager:  jbatson
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Jordan Taylor
+sAMAccountName    : jordan.taylor
+userPrincipalName : jordan.taylor@accruent.com
+mail              : jordan.taylor@accruent.com
+Description       : IT Intern
+title             : IT Intern
+manager           : CN=Josh Batson,OU=IT,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes
+Syncing all NC's held on AUSITDC02.
+Syncing partition: DC=ForestDnsZones,DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Conf
+iguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: SyncAll Finished.
+
+SyncAll reported the following errors:
+Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Configuration,DC=accru
+ent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+
+Syncing partition: DC=DomainDnsZones,DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Conf
+iguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: SyncAll Finished.
+
+SyncAll reported the following errors:
+Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Configuration,DC=accru
+ent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+
+Syncing partition: CN=Schema,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Conf
+iguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: Error issuing replication: 8452 (0x2104):
+    The naming context is in the process of being removed or is not replicated from the specified server.
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: SyncAll Finished.
+
+SyncAll reported the following errors:
+Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Configuration,DC=accru
+ent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error issuing replication: 8452 (0x2104):
+    The naming context is in the process of being removed or is not replicated from the specified server.
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+Syncing partition: CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Conf
+iguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: Error issuing replication: 8452 (0x2104):
+    The naming context is in the process of being removed or is not replicated from the specified server.
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: SyncAll Finished.
+
+SyncAll reported the following errors:
+Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Configuration,DC=accru
+ent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error issuing replication: 8452 (0x2104):
+    The naming context is in the process of being removed or is not replicated from the specified server.
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+Syncing partition: DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Conf
+iguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: Error issuing replication: 8452 (0x2104):
+    The naming context is in the process of being removed or is not replicated from the specified server.
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: SyncAll Finished.
+
+SyncAll reported the following errors:
+Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Configuration,DC=accru
+ent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error issuing replication: 8452 (0x2104):
+    The naming context is in the process of being removed or is not replicated from the specified server.
+    From: CN=NTDS Settings,CN=PLNITDC03,CN=Servers,CN=PLN-Plano,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+Syncing partition: DC=famis,DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configu
+ration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Con
+figuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Conf
+iguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication is in progress:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: The following replication completed successfully:
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+CALLBACK MESSAGE: SyncAll Finished.
+
+SyncAll reported the following errors:
+Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=BOS-Charlestown,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=DFW-Rackspace,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=MSP-Minneapolis,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=LON-Equinix-HEX,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=LON-Equinix-PGT,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=YYR-Vancouver,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=YYZ-Vaughan,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC01,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=PHXITACCDC02,CN=Servers,CN=PHX-Phoenix,CN=Sites,CN=Configuration,DC=accruent
+,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYZPRSHAZZVDC03,CN=Servers,CN=YYZ-Brampton,CN=Sites,CN=Configuration,DC=accr
+uent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=YYCPRSHAZZVDC03,CN=Servers,CN=YYC-Calgary,CN=Sites,CN=Configuration,DC=accru
+ent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=TLVPRACCZZVDC01,CN=Servers,CN=TLV-Israel,CN=Sites,CN=Configuration,DC=accrue
+nt,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+Error contacting server CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=AUS-DataFoundry,CN=Sites,CN=Configuration,DC=acc
+ruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+[BOSCORPAADC.accruent.com] Connecting to remote server BOSCORPAADC.accruent.com failed with the following error message 
+: WinRM cannot complete the operation. Verify that the specified computer name is valid, that the computer is 
+accessible over the network, and that a firewall exception for the WinRM service is enabled and allows access from this 
+computer. By default, the WinRM firewall exception for public profiles limits access to remote computers within the 
+same local subnet. For more information, see the about_Remote_Troubleshooting Help topic.
+    + CategoryInfo          : OpenError: (BOSCORPAADC.accruent.com:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : WinRMOperationTimeout,PSSessionStateBroken
+[BOSCORPAADC.accruent.com] Connecting to remote server BOSCORPAADC.accruent.com failed with the following error
+message : WinRM cannot complete the operation. Verify that the specified computer name is valid, that the computer is
+accessible over the network, and that a firewall exception for the WinRM service is enabled and allows access from
+this computer. By default, the WinRM firewall exception for public profiles limits access to remote computers within
+the same local subnet. For more information, see the about_Remote_Troubleshooting Help topic.
+    + CategoryInfo          : OpenError: (BOSCORPAADC.accruent.com:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : WinRMOperationTimeout,PSSessionStateBroken
+**********************
+Windows PowerShell transcript end
+End time: 20180716114621
+**********************

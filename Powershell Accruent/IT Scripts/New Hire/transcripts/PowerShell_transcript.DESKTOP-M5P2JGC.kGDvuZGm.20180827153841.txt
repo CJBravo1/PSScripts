@@ -1,0 +1,56 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180827153841
+Username: ACCRUENT\da_dat.vu
+RunAs User: ACCRUENT\da_dat.vu
+Configuration Name: 
+Machine: DESKTOP-M5P2JGC (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\dat.vu.ACCRUENT\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 3620
+PSVersion: 5.1.16299.492
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.492
+BuildVersion: 10.0.16299.492
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\dat.vu.ACCRUENT\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.DESKTOP-M5P2JGC.kGDvuZGm.20180827153841.txt
+WARNING: The names of some imported commands from the module 'tmp_tqfq01wb.szf' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_tqfq01wb.szf                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Mark
+Middle Initial:
+Last Name:  Boylan
+Full Name:  Mark Boylan
+Username:  Mark.Boylan
+UserID:  mark.boylan
+Email Address:  mark.boylan@accruent.com
+Office Location:  Austin
+Job Title:  Business Development Representative
+Department:  Business Development CRE
+Manager:  tnechkash
+Product:  EMS
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+
+Name              : Mark Boylan
+sAMAccountName    : mark.boylan
+userPrincipalName : mark.boylan@accruent.com
+mail              : mark.boylan@accruent.com
+Description       : Business Development Representative
+title             : Business Development Representative
+manager           : CN=Tim Nechkash,OU=Business Development,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes

@@ -1,0 +1,56 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180411124455
+Username: ACCRUENT\cjorenby
+RunAs User: ACCRUENT\cjorenby
+Configuration Name: 
+Machine: C-0633 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\cjorenby.ACCRUENT\OneDrive - Accruent, LLC\Scripts\Powershell\IT Scripts\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 6360
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\cjorenby.ACCRUENT\OneDrive - Accruent, LLC\Scripts\Powershell\IT Scripts\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0633.72rETESc.20180411124455.txt
+WARNING: The names of some imported commands from the module 'tmp_mvvbscpg.fud' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_mvvbscpg.fud                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Vi
+Middle Initial:
+Last Name:  Le
+Full Name:  Vi Le
+Username:  Vi.Le
+UserID:  vi.le
+Email Address:  vi.le@accruent.com
+Office Location:  Minneapolis
+Job Title:  Senior Software Engineer
+Department:  Engineering Retail
+Manager:  dsweeney
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+
+Name              : Vi Le
+sAMAccountName    : vi.le
+userPrincipalName : vi.le@accruent.com
+mail              : vi.le@accruent.com
+Description       : Senior Software Engineer
+title             : Senior Software Engineer
+manager           : CN=Dan Sweeney,OU=QA,OU=2nd. Avenue,OU=MSP,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes

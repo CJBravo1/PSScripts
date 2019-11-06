@@ -1,0 +1,106 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180201113050
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1'
+Process ID: 4920
+PSVersion: 5.1.16299.98
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.98
+BuildVersion: 10.0.16299.98
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Dropbox (Accruent)\1. IT\New Hires\Transcripts\PowerShell_transcript.C-0236.yI8hFuOf.20180201113050.txt
+WARNING: The names of some imported commands from the module 'tmp_5yzq5kcx.0px' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_5yzq5kcx.0px                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Erin
+Middle Initial:
+Last Name:  Johnson
+Full Name:  Erin Johnson
+Username:  Erin.Johnson
+UserID:  erin.johnson
+Email Address:  erin.johnson@accruent.com
+Office Location:  Domain
+Job Title:  Associate Recruiter
+Department:  Recruiting US
+Manager:  aosuna
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Erin Johnson
+sAMAccountName    : erin.johnson
+userPrincipalName : erin.johnson@accruent.com
+mail              : erin.johnson@accruent.com
+Description       : Associate Recruiter
+title             : Associate Recruiter
+manager           : CN=Amanda Osuna,OU=Recruiting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Ralph
+Middle Initial:
+Last Name:  Franco
+Full Name:  Ralph Franco
+Username:  Ralph.Franco
+UserID:  ralph.franco
+Email Address:  ralph.franco@accruent.com
+Office Location:  Domain
+Job Title:  Regional Vice President, Sales
+Department:  Sales IoT
+Manager:  bglass
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Ralph Franco
+sAMAccountName    : ralph.franco
+userPrincipalName : ralph.franco@accruent.com
+mail              : ralph.franco@accruent.com
+Description       : Regional Vice President, Sales
+title             : Regional Vice President, Sales
+manager           : CN=Bill Glass,OU=Executives,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+First Name:  Diem
+Middle Initial:
+Last Name:  McLaughlin
+Full Name:  Diem McLaughlin
+Username:  Diem.McLaughlin
+UserID:  diem.mclaughlin
+Email Address:  diem.mclaughlin@accruent.com
+Office Location:  Domain
+Job Title:  Support Associate
+Department:  Support Retail - Verisae
+Manager:  kentrekin
+Product:  Verisae
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+
+Name              : Diem McLaughlin
+sAMAccountName    : diem.mclaughlin
+userPrincipalName : diem.mclaughlin@accruent.com
+mail              : diem.mclaughlin@accruent.com
+Description       : Support Associate
+title             : Support Associate
+manager           : CN=Kenneth Entrekin,OU=Support,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Syncing Changes

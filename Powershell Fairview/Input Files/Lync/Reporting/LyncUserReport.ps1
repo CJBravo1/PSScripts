@@ -1,0 +1,1 @@
+get-csuser | select identity, samaccountname,SIPaddress,registrarpool,conferencingpolicy,EnterpriseVoiceEnabled,ExternalAccessPolicy, LineURI | export-csv c:\export\LyncUserReport.csv -noType 

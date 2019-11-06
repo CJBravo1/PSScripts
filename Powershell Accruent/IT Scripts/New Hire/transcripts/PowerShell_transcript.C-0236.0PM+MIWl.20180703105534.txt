@@ -1,0 +1,57 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180703105534
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 17868
+PSVersion: 5.1.16299.492
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.492
+BuildVersion: 10.0.16299.492
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.0PM+MIWl.20180703105534.txt
+WARNING: The names of some imported commands from the module 'tmp_0hw3gewj.r3w' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_0hw3gewj.r3w                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  Sam
+Middle Initial:
+Last Name:  Gomez
+Full Name:  Sam Gomez
+Username:  Sam.Gomez
+UserID:  sam.gomez
+Email Address:  sam.gomez@accruent.com
+Office Location:  Austin
+Job Title:  IT Intern
+Department:  IT-US
+Manager:  jbatson
+Product:  Overhead
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+Adding User to Title based AD Groups
+
+Name              : Sam Gomez
+sAMAccountName    : sam.gomez
+userPrincipalName : sam.gomez@accruent.com
+mail              : sam.gomez@accruent.com
+Description       : IT Intern
+title             : IT Intern
+manager           : CN=Josh Batson,OU=IT,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes

@@ -1,0 +1,1777 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170803115034
+Username: ACCRUENT\da_jbatson
+RunAs User: ACCRUENT\da_jbatson
+Machine: ITWINGDING (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 2964
+PSVersion: 5.1.14393.1480
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.1480
+BuildVersion: 10.0.14393.1480
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+New-PSSession : [outlook.office365.com] Connecting to remote server outlook.office365.com failed with the following 
+error message : [ClientAccessServer=MWHPR01CA0040,BackEndServer=dm5pr12mb1932.namprd12.prod.outlook.com,RequestId=cf898e
+63-3b20-4dc9-ab30-8b1f3c52c12c,TimeStamp=8/3/2017 4:50:48 PM] Access Denied For more information, see the 
+about_Remote_Troubleshooting Help topic.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:17 char:13
++ ...  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -Conn ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.Manageme....RemoteRunspace:RemoteRunspace) [New-PSSession], 
+PSRemotingTransportException
+    + FullyQualifiedErrorId : -2144108477,PSSessionOpenFailed
+New-PSSession : [outlook.office365.com] Connecting to remote server outlook.office365.com failed with the following error message :
+[ClientAccessServer=MWHPR01CA0040,BackEndServer=dm5pr12mb1932.namprd12.prod.outlook.com,RequestId=cf898e63-3b20-4dc9-ab30-8b1f3c52c12c,TimeStamp=8/3/2017 4:50:48 PM] Access Denied For more information, see the
+about_Remote_Troubleshooting Help topic.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:17 char:13
++ ...  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -Conn ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.Manageme....RemoteRunspace:RemoteRunspace) [New-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : -2144108477,PSSessionOpenFailed
+WARNING: The names of some imported commands from the module 'tmp_v5wnrznh.5dq' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_v5wnrznh.5dq                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember, Add-MailboxFolderPermission, Add-MailboxLocation...}
+First Name:  Michael
+Middle Initial:
+Last Name:  Cornes
+Full Name:  Michael Cornes
+Username:  Michael.Cornes
+UserID:  michael.cornes
+Email Address:  michael.cornes@accruent.com
+Office Location:  W@Home
+Job Title:  Business intelligence Consultant
+Department:  Professional Services Retail - Verisae�
+Manager:  psmyth
+Product:  Verisae
+
+
+Name              : Michael Cornes
+sAMAccountName    : michael.cornes
+userPrincipalName : michael.cornes@accruent.com
+mail              : michael.cornes@accruent.com
+Description       : Business intelligence Consultant
+title             : Business intelligence Consultant
+manager           : CN=Phillip Smyth,OU=Professional Services,OU=Davidson House,OU=LCY,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Nemat
+Middle Initial:
+Last Name:  Nazari
+Full Name:  Nemat Nazari
+Username:  Nemat.Nazari
+UserID:  nemat.nazari
+Email Address:  nemat.nazari@accruent.com
+Office Location:  Minneapolis�
+Job Title:  Quality Assurance Engineer
+Department:  Engineering Retail - Legacy�
+Manager:  dsweeney
+Product:  Verisae
+
+
+Name              : Nemat Nazari
+sAMAccountName    : nemat.nazari
+userPrincipalName : nemat.nazari@accruent.com
+mail              : nemat.nazari@accruent.com
+Description       : Quality Assurance Engineer
+title             : Quality Assurance Engineer
+manager           : CN=Dan Sweeney,OU=QA,OU=2nd. Avenue,OU=MSP,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Nathan
+Middle Initial:
+Last Name:  Green
+Full Name:  Nathan Green
+Username:  Nathan.Green
+UserID:  nathan.green
+Email Address:  nathan.green@accruent.com
+Office Location:  Minneapolis�
+Job Title:  Business Intelligence Engineer
+Department:  Engineering Retail - Legacy�
+Manager:  sradhakrishnan
+Product:  Verisae
+
+
+Name              : Nathan Green
+sAMAccountName    : nathan.green
+userPrincipalName : nathan.green@accruent.com
+mail              : nathan.green@accruent.com
+Description       : Business Intelligence Engineer
+title             : Business Intelligence Engineer
+manager           : CN=Sridhar Radhakrishnan,OU=Engineering,OU=2nd. Avenue,OU=MSP,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Neil
+Middle Initial:
+Last Name:  Howell
+Full Name:  Neil Howell
+Username:  Neil.Howell
+UserID:  neil.howell
+Email Address:  neil.howell@accruent.com
+Office Location:  Domain
+Job Title:  Software Associate in Test
+Department:  QA Public Sector
+Manager:  clange
+Product:  VFA
+
+
+Name              : Neil Howell
+sAMAccountName    : neil.howell
+userPrincipalName : neil.howell@accruent.com
+mail              : neil.howell@accruent.com
+Description       : Software Associate in Test
+title             : Software Associate in Test
+manager           : CN=Carmina Lange,OU=Engineering,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Kyle
+Middle Initial:
+Last Name:  Martin
+Full Name:  Kyle Martin
+Username:  Kyle.Martin
+UserID:  kyle.martin
+Email Address:  kyle.martin@accruent.com
+Office Location:  Domain
+Job Title:  Renewals Representative
+Department:  Renewals
+Manager:  dshaw
+Product:  FRSoft
+
+
+Name              : Kyle Martin
+sAMAccountName    : kyle.martin
+userPrincipalName : kyle.martin@accruent.com
+mail              : kyle.martin@accruent.com
+Description       : Renewals Representative
+title             : Renewals Representative
+manager           : CN=Derrick Shaw,OU=Renewals,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Devesh
+Middle Initial:
+Last Name:  Binjola
+Full Name:  Devesh Binjola
+Username:  Devesh.Binjola
+UserID:  devesh.binjola
+Email Address:  devesh.binjola@accruent.com
+Office Location:  Domain
+Job Title:  Software Associate in Test
+Department:  QA Education
+Manager:  dturner
+Product:  FAMIS
+
+
+Name              : Devesh Binjola
+sAMAccountName    : devesh.binjola
+userPrincipalName : devesh.binjola@accruent.com
+mail              : devesh.binjola@accruent.com
+Description       : Software Associate in Test
+title             : Software Associate in Test
+manager           : CN=Daniel Turner,OU=Engineering,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Jovon
+Middle Initial:
+Last Name:  Hodge
+Full Name:  Jovon Hodge
+Username:  Jovon.Hodge
+UserID:  jovon.hodge
+Email Address:  jovon.hodge@accruent.com
+Office Location:  Domain
+Job Title:  Systems Engineer II
+Department:  Hosting Overhead
+Manager:  ksabin
+Product:  Accruent
+
+
+Name              : Jovon Hodge
+sAMAccountName    : jovon.hodge
+userPrincipalName : jovon.hodge@accruent.com
+mail              : jovon.hodge@accruent.com
+Description       : Systems Engineer II
+title             : Systems Engineer II
+manager           : CN=Kari Sabin,OU=Hosting,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Nathan
+Middle Initial:
+Last Name:  Papapietro
+Full Name:  Nathan Papapietro
+Username:  Nathan.Papapietro
+UserID:  nathan.papapietro
+Email Address:  nathan.papapietro@accruent.com
+Office Location:  Domain
+Job Title:  Engineering Education
+Department:  Engineering Education
+Manager:  dturner
+Product:  FAMIS
+
+
+Name              : Nathan Papapietro
+sAMAccountName    : nathan.papapietro
+userPrincipalName : nathan.papapietro@accruent.com
+mail              : nathan.papapietro@accruent.com
+Description       : Engineering Education
+title             : Engineering Education
+manager           : CN=Daniel Turner,OU=Engineering,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Beverly
+Middle Initial:
+Last Name:  Ronses
+Full Name:  Beverly Ronses
+Username:  Beverly.Ronses
+UserID:  beverly.ronses
+Email Address:  beverly.ronses@accruent.com
+Office Location:  Domain
+Job Title:  Business Development Representative
+Department:  Business Development Telecom
+Manager:  ediamond
+Product:  Siterra
+
+
+Name              : Beverly Ronses
+sAMAccountName    : beverly.ronses
+userPrincipalName : beverly.ronses@accruent.com
+mail              : beverly.ronses@accruent.com
+Description       : Business Development Representative
+title             : Business Development Representative
+manager           : CN=Ethan Daimond,OU=Business Development,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Samuel
+Middle Initial:
+Last Name:  McQuilkin
+Full Name:  Samuel McQuilkin
+Username:  Samuel.McQuilkin
+UserID:  samuel.mcquilkin
+Email Address:  samuel.mcquilkin@accruent.com
+Office Location:  Domain
+Job Title:  Data Quality Analyst
+Department:  Sales Operations
+Manager:  peter.c.wolfman
+Product:  Accruent
+
+
+Name              : Samuel McQuilkin
+sAMAccountName    : samuel.mcquilkin
+userPrincipalName : samuel.mcquilkin@accruent.com
+mail              : samuel.mcquilkin@accruent.com
+Description       : Data Quality Analyst
+title             : Data Quality Analyst
+manager           : CN=Peter Wolfman,OU=Sales,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Bruce
+Middle Initial:
+Last Name:  McLemore
+Full Name:  Bruce McLemore
+Username:  Bruce.McLemore
+UserID:  bruce.mclemore
+Email Address:  bruce.mclemore@accruent.com
+Office Location:  Domain
+Job Title:  Support Associate
+Department:  Support Healthcare
+Manager:  shunt
+Product:  Mainspring
+
+
+Name              : Bruce McLemore
+sAMAccountName    : bruce.mclemore
+userPrincipalName : bruce.mclemore@accruent.com
+mail              : bruce.mclemore@accruent.com
+Description       : Support Associate
+title             : Support Associate
+manager           : CN=Sam Hunt,OU=Support,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Melissa
+Middle Initial:
+Last Name:  Wile
+Full Name:  Melissa Wile
+Username:  Melissa.Wile
+UserID:  melissa.wile
+Email Address:  melissa.wile@accruent.com
+Office Location:  Domain
+Job Title:  Account Executive II
+Department:  Sales Telecom
+Manager:  jday
+Product:  Siterra
+
+
+Name              : Melissa Wile
+sAMAccountName    : melissa.wile
+userPrincipalName : melissa.wile@accruent.com
+mail              : melissa.wile@accruent.com
+Description       : Account Executive II
+title             : Account Executive II
+manager           : CN=Jason Day,OU=Executives,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+First Name:  Skyler
+Middle Initial:
+Last Name:  Smith
+Full Name:  Skyler Smith
+Username:  Skyler.Smith
+UserID:  skyler.smith
+Email Address:  skyler.smith@accruent.com
+Office Location:  Domain
+Job Title:  Support Associate
+Department:  Support Healthcare
+Manager:  nspies
+Product:  FRSoft
+
+
+Name              : Skyler Smith
+sAMAccountName    : skyler.smith
+userPrincipalName : skyler.smith@accruent.com
+mail              : skyler.smith@accruent.com
+Description       : Support Associate
+title             : Support Associate
+manager           : CN=Nick Spies,OU=Support,OU=The Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Syncing all NC's held on AUSPRD-ITDC02.
+
+Syncing partition: DC=ForestDnsZones,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: SyncAll Finished.
+
+
+
+SyncAll reported the following errors:
+
+Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+
+
+Syncing partition: DC=DomainDnsZones,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: SyncAll Finished.
+
+
+
+SyncAll reported the following errors:
+
+Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+
+
+Syncing partition: CN=Schema,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error issuing replication: 8453 (0x2105):
+
+    Replication access was denied.
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: SyncAll Finished.
+
+
+
+SyncAll reported the following errors:
+
+Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error issuing replication: 8453 (0x2105):
+
+    Replication access was denied.
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+
+
+Syncing partition: CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error issuing replication: 8453 (0x2105):
+
+    Replication access was denied.
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: SyncAll Finished.
+
+
+
+SyncAll reported the following errors:
+
+Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error issuing replication: 8453 (0x2105):
+
+    Replication access was denied.
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+
+
+Syncing partition: DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSENGFAMIS03,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: SyncAll Finished.
+
+
+
+SyncAll reported the following errors:
+
+Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+
+
+Syncing partition: DC=famis,DC=accruent,DC=com
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC02,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=PHX-ITDC01,CN=Servers,CN=Tempe,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN41,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSITDC02,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=AUSITDC01,CN=Servers,CN=AUS-TheDomain,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VERINFDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN42,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN71,CN=Servers,CN=Pittsburgh,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=AUSPRD-ITDC01,CN=Servers,CN=DataFoundry,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VANACCITDC01,CN=Servers,CN=Vancouver,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication is in progress:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN83,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC01,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: The following replication completed successfully:
+
+    From: CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+    To  : CN=NTDS Settings,CN=VAUACCITDC02,CN=Servers,CN=Vaughan,CN=Sites,CN=Configuration,DC=accruent,DC=com
+
+CALLBACK MESSAGE: SyncAll Finished.
+
+
+
+SyncAll reported the following errors:
+
+Error contacting server CN=NTDS Settings,CN=DOMAIN51,CN=Servers,CN=Calgary,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=VERINFDC02,CN=Servers,CN=Minneapolis,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONPRD-ITDC01,CN=Servers,CN=Equinix-HEX,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+Error contacting server CN=NTDS Settings,CN=LONDR-ITDC01,CN=Servers,CN=Equinix-PGT,CN=Sites,CN=Configuration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+
+    The RPC server is unavailable.
+
+
+
+The term 'C:\Program Files\Microsoft Azure AD Sync\Bin\DirectorySyncClientCmd.exe' is not recognized as the name of a 
+cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify 
+that the path is correct and try again.
+    + CategoryInfo          : ObjectNotFound: (C:\Program File...ncClientCmd.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+    + PSComputerName        : BOSCORPAADC.accruent.com
+The term 'C:\Program Files\Microsoft Azure AD Sync\Bin\DirectorySyncClientCmd.exe' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+    + CategoryInfo          : ObjectNotFound: (C:\Program File...ncClientCmd.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+    + PSComputerName        : BOSCORPAADC.accruent.com
+
+**********************
+Command start time: 20170803120343
+**********************
+PS C:\Users\da_jbatson> TerminatingError(Send-MailMessage): "Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+Send-MailMessage : Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that 
+is not null or empty, and then try the command again.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:315 char:22
++ Send-MailMessage -To $Sender -From $Sender -Subject "INFO | New Hire  ...
++                      ~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Send-MailMessage], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.SendMailMessage
+Send-MailMessage : Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:315 char:22
++ Send-MailMessage -To $Sender -From $Sender -Subject "INFO | New Hire  ...
++                      ~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Send-MailMessage], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.SendMailMessage
+
+>> TerminatingError(Remove-PSSession): "Cannot validate argument on parameter 'Id'. The argument is null. Provide a valid value for the argument, and then try running the command again."
+Remove-PSSession : Cannot validate argument on parameter 'Id'. The argument is null. Provide a valid value for the 
+argument, and then try running the command again.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:317 char:18
++ Remove-PSSession $ExchangeSession
++                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Remove-PSSession], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.RemovePSSessionCommand
+Remove-PSSession : Cannot validate argument on parameter 'Id'. The argument is null. Provide a valid value for the argument, and then try running the command again.
+At C:\Dropbox (Accruent)\1. IT\New Hires\user-account-creation2.ps1:317 char:18
++ Remove-PSSession $ExchangeSession
++                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Remove-PSSession], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.RemovePSSessionCommand
+
+**********************
+Windows PowerShell transcript end
+End time: 20170803120343
+**********************

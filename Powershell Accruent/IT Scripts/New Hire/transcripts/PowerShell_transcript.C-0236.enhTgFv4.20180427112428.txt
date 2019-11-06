@@ -1,0 +1,68 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180427112428
+Username: ACCRUENT\regan.a.vecera
+RunAs User: ACCRUENT\regan.a.vecera
+Configuration Name: 
+Machine: C-0236 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\user-account-creation2.ps1'
+Process ID: 20888
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\regan.a.vecera\Documents\it_scripts\New Hire\Transcripts\PowerShell_transcript.C-0236.enhTgFv4.20180427112428.txt
+WARNING: The names of some imported commands from the module 'tmp_2ckqlcmi.zxm' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_2ckqlcmi.zxm                    {Add-AvailabilityAddressSpace, Add-DistributionGroupMember...
+First Name:  David
+Middle Initial:
+Last Name:  Cox
+Full Name:  David Cox
+Username:  David.Cox
+UserID:  david.cox
+Email Address:  david.cox@accruent.com
+Office Location:  Austin
+Job Title:  Associate PS Engineer
+Department:  Professional Services
+Manager:  cbrowning
+Product:  Siterra
+
+Creating AD User Account
+Adding Proxy Addresses
+Adding User to Default AD Groups
+Setting Office Locations
+Adding User to Location based AD Groups
+Adding User to Department based AD Groups
+Adding User to Product based AD Groups
+
+Name              : David Cox
+sAMAccountName    : david.cox
+userPrincipalName : david.cox@accruent.com
+mail              : david.cox@accruent.com
+Description       : Associate PS Engineer
+title             : Associate PS Engineer
+manager           : CN=Canyon Browning,OU=Professional Services,OU=The
+                    Domain,OU=AUS,OU=acc_Domain_Users,DC=accruent,DC=com
+
+Writing Email
+Submitting Kace Ticket
+Syncing Changes
+Syncing all NC's held on AUSITDC02.
+Syncing partition: DC=ForestDnsZones,DC=accruent,DC=com
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN43,CN=Servers,CN=DataFoundry-Atlas,CN=Sites,CN=Confi
+guration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=DOMAIN81,CN=Servers,CN=Charlestown,CN=Sites,CN=Configurati
+on,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
+CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=628555-DOMAIN63,CN=Servers,CN=Rackspace-DFW,CN=Sites,CN=Co
+nfiguration,DC=accruent,DC=com (network error): 1722 (0x6ba):
+    The RPC server is unavailable.
