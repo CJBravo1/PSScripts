@@ -9,10 +9,11 @@ Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Office 365 resources"
 
 #Get Login Credentials
-$UserCredential = Get-Credential -Message "Enter your Office 365 Credentials"
+#$UserCredential = Get-Credential -Message "Enter your Office 365 Credentials"
 
 #Make new session
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+#$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+Connect-ExchangeOnlineShell
 
 #Connect to PsSession
 Import-PSSession $Session -WarningAction SilentlyContinue
