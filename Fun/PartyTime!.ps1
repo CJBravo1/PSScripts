@@ -2,10 +2,6 @@
 $x = 0
 Write-Host "What Time is it?"
 Start-Sleep 5
-#EXCELLENT
-#Another comment
-#adding a comment here - RV
-#Dan's addition
 while ($x -eq 0)
 	{
 	$random = new-object random
