@@ -1,3 +1,9 @@
+#Confirm There is a BTSession
+$BTSession = Get-BTSession
+if ($BTSession -ne $Null){
+    Write-Host "Binary Tree Client:" $BTSession.ClientName -ForegroundColor Yellow
+    Write-Host "User:" $BTSession.ApiKeyName -ForegroundColor Yellow
+
 #Gather Wave Session and Users
 $salesWave = Read-Host -Prompt "Enter Migration Wave Name" 
 $salesWaveUsers = Get-BTUser -Wave $salesWave
@@ -46,5 +52,10 @@ foreach ($user in $salesWaveUsers) {
         $LogTable += $TableLine
         $TableLine = New-Object psobject
     }
-$LogTable | Export-Csv -NoTypeInformation .\UserErrors.csv
+$LogTable | Export-Csv -NoTypeInformation .\"$SalesWave.csv"
+Write-Host "Logs Exported as $SalesWave.csv" -ForegroundColor Green
+}
+}
+else {
+    Write-Host "There is no Binary Tree Session, or the module is not installed."
 }
