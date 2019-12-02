@@ -53,7 +53,7 @@ foreach ($user in $salesWaveUsers) {
         $TableLine = New-Object psobject
     }
 $LogTable | Export-Csv -NoTypeInformation .\"$SalesWave.csv"
-Write-Host "Logs Exported as $SalesWave.csv" -ForegroundColor Green
+#Write-Host "Logs Exported as $SalesWave.csv" -ForegroundColor Green
 }
 }
 else {
