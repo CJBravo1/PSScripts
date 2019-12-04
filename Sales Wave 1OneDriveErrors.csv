@@ -1,0 +1,1996 @@
+"DisplayName","User","Level","TimeStamp","Message","Exception"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075216558","Unable to sync item 'Sussex,%20Brighton,%20Royal%20Pavilion_A537F779-53E5-4C3A-BD8B-1E38C0C501662013-04-09T09-26-50.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Sussex,%2520Brighton,%2520Royal%2520Pavilion_A537F779-53E5-4C3A-BD8B-1E38C0C501662013-04-09T09-26-50.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075157983","Unable to sync item 'Spire St Anthony's quotation VI Rental 100918_4F1AEEEC-38AE-4504-B792-EDB8B9FCBC6E2018-09-10T03-51-43.docx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7BCBF4DCAB-21FD-49A9-97FD-BF83763DCB9E%7D&file=Spire%20St%20Anthony%27s%20quotation%20VI%20Rental%20100918_4F1AEEEC-38AE-4504-B792-EDB8B9FCBC6E2018-09-10T03-51-43.docx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075121029","Unable to sync item 'S&S_3122DAF4-948A-4C73-9E50-5BE5152531172018-11-03T10-09-49.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/S%26S_3122DAF4-948A-4C73-9E50-5BE5152531172018-11-03T10-09-49.jpg)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075052277","Unable to sync item 'PW's_CB6FFC74-083E-41C0-9658-649DCD7DC8292018-08-06T04-21-44.xlsx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7B4E463C46-1AAE-435E-933D-D9D9FD127E6A%7D&file=PW%27s_CB6FFC74-083E-41C0-9658-649DCD7DC8292018-08-06T04-21-44.xlsx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075051967","Unable to sync item 'PW's_CB6FFC74-083E-41C0-9658-649DCD7DC8292016-04-15T07-41-52.xlsx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7B20977B38-CDFE-47F5-9AD0-F116FD785B39%7D&file=PW%27s_CB6FFC74-083E-41C0-9658-649DCD7DC8292016-04-15T07-41-52.xlsx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075051797","Unable to sync item 'PW's 2_6046F1E8-80E4-4EE0-8884-A1E7BB90020B2018-10-27T04-49-50.xlsx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7BB81FE183-50BD-42EB-8E20-7A78F17B30F3%7D&file=PW%27s%202_6046F1E8-80E4-4EE0-8884-A1E7BB90020B2018-10-27T04-49-50.xlsx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128075050154","Unable to sync item 'pub+chalkboard+funny (1)_B77C44A5-6D87-40DD-9AE5-13662B5576AF2017-12-14T06-19-43.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/pub+chalkboard+funny%20(1)_B77C44A5-6D87-40DD-9AE5-13662B5576AF2017-12-14T06-19-43.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128074942435","Unable to sync item 'Old%20Age%202014%20banner%20v1_D50B58C3-C69F-42C2-A7A7-040CC5FD73462014-01-09T08-24-58.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Old%2520Age%25202014%2520banner%2520v1_D50B58C3-C69F-42C2-A7A7-040CC5FD73462014-01-09T08-24-58.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128074741175","Unable to sync item 'kent%20and%20canterbury%20hospital%20stock%20picture_v_Variation_1_D29DB994-294A-4825-B5A6-C0010160242E2014-01-09T07-29-44.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/kent%2520and%2520canterbury%2520hospital%2520stock%2520picture_v_Variation_1_D29DB994-294A-4825-B5A6-C0010160242E2014-01-09T07-29-44.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128074725345","Unable to sync item 'Jelani & Matata_FA74CBE8-3034-415D-8BBF-2FFA53BE43D22017-12-01T01-10-23.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Jelani%20%26%20Matata_FA74CBE8-3034-415D-8BBF-2FFA53BE43D22017-12-01T01-10-23.jpg)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128074725170","Unable to sync item 'Jelani & Matata a_D45312B0-F48C-4EAD-ADB3-CF99B057953C2017-12-01T01-36-52.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Jelani%20%26%20Matata%20a_D45312B0-F48C-4EAD-ADB3-CF99B057953C2017-12-01T01-36-52.jpg)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128074500553","Unable to sync content of item 'IMG_0634_5FACE595-B961-4F74-AFF1-823F866088792015-10-29T05-52-49.JPG' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/IMG_0634_5FACE595-B961-4F74-AFF1-823F866088792015-10-29T05-52-49.JPG)","Status Code: NotFound
+Microsoft.Graph.ServiceException: Code: itemNotFound
+Message: The resource could not be found.
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<SendRequestAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<PutAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.ChunkedUploadProvider.<GetChunkRequestResponseAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetContentAsync>d__68.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073506308","Unable to sync item 'Group%20Shot%2002_9F8AA109-03FC-4A13-9691-C4746BF0D7642017-08-18T04-38-53.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Group%2520Shot%252002_9F8AA109-03FC-4A13-9691-C4746BF0D7642017-08-18T04-38-53.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073505953","Unable to sync item 'Group%20Shot%2001_CAD008C1-6847-4322-9820-58B3DEDC22E12017-08-18T04-37-58.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Group%2520Shot%252001_CAD008C1-6847-4322-9820-58B3DEDC22E12017-08-18T04-37-58.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073455782","Unable to sync item 'Funy+pub+chalkboard_08C4C79A-2436-4F44-8D4E-33914FB1E6012017-12-14T06-19-06.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Funy+pub+chalkboard_08C4C79A-2436-4F44-8D4E-33914FB1E6012017-12-14T06-19-06.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073455512","Unable to sync item 'funny+pub+chalkboard (9)_CEDE3FC6-0F17-4C10-97DE-A43D56ACCBAE2017-12-14T06-20-06.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/funny+pub+chalkboard%20(9)_CEDE3FC6-0F17-4C10-97DE-A43D56ACCBAE2017-12-14T06-20-06.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073455226","Unable to sync item 'Funny+pub+chalkboard (8)_1CD7D8F6-1408-4AB8-971D-1F7B4E1950542017-12-14T06-20-03.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Funny+pub+chalkboard%20(8)_1CD7D8F6-1408-4AB8-971D-1F7B4E1950542017-12-14T06-20-03.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073454901","Unable to sync item 'funny+pub+chalkboard (7)_B97FA46F-CEF7-42EA-99A0-A7E3E29014182017-12-14T06-19-59.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/funny+pub+chalkboard%20(7)_B97FA46F-CEF7-42EA-99A0-A7E3E29014182017-12-14T06-19-59.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073454626","Unable to sync item 'funny+pub+chalkboard (6)_D91013F6-A2E8-4994-BB57-94EC57BCB76F2017-12-14T06-19-52.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/funny+pub+chalkboard%20(6)_D91013F6-A2E8-4994-BB57-94EC57BCB76F2017-12-14T06-19-52.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073454336","Unable to sync item 'funny+pub+chalkboard (5)_E1B25706-39B2-4623-8CAF-E185AF06B1A12017-12-14T06-19-48.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/funny+pub+chalkboard%20(5)_E1B25706-39B2-4623-8CAF-E185AF06B1A12017-12-14T06-19-48.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073454026","Unable to sync item 'funny+pub+chalkboard (4)_FF9F49F1-6E2E-4D39-A57D-B639271C121E2017-12-14T06-19-39.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/funny+pub+chalkboard%20(4)_FF9F49F1-6E2E-4D39-A57D-B639271C121E2017-12-14T06-19-39.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073453686","Unable to sync item 'Funny+pub+chalkboard (3)_2570A091-D0A4-4466-96B5-DB0A0C01AA9D2017-12-14T06-19-35.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Funny+pub+chalkboard%20(3)_2570A091-D0A4-4466-96B5-DB0A0C01AA9D2017-12-14T06-19-35.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073453381","Unable to sync item 'Funny+pub+chalkboard (10)_ADAD4EEE-46BA-4553-AD89-7C55568D21492017-12-14T06-20-10.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Funny+pub+chalkboard%20(10)_ADAD4EEE-46BA-4553-AD89-7C55568D21492017-12-14T06-20-10.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073453051","Unable to sync item 'funny+pub+chalkboard (1)_30192BE7-F3D9-4D5C-AD13-C10380CC03D72017-12-14T06-19-26.png' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/funny+pub+chalkboard%20(1)_30192BE7-F3D9-4D5C-AD13-C10380CC03D72017-12-14T06-19-26.png)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073444846","Unable to sync item 'Fargesia%20Robusta_771B2962-1FF3-49B1-A484-11D80736FA882010-08-21T07-01-00.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/Fargesia%2520Robusta_771B2962-1FF3-49B1-A484-11D80736FA882010-08-21T07-01-00.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073315710","Unable to sync item 'current%20royal%20family_04C7AA85-F666-4756-B9D8-C1E2365B26B92013-09-09T03-23-40.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/PreservationHoldLibrary/current%2520royal%2520family_04C7AA85-F666-4756-B9D8-C1E2365B26B92013-09-09T03-23-40.jpg)","Status Code: Conflict
+Microsoft.Graph.ServiceException: Code: nameAlreadyExists
+Message: The specified item name already exists.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128073300328","Unable to sync item 'Collective Consultation Q&A Tracker 08NOV19_16B6DE48-33F4-4FB4-8F05-87FDEA56BE102019-11-12T05-12-09.xlsx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7BBE7EED0E-C7C5-4F98-8C4E-922A2D5C4190%7D&file=Collective%20Consultation%20Q%26A%20Tracker%2008NOV19_16B6DE48-33F4-4FB4-8F05-87FDEA56BE102019-11-12T05-12-09.xlsx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128071942040","Unable to sync item ' workings actual sales Q1  2 volumes by KAM -corrected ALL Oct 27th_81282930-3360-440E-A268-175824A4583E2015-11-26T06-50-57.xlsx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7B95BE4003-2590-4BA0-814A-15A08A3AB104%7D&file=%20workings%20actual%20sales%20Q1%20%202%20volumes%20by%20KAM%20-corrected%20ALL%20Oct%2027th_81282930-3360-440E-A268-175824A4583E2015-11-26T06-50-57.xlsx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: invalidRequest
+Message: The provided name cannot contain leading, or trailing, spaces.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128071941894","Unable to sync item ' of Shared accounts IO EKOS Uk - check io side for EKOS only_060318_61D9AA16-8D31-4CAD-9282-FFD68BC9B6C92018-03-12T01-26-47.xlsx' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/_layouts/15/Doc.aspx?sourcedoc=%7B091ACABF-5089-4412-8B33-E6816D806393%7D&file=%20of%20Shared%20accounts%20IO%20EKOS%20Uk%20-%20check%20io%20side%20for%20EKOS%20only_060318_61D9AA16-8D31-4CAD-9282-FFD68BC9B6C92018-03-12T01-26-47.xlsx&action=default&mobileredirect=true)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: invalidRequest
+Message: The provided name cannot contain leading, or trailing, spaces.
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128071833033","Unable to sync content of item 'IMG_0512.MOV' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/IMG_0512.MOV)","Status Code: NotFound
+Microsoft.Graph.ServiceException: Code: itemNotFound
+Message: The resource could not be found.
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<SendRequestAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<PutAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.ChunkedUploadProvider.<GetChunkRequestResponseAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetContentAsync>d__68.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128070407718","Unable to sync item 'Pictures/Newton's Cradle.GIF' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Pictures/Newton%27s%20Cradle.GIF)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128070400472","Unable to sync content of item 'Pictures/millbackoutside.jpg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Pictures/millbackoutside.jpg)","Status Code: NotFound
+Microsoft.Graph.ServiceException: Code: itemNotFound
+Message: The resource could not be found.
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<SendRequestAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<PutAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.ChunkedUploadProvider.<GetChunkRequestResponseAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetContentAsync>d__68.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128004409128","Unable to sync item 'My Scans/Holiday forms A&M.pdf' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/My%20Scans/Holiday%20forms%20A%26M.pdf)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128001335966","Unable to sync content of item 'My Scans/Feed in tariff application 19 Oct 2015.pdf' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/My%20Scans/Feed%20in%20tariff%20application%2019%20Oct%202015.pdf)","Status Code: NotFound
+Microsoft.Graph.ServiceException: Code: itemNotFound
+Message: The resource could not be found.
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<SendRequestAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<PutAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.ChunkedUploadProvider.<GetChunkRequestResponseAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetContentAsync>d__68.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128001106393","Unable to sync item 'Hospital/UCH/UCLH Internet - GPs & healthcare professionals - Consultants - Consultants3.htm' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/UCH/UCLH%20Internet%20-%20GPs%20%26%20healthcare%20professionals%20-%20Consultants%20-%20Consultants3.htm)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128000944328","Unable to sync item 'Hospital/UCH/UCLH Internet - GPs & healthcare professionals - Consultants - Consultants_files' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/UCH/UCLH%20Internet%20-%20GPs%20%26%20healthcare%20professionals%20-%20Consultants%20-%20Consultants_files)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128000810954","Unable to sync item 'Hospital/St Georges/FW Radiology Contract renewal Cryosurgical Unit - St George's Hospital.msg' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/St%20Georges/FW%20Radiology%20Contract%20renewal%20Cryosurgical%20Unit%20-%20St%20George%27s%20Hospital.msg)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128000738415","Unable to sync item 'Hospital/Spire St Anthony's' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/Spire%20St%20Anthony%27s)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128000737325","Unable to sync item 'Hospital/Spire Southampton/Spire T&C signatory sheet.pdf' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/Spire%20Southampton/Spire%20T%26C%20signatory%20sheet.pdf)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128000440021","Unable to sync content of item 'Hospital/Royal Surrey/Consultant list.pdf' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/Royal%20Surrey/Consultant%20list.pdf)","Status Code: NotFound
+Microsoft.Graph.ServiceException: Code: itemNotFound
+Message: The resource could not be found.
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<SendRequestAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.UploadChunkRequest.<PutAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.ChunkedUploadProvider.<GetChunkRequestResponseAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<SetLargeContentAsync>d__70.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<SetContentAsync>d__68.MoveNext()"
+"Andy Ferrie","@{UserPrincipalName=aferrie@btgplc.com}","Error","20191128000049900","Unable to sync item 'Hospital/R.Sussex & P. Royal' (https://btggroup-my.sharepoint.com/personal/aferrie_btgplc_com/Documents/Hospital/R.Sussex%20%26%20P.%20Royal)","Status Code: BadRequest
+Microsoft.Graph.ServiceException: Code: BadRequest
+Message: Invalid filter clause
+
+Inner error
+
+   at Microsoft.Graph.HttpProvider.<SendAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendRequestAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.BaseRequest.<SendAsync>d__31`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Graph.DriveItemChildrenCollectionRequest.<GetAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<>c__DisplayClass106_0`1.<<RetryExecute>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<RetryExecute>d__106`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<AddDriveItem>d__103.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CreateItemAsync>d__86.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyItemAsync>d__78.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at OneDrive.Library.GraphDriveWorker.<CopyChildrenAsync>d__54.MoveNext()"
