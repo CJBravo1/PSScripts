@@ -16,12 +16,15 @@ foreach ($user in $BTUsers) {
 
     foreach ($log in $BTLogs) {
         
+        $logException = $log | Select-Object exception
+        $logException = $logException -split "Inner Error"
+
         $TableLine | Add-Member -NotePropertyName "DisplayName" -NotePropertyValue $DisplayName
         $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN
         $TableLine | Add-Member -NotePropertyName "Level" -NotePropertyValue $log.Level
         $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $Log.LogTimeStamp
         $TableLine | Add-Member -NotePropertyName "Message" -NotePropertyValue $log.message
-        $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $log.exception
+        $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
         
         $LogTable += $TableLine
         $TableLine = New-Object psobject
