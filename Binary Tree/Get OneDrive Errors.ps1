@@ -2,6 +2,9 @@
 $LogTable = @()
 $TableLine = New-Object psobject 
 
+$BTSession = Get-BTSession
+Write-Host "Binary Tree Client:" $BTSession.ClientName -ForegroundColor Yellow
+Write-Host "User:" $BTSession.ApiKeyName -ForegroundColor Yellow
 $MigWave = Read-Host -Prompt "Enter Migration Wave"
 
 Write-Host "Gathering Users" -ForeGroundColor Green
@@ -17,7 +20,7 @@ foreach ($user in $BTUsers) {
     foreach ($log in $BTLogs) {
         
         $logException = $log | Select-Object exception
-        $logException = $logException -split "Inner Error"
+        $logException = $logException -split "  "
 
         $TableLine | Add-Member -NotePropertyName "DisplayName" -NotePropertyValue $DisplayName
         $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN

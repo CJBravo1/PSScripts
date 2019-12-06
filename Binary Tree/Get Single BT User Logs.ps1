@@ -1,0 +1,61 @@
+#Confirm There is a BTSession
+$BTSession = Get-BTSession
+if ($BTSession -ne $Null){
+    Write-Host "Binary Tree Client:" $BTSession.ClientName -ForegroundColor Yellow
+    Write-Host "User:" $BTSession.ApiKeyName -ForegroundColor Yellow
+
+#Gather Wave Session and Users
+$UserWave = Read-Host -Prompt "Enter Source User's UserPrincipalName" 
+$UserWaveUsers = Get-BTUser -Identity $salesWave
+
+#Create Blank Table
+$LogTable = @()
+$TableLine = New-Object psobject   
+
+#Write-Host "Current Wave shows" $SalesWaveUsers.Count "Users" -ForegroundColor Green
+
+foreach ($user in $UserWaveUsers) {
+    Write-Host "Processing:" $user.UserPrincipalName -ForegroundColor Cyan
+    #Gather Logs from each user
+    $BTUser = Get-BTUser -Identity $user
+    $BTSync = Get-BTSync -User $user
+    $Logs = $BTSync | Select-Object -first 2 |Get-BTLog | Where-Object {$_.Level -eq "SyncJob" -or $_.Level -eq "Error" -or $_.Level -eq "Info"}
+    $LogWarn = $BTSync  | Get-BTLog | Where-Object {$_.Level -eq "Warn"} | Select-Object -First 1 -Unique
+    
+
+    foreach ($Log in $Logs){
+       #Gather Variables
+        $userDisplayName = $user.DisplayName
+        $userLogLevel = $Log.level
+        $userLogMessage = $log.message
+        #$SyncStatus = $BTSync | Select-Object -first 1 SyncState
+        $LogWarn = $LogWarn | Select-Object Message -Unique
+        $EXCHSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "Mail"} | Select-Object -first 1 
+        $ODBSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "OneDriveForBusiness"} | Select-Object -first 1  
+       
+        #Create Table
+        $TableLine | Add-Member -NotePropertyName "UserDisplayName" -NotePropertyValue $userDisplayName
+        $TableLine | Add-Member -NotePropertyName "SourceUPN" -NotePropertyValue $BTUser.UserPrincipalName
+        $TableLine | Add-Member -NotePropertyName "DestinationUPN" -NotePropertyValue $BTUser.NewUserPrincipalName
+        $TableLine | Add-Member -NotePropertyName "SourceEmail" -NotePropertyValue $BTUser.PrimarySmtpAddress
+        $TableLine | Add-Member -NotePropertyName "DestinationEmail" -NotePropertyValue $BTUser.NewPrimarySmtpAddress
+        $TableLine | Add-Member -NotePropertyName "LogLevel" -NotePropertyValue $userLogLevel
+        $TableLine | Add-Member -NotePropertyName "UserMigrationStatus" -NotePropertyValue $BTUser.MigrationState
+        $TableLine | Add-Member -NotePropertyName "ExchSyncState" -NotePropertyValue $EXCHSyncData.SyncState
+        $TableLine | Add-Member -NotePropertyName "ExchPercentComplete" -NotePropertyValue $EXCHSyncData.PercentComplete
+        $TableLine | Add-Member -NotePropertyName "ODBSyncState" -NotePropertyValue $ODBSyncData.SyncState
+        $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $OBDSyncData.PercentComplete
+        $TableLine | Add-Member -NotePropertyName "LogMessage" -NotePropertyValue $userLogMessage
+        $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn
+        
+        #Export Data to Table and Clear Table Line Variable
+        $LogTable += $TableLine
+        $TableLine = New-Object psobject
+    }
+$LogTable | Export-Csv -NoTypeInformation .\"$UserWave.csv"
+#Write-Host "Logs Exported as $SalesWave.csv" -ForegroundColor Green
+}
+}
+else {
+    Write-Host "There is no Binary Tree Session, or the module is not installed."
+}
