@@ -1,3 +1,12 @@
+#Confirm There is a BTSession
+$BTSession = Get-BTSession
+if ($BTSession -eq $Null){
+    Write-Host "There is no Binary Tree Session"
+    $APIKey = Read-Host -Prompt "What is your Binary Tree API Key?"
+    Connect-BTSession -ApiKey (ConvertTo-SecureString $APIKey -AsPlainText -Force)
+    $BTSession = Get-BTSession
+    }
+
 #Create Blank Table
 $LogTable = @()
 $TableLine = New-Object psobject 

@@ -1,6 +1,12 @@
 #Confirm There is a BTSession
 $BTSession = Get-BTSession
-if ($BTSession -ne $Null){
+if ($BTSession -eq $Null){
+    Write-Host "There is no Binary Tree Session"
+    $APIKey = Read-Host -Prompt "What is your Binary Tree API Key?"
+    Connect-BTSession -ApiKey (ConvertTo-SecureString $APIKey -AsPlainText -Force)
+    $BTSession = Get-BTSession
+    }
+    
     Write-Host "Binary Tree Client:" $BTSession.ClientName -ForegroundColor Yellow
     Write-Host "User:" $BTSession.ApiKeyName -ForegroundColor Yellow
 
@@ -54,8 +60,4 @@ foreach ($user in $UserWaveUsers) {
     }
 $LogTable | Export-Csv -NoTypeInformation .\"$UserWave.csv"
 #Write-Host "Logs Exported as $SalesWave.csv" -ForegroundColor Green
-}
-}
-else {
-    Write-Host "There is no Binary Tree Session, or the module is not installed."
 }
