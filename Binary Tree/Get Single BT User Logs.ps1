@@ -6,7 +6,7 @@ if ($BTSession -ne $Null){
 
 #Gather Wave Session and Users
 $UserWave = Read-Host -Prompt "Enter Source User's UserPrincipalName" 
-$UserWaveUsers = Get-BTUser -Identity $salesWave
+$UserWaveUsers = Get-BTUser -Identity $UserWave
 
 #Create Blank Table
 $LogTable = @()
@@ -44,7 +44,7 @@ foreach ($user in $UserWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "ExchSyncState" -NotePropertyValue $EXCHSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ExchPercentComplete" -NotePropertyValue $EXCHSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "ODBSyncState" -NotePropertyValue $ODBSyncData.SyncState
-        $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $OBDSyncData.PercentComplete
+        $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $ODBSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "LogMessage" -NotePropertyValue $userLogMessage
         $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn
         

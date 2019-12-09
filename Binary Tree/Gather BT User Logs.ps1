@@ -44,7 +44,7 @@ foreach ($user in $salesWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "ExchSyncState" -NotePropertyValue $EXCHSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ExchPercentComplete" -NotePropertyValue $EXCHSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "ODBSyncState" -NotePropertyValue $ODBSyncData.SyncState
-        $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $OBDSyncData.PercentComplete
+        $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $ODBSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "LogMessage" -NotePropertyValue $userLogMessage
         $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn
         
