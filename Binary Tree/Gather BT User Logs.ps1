@@ -46,6 +46,7 @@ foreach ($user in $salesWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "SourceEmail" -NotePropertyValue $BTUser.PrimarySmtpAddress
         $TableLine | Add-Member -NotePropertyName "DestinationEmail" -NotePropertyValue $BTUser.NewPrimarySmtpAddress
         $TableLine | Add-Member -NotePropertyName "LogLevel" -NotePropertyValue $userLogLevel
+        $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $Log.LogTimeStamp
         $TableLine | Add-Member -NotePropertyName "UserMigrationStatus" -NotePropertyValue $BTUser.MigrationState
         $TableLine | Add-Member -NotePropertyName "ExchSyncState" -NotePropertyValue $EXCHSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ExchPercentComplete" -NotePropertyValue $EXCHSyncData.PercentComplete

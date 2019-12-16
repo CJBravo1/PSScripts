@@ -1,3 +1,6 @@
+Write-Host "This Script gathers ALL Binary Tree OneDrive Sync Logs, regardless of Error or Sync State 
+This will take some time determining on the user, or the amount of sync's the user has gone through."
+
 #Confirm There is a BTSession
 $BTSession = Get-BTSession
 if ($BTSession -eq $Null){
@@ -25,7 +28,7 @@ foreach ($user in $BTUsers) {
     Write-Host $Displayname -ForegroundColor Magenta
     $BTSync = Get-BTSync -User $user.UserPrincipalName | Where-Object {$_.SyncDataType -eq "OneDriveForBusiness"}
     $BTLogs = $BTSync | Get-BTLog 
-
+    #$BTLogs = $BTSync | Get-BTLog | Where-Object {$_.Message -like "Unable to sync Item*" -or $_.Message -like "Unable to Sync Content*" }
     foreach ($log in $BTLogs) {
         
         $logException = $log | Select-Object exception
