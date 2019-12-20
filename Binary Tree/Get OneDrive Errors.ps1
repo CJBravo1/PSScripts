@@ -22,7 +22,7 @@ foreach ($user in $BTUsers) {
     $UPN = $user | Select-Object UserPrincipalName
     $DisplayName = $user.DisplayName
 
-    Write-Host $Displayname -ForegroundColor Magenta
+    Write-Host $Displayname -ForegroundColor Cyan
     $BTSync = Get-BTSync -User $user.UserPrincipalName | Where-Object {$_.SyncDataType -eq "OneDriveForBusiness" -and $_.ItemsFailed -ge 1 -and $_.SyncState -eq "SyncError"}
     $BTLogs = $BTSync | Get-BTLog | Where-Object {$_.Message -like "Unable to sync Item*" -or $_.Message -like "Unable to Sync Content*" }
 
