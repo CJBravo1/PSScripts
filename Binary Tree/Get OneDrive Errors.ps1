@@ -31,11 +31,15 @@ foreach ($user in $BTUsers) {
         
         $logException = $log | Select-Object exception
         $logException = $logException -split "  "
+        
+        #Correct Timestamp
+        $timestamp = $log.LogTimeStamp
+        $timeStamp = [DateTime]::ParseExact($timestamp, 'yyyyMMddHHmmssfff', $null).ToString()
 
         $TableLine | Add-Member -NotePropertyName "DisplayName" -NotePropertyValue $DisplayName
         $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN
         $TableLine | Add-Member -NotePropertyName "Level" -NotePropertyValue $log.Level
-        $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $Log.LogTimeStamp
+        $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $timestamp
         $TableLine | Add-Member -NotePropertyName "Message" -NotePropertyValue $log.message
         $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
         
