@@ -1,6 +1,7 @@
-Hello,
-Hello Git
+This is my Personal Powershell script repository, containing multiple scripts written and used throughout my IT carrier. 
+These include my own scripts, and scripts shared with me. 
 
-UNWANTED CHANGE 1
-UNWANTED CHANGE 2
-UNWANTED CHANGE 3
+Legacy Scripts are scripts written from previous jobs or learning opportunities, and are not used on a regular basis. They are here for refences.
+
+
+Have a lot of fun!!!
