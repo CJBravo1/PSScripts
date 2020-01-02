@@ -37,7 +37,11 @@ foreach ($user in $salesWaveUsers) {
         #$SyncStatus = $BTSync | Select-Object -first 1 SyncState
         $LogWarn = $LogWarn | Select-Object Message -Unique
         $EXCHSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "Mail"} | Select-Object -first 1 
-        $ODBSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "OneDriveForBusiness"} | Select-Object -first 1  
+        $ODBSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "OneDriveForBusiness"} | Select-Object -first 1 
+        
+        #Correct Timestamp
+        $timestamp = $log.LogTimeStamp
+        $timeStamp = [DateTime]::ParseExact($timestamp, 'yyyyMMddHHmmssfff', $null).ToString() 
        
         #Create Table
         $TableLine | Add-Member -NotePropertyName "UserDisplayName" -NotePropertyValue $userDisplayName
@@ -46,7 +50,7 @@ foreach ($user in $salesWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "SourceEmail" -NotePropertyValue $BTUser.PrimarySmtpAddress
         $TableLine | Add-Member -NotePropertyName "DestinationEmail" -NotePropertyValue $BTUser.NewPrimarySmtpAddress
         $TableLine | Add-Member -NotePropertyName "LogLevel" -NotePropertyValue $userLogLevel
-        $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $Log.LogTimeStamp
+        $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $timestamp
         $TableLine | Add-Member -NotePropertyName "UserMigrationStatus" -NotePropertyValue $BTUser.MigrationState
         $TableLine | Add-Member -NotePropertyName "ExchSyncState" -NotePropertyValue $EXCHSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ExchPercentComplete" -NotePropertyValue $EXCHSyncData.PercentComplete
