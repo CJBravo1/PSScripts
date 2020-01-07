@@ -37,7 +37,7 @@ foreach ($user in $BTUsers) {
         $timeStamp = [DateTime]::ParseExact($timestamp, 'yyyyMMddHHmmssfff', $null).ToString()
 
         $TableLine | Add-Member -NotePropertyName "DisplayName" -NotePropertyValue $DisplayName
-        $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN
+        $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN.UserPrincipalName.ToString()
         $TableLine | Add-Member -NotePropertyName "Level" -NotePropertyValue $log.Level
         $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $timestamp
         $TableLine | Add-Member -NotePropertyName "Message" -NotePropertyValue $log.message
