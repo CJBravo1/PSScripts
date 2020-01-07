@@ -29,8 +29,8 @@ foreach ($user in $BTUsers) {
 
     foreach ($log in $BTLogs) {
         
-        $logException = $log | Select-Object exception
-        $logException = $logException -split "  "
+        $logException = $log.Exception.ToString() 
+        $logException = $logException -split "  " 
         
         #Correct Timestamp
         $timestamp = $log.LogTimeStamp
