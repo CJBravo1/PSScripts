@@ -35,7 +35,7 @@ foreach ($user in $UserWaveUsers) {
         $userLogLevel = $Log.level
         $userLogMessage = $log.message
         #$SyncStatus = $BTSync | Select-Object -first 1 SyncState
-        $LogWarn = $LogWarn | Select-Object Message -Unique
+        $LogWarn = $LogWarn | Select-Object Message -Unique 
         $EXCHSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "Mail"} | Select-Object -first 1 
         $ODBSyncData = $BTSync | Where-Object {$_.SyncDataType -eq "OneDriveForBusiness"} | Select-Object -first 1  
         
@@ -57,7 +57,12 @@ foreach ($user in $UserWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "ODBSyncState" -NotePropertyValue $ODBSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $ODBSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "LogMessage" -NotePropertyValue $userLogMessage
-        $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn
+        try {
+            $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn.message.ToString() -ErrorAction SilentlyContinue
+        }
+        catch {
+            $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $Null
+        }
         
         #Export Data to Table and Clear Table Line Variable
         $LogTable += $TableLine
