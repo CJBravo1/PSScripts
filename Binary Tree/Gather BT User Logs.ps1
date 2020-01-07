@@ -57,7 +57,7 @@ foreach ($user in $salesWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "ODBSyncState" -NotePropertyValue $ODBSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $ODBSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "LogMessage" -NotePropertyValue $userLogMessage
-        $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn
+        $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn.message.ToString()
         
         #Export Data to Table and Clear Table Line Variable
         $LogTable += $TableLine

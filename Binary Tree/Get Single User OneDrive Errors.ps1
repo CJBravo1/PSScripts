@@ -32,14 +32,15 @@ foreach ($user in $BTUsers) {
     foreach ($log in $BTLogs) {
         
         $logException = $log | Select-Object exception
-        $logException = $logException -split "  "
+        $logException = $logException.exception.ToString() -split "  "
+        if ($logException[0] -eq "@{exception=}") {$logException -eq $Null}
         
         #Correct Timestamp
         $timestamp = $log.LogTimeStamp
         $timeStamp = [DateTime]::ParseExact($timestamp, 'yyyyMMddHHmmssfff', $null).ToString() 
 
         $TableLine | Add-Member -NotePropertyName "DisplayName" -NotePropertyValue $DisplayName
-        $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN
+        $TableLine | Add-Member -NotePropertyName "User" -NotePropertyValue $UPN.UserPrincipalName.ToString()
         $TableLine | Add-Member -NotePropertyName "Level" -NotePropertyValue $log.Level
         $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $timestamp
         $TableLine | Add-Member -NotePropertyName "Message" -NotePropertyValue $log.message
