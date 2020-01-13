@@ -1,4 +1,4 @@
-#Confirm There is a BTSession
+ #Confirm There is a BTSession
 $BTSession = Get-BTSession
 if ($BTSession -eq $Null){
     Write-Host "There is no Binary Tree Session"
