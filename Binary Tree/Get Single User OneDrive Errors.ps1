@@ -30,11 +30,7 @@ foreach ($user in $BTUsers) {
     $BTLogs = $BTSync | Get-BTLog 
     #$BTLogs = $BTSync | Get-BTLog | Where-Object {$_.Message -like "Unable to sync Item*" -or $_.Message -like "Unable to Sync Content*" }
     foreach ($log in $BTLogs) {
-        
-        $logException = $log | Select-Object exception
-        $logException = $logException.exception.ToString() -split "  "
-        if ($logException[0] -eq "@{exception=}") {$logException -eq $Null}
-        
+
         #Correct Timestamp
         $timestamp = $log.LogTimeStamp
         $timeStamp = [DateTime]::ParseExact($timestamp, 'yyyyMMddHHmmssfff', $null).ToString() 
@@ -44,7 +40,16 @@ foreach ($user in $BTUsers) {
         $TableLine | Add-Member -NotePropertyName "Level" -NotePropertyValue $log.Level
         $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $timestamp
         $TableLine | Add-Member -NotePropertyName "Message" -NotePropertyValue $log.message
-        $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
+        
+        if ($log.Exception -ne $Null) {
+            $logException = $log | where {$_.Exception -ne $Null} | Select-Object exception
+            $logException = $log.exception.ToString()
+            $logException = $logException  -split "  "
+            $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
+            }
+            else {
+                $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $Null
+            }
         
         $LogTable += $TableLine
         $TableLine = New-Object psobject
