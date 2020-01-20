@@ -28,10 +28,7 @@ foreach ($user in $BTUsers) {
     $BTLogs = $BTSync | Get-BTLog 
 
     foreach ($log in $BTLogs) {
-        
-        $logException = $log.Exception.ToString() 
-        $logException = $logException -split "  " 
-        
+
         #Correct Timestamp
         $timestamp = $log.LogTimeStamp
         $timeStamp = [DateTime]::ParseExact($timestamp, 'yyyyMMddHHmmssfff', $null).ToString()
@@ -41,7 +38,15 @@ foreach ($user in $BTUsers) {
         $TableLine | Add-Member -NotePropertyName "Level" -NotePropertyValue $log.Level
         $TableLine | Add-Member -NotePropertyName "TimeStamp" -NotePropertyValue $timestamp
         $TableLine | Add-Member -NotePropertyName "Message" -NotePropertyValue $log.message
-        $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
+          if ($log.Exception -ne $Null) {
+            $logException = $log | Where-Object {$_.Exception -ne $Null} | Select-Object exception
+            $logException = $log.exception.ToString()
+            $logException = $logException  -split "  "
+            $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
+            }
+            else {
+                $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $Null
+            }
         
         $LogTable += $TableLine
         $TableLine = New-Object psobject
