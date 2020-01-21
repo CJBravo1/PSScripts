@@ -68,6 +68,6 @@ foreach ($user in $UserWaveUsers) {
         $LogTable += $TableLine
         $TableLine = New-Object psobject
     }
-$LogTable | Export-Csv -NoTypeInformation .\"$UserWave.csv"
+$LogTable | Export-Csv -NoTypeInformation ~\Desktop\"$UserWave.csv"
 #Write-Host "Logs Exported as $SalesWave.csv" -ForegroundColor Green
 }
