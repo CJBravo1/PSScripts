@@ -54,5 +54,5 @@ foreach ($user in $BTUsers) {
         $LogTable += $TableLine
         $TableLine = New-Object psobject
         }
-        $LogTable | Export-Csv -NoTypeInformation .\"$MigUser"OneDriveErrors.csv
+        $LogTable | Export-Csv -NoTypeInformation ~\Desktop\"$MigUser"OneDriveErrors.csv
     }
