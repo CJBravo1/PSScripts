@@ -22,7 +22,7 @@ $dateEnd = get-date
 $dateStart = $dateEnd.AddDays(-30)
 
 #Get Groups and Message trace
-$groups=Import-Csv .\DistroGroups.csv
+$groups = Get-DistributionGroup
 $groups | %{Get-MessageTrace -RecipientAddress $_.primarysmtpaddress -startDate $dateStart -EndDate $dateEnd ; write-host (“Processed Group:  ” + $_.primarySMTPAddress)} | export-csv -Path .\output.csv –Append
 
 
