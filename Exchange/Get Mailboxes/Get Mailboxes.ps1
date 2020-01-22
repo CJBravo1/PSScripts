@@ -23,6 +23,6 @@ $UserMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "UserMailbox"}
 $SharedMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "SharedMailbox"}
 $RoomMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "RoomMailbox"}
 
-$UserMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails | Export-Csv .\UserMailboxes.csv -NoTypeInformation
-$SharedMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails | Export-Csv .\SharedMailboxes.csv -NoTypeInformation
-$RoomMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails | Export-Csv .\RoomMailboxes.csv -NoTypeInformation
+$UserMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\UserMailboxes.csv -NoTypeInformation
+$SharedMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\SharedMailboxes.csv -NoTypeInformation
+$RoomMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\RoomMailboxes.csv -NoTypeInformation
