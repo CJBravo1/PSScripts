@@ -4,7 +4,7 @@
 #Change Window Title
 $host.ui.RawUI.WindowTitle = "Mailbox Recon"
 Clear-Host
-cat .\planetexpress.txt
+#cat .\planetexpress.txt
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Office 365 resources"
 
@@ -36,10 +36,10 @@ $SharedMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "SharedMailbo
 $RoomMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "RoomMailbox"}
 $EquipmentMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "EquipmentMailbox"}
 
-$UserMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses | Export-Csv .\ReconMailboxes\UserMailboxes.csv -NoTypeInformation
-$SharedMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses | Export-Csv .\ReconMailboxes\SharedMailboxes.csv -NoTypeInformation
-$RoomMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses | Export-Csv .\ReconMailboxes\RoomMailboxes.csv -NoTypeInformation
-$EquipmentMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses | Export-Csv .\ReconMailboxes\EquipmentMailboxes.csv -NoTypeInformation
+$UserMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\UserMailboxes.csv -NoTypeInformation
+$SharedMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\SharedMailboxes.csv -NoTypeInformation
+$RoomMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\RoomMailboxes.csv -NoTypeInformation
+$EquipmentMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\EquipmentMailboxes.csv -NoTypeInformation
 
 #Gather Shared Mailbox Members
 Write-host "Gathering Shared Mailbox and their members" -foregroundcolor Cyan
