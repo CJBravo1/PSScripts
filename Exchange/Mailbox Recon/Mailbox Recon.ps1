@@ -21,8 +21,8 @@ Connect-MsolService -Credential $UserCredential
 
 #Write-Host "Clearing ALL current csv files in this directory" -ForegroundColor Yellow -BackgroundColor Red
 Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
-rm .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
-rm .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
 
 #Get Mailboxes
 Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
@@ -31,27 +31,27 @@ $mailboxes = get-Mailbox -ResultSize Unlimited
 #Separate Mailboxes
 Write-Host "Separating Mailboxes" -ForegroundColor Yellow
 New-Item -Path .\ -Name ReconMailboxes -ItemType Directory > $null
-$UserMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "UserMailbox"}
-$SharedMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "SharedMailbox"}
-$RoomMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "RoomMailbox"}
-$EquipmentMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "EquipmentMailbox"}
+$UserMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "UserMailbox"}
+$SharedMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
+$RoomMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox"}
+$EquipmentMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "EquipmentMailbox"}
 
-$UserMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\UserMailboxes.csv -NoTypeInformation
-$SharedMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\SharedMailboxes.csv -NoTypeInformation
-$RoomMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\RoomMailboxes.csv -NoTypeInformation
-$EquipmentMailboxes | select name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\EquipmentMailboxes.csv -NoTypeInformation
+$UserMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\UserMailboxes.csv -NoTypeInformation
+$SharedMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\SharedMailboxes.csv -NoTypeInformation
+$RoomMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\RoomMailboxes.csv -NoTypeInformation
+$EquipmentMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\EquipmentMailboxes.csv -NoTypeInformation
 
 #Gather Shared Mailbox Members
 Write-host "Gathering Shared Mailbox and their members" -foregroundcolor Cyan
-$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | where {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
+$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
 
 #Gather Shared Mailbox Members
 $csvLine = New-Object PSObject
 $csvTable = @()
-$SharedMailboxes | foreach {
+$SharedMailboxes | ForEach-Object {
     $mailbox = Get-Mailbox -Identity $_.Alias -ResultSize Unlimited
     $Members = Get-MailboxPermission -Identity $mailbox.Alias
-    $Members = $Members | where {$_.User -like "*@*.com"}
+    $Members = $Members | Where-Object {$_.User -like "*@*.com"}
     
     #Separate each User in the mailbox and add to the table
     foreach ($user in $Members) {
@@ -70,7 +70,7 @@ $SharedMailboxes | foreach {
 Write-Host "Gathering Distribution Groups"
 New-Item -Path .\ -Name ReconGroups -ItemType Directory > $null
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
-$distroGroups | select name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
+$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
 Write-Host "Use the Get-DistributionGroupMembers.ps1 script to get Group Members" -ForegroundColor Yellow
 
 #Get Dynamic Distribution Groups
