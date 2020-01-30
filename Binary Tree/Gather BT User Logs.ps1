@@ -57,7 +57,15 @@ foreach ($user in $salesWaveUsers) {
         $TableLine | Add-Member -NotePropertyName "ODBSyncState" -NotePropertyValue $ODBSyncData.SyncState
         $TableLine | Add-Member -NotePropertyName "ODBPercentComplete" -NotePropertyValue $ODBSyncData.PercentComplete
         $TableLine | Add-Member -NotePropertyName "LogMessage" -NotePropertyValue $userLogMessage
-        $TableLine | Add-Member -NotePropertyName "LogWarning" -NotePropertyValue $LogWarn.message.ToString()
+        if ($log.Exception -ne $Null) {
+            $logException = $log | Where-Object {$_.Exception -ne $Null} | Select-Object exception
+            $logException = $log.exception.ToString()
+            $logException = $logException  -split "  "
+            $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $logException[0]
+            }
+            else {
+                $TableLine | Add-Member -NotePropertyName "Exception" -NotePropertyValue $Null
+            }
         
         #Export Data to Table and Clear Table Line Variable
         $LogTable += $TableLine
