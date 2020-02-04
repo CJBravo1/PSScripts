@@ -1,2 +1,0 @@
-import-csv "c:\NewEquip.csv" | foreach{
-New-Mailbox -Name $_.name -Alias $_.alias -OrganizationalUnit 'Fairview.org/Exchange/Resources' -UserPrincipalName $_.UPN -SamAccountName $_.Sam -FirstName '' -Initials '' -LastName $_.Last -Database $_.DB -EQUIPMENT}

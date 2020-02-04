@@ -1,2 +1,0 @@
-If you apply the ManualAccept settings you need to add Full Mailbox permissions for the Owner, this is not currently in the script.
-If you apply the DelegateAccept setting you need to add the Delegates, this is not currently in the script.

@@ -1,1 +1,0 @@
-powershell.exe -noexit C:\SCRIPTS\NewConfrmAuto.PS1
