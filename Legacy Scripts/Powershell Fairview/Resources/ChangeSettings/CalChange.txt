@@ -1,2 +1,0 @@
-import-csv "c:\CalChange.csv" | foreach{
-Set-MailboxCalendarSettings -Identity $_.identity -AdditionalResponse:"Equipment needs to be picked up and dropped off between 8am and 430pm at Room LL-32B.  If you need equipment outside of these office hours, please contact Aaron Pfeifer (apfeife1@fairview.org) to arrange to pick up or drop off the day before or after your reservation.  Thank you."}
