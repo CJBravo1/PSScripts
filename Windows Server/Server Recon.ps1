@@ -1,8 +1,9 @@
-#$serverlist = cat C:\Temp\serverlist.txt
-$serverlist = "surmndcaw01"
+$serverlist = cat C:\Temp\serverlist.txt
+#$serverlist = "surmndcaw01"
 
 foreach ($RemoteServer in $serverlist)
 {
+    Write-Host "Testing $RemoteServer" -foregroundColor Cyan
     $csvline = New-Object psobject
     $testConnection = Test-Connection -ComputerName $RemoteServer -Count 1 -ErrorAction SilentlyContinue
     if ($testConnection -ne $null) 
@@ -21,6 +22,9 @@ foreach ($RemoteServer in $serverlist)
             InstalledFeatures = $installedFeatures.Name | Out-String
             InstalledApps = $installedApps.Name | Out-String
         }
-        $Table | Export-Csv -NoTypeInformation ~\Desktop\Servers.csv
+        $Table | Export-Csv -NoTypeInformation ~\Desktop\Servers.csv -Append
     }
+    else {
+        Write-Host "$RemoteServer is not Responsive" -ForegroundColor Red
+        }
 }
