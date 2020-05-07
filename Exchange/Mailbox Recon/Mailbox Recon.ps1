@@ -7,16 +7,16 @@ Clear-Host
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Office 365 resources"
 
-#Get Login Credentials
-$UserCredential = Get-Credential -Message "Enter your Office 365 Credentials"
+$PSSession = Get-PSSession | where {$_.ComputerName -eq "outlook.office365.com"}
 
-#Make new session
-#$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-Connect-ExchangeOnlineShell
-
-#Connect to PsSession
-Import-PSSession $Session -WarningAction SilentlyContinue
-Connect-MsolService -Credential $UserCredential
+if ($PSSession -eq $null)
+    {
+    #Make new session
+    Write-Host "Connect to Exchange Online" -ForegroundColor Yellow
+    Connect-ExchangeOnlineShell
+    Write-Host "Connect to Microsoft Online" -ForegroundColor Yellow
+    Connect-MsolService
+    }
 
 #Write-Host "Clearing ALL current csv files in this directory" -ForegroundColor Yellow -BackgroundColor Red
 Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
@@ -25,7 +25,7 @@ Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
 
 #Get Mailboxes
 Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
-$mailboxes = get-Mailbox -ResultSize Unlimited
+$mailboxes = Get-EXOMailbox -ResultSize Unlimited
 
 #Separate Mailboxes
 Write-Host "Separating Mailboxes" -ForegroundColor Yellow
@@ -42,14 +42,14 @@ $EquipmentMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress
 
 #Gather Shared Mailbox Members
 Write-host "Gathering Shared Mailbox and their members" -foregroundcolor Cyan
-$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
+$SharedMailboxes = Get-EXOMailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
 
 #Gather Shared Mailbox Members
 $csvLine = New-Object PSObject
 $csvTable = @()
 $SharedMailboxes | ForEach-Object {
-    $mailbox = Get-Mailbox -Identity $_.Alias -ResultSize Unlimited
-    $Members = Get-MailboxPermission -Identity $mailbox.Alias
+    $mailbox = Get-EXOMailbox -Identity $_.Alias -ResultSize Unlimited
+    $Members = Get-EXOMailboxPermission -Identity $mailbox.Alias
     $Members = $Members | Where-Object {$_.User -like "*@*.com"}
     
     #Separate each User in the mailbox and add to the table
