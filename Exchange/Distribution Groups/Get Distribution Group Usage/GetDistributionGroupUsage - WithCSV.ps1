@@ -5,10 +5,13 @@ $UserCredential = Get-Credential -Message "Enter your Office 365 Credentials"
 
 #Make new session
 Write-Host "Connecting to Office 365" -ForegroundColor Yellow
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+$Session = Get-PSSession | where {$_.ConfigurationName -eq "Microsoft.Exchange"}
 
-#Connect to Exchange Session
-Import-PSSession $Session -WarningAction SilentlyContinue
+if ($session -eq $null)
+{
+    Connect-ExchangeOnline
+}
+
 
 #Check and Remove Output files
 $outputCSV = Test-Path .\output.csv
