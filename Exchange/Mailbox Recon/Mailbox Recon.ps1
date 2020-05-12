@@ -3,7 +3,7 @@
 
 #Change Window Title
 $host.ui.RawUI.WindowTitle = "Mailbox Recon"
-Clear-Host
+#Clear-Host
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Office 365 resources"
 
