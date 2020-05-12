@@ -47,14 +47,14 @@ $csvLine = New-Object PSObject
 $csvTable = @()
 $SharedMailboxes | ForEach-Object {
     $mailbox = Get-Mailbox -Identity $_.Alias -ResultSize Unlimited
-    #$Members = Get-MailboxPermission -Identity $mailbox.Alias
-    #$Members = $Members | Where-Object {$_.User -like "*@*.com"}
+    $Members = Get-MailboxPermission -Identity $mailbox.Alias
+    $Members = $Members | Where-Object {$_.User -like "*@*.com"}
     
     #Separate each User in the mailbox and add to the table
     foreach ($user in $Members) {
         $csvLine | Add-Member -NotePropertyName "MailboxName" -NotePropertyValue $mailbox.Alias
-        #$csvLine | Add-Member -NotePropertyName "Member" -NotePropertyValue $User.User
-        #$csvLine | Add-Member -NotePropertyName "AccessRights" -NotePropertyValue $user.AccessRights
+        $csvLine | Add-Member -NotePropertyName "Member" -NotePropertyValue $User.User
+        $csvLine | Add-Member -NotePropertyName "AccessRights" -NotePropertyValue $user.AccessRights
         $csvTable += @($csvLine)
         $csvLine = New-Object PSObject
         }
@@ -82,11 +82,6 @@ foreach ($group in $ddGroup)
     Write-Host "Processing $groupAlias" -ForegroundColor Yellow
     Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation .\ReconGroups\DynamicDistributionGroupMembers\"$groupAlias.csv"
     }
-
-
-#Gather Office 365 Groups
-Write-Host "Gathering Office 365 Groups" -ForegroundColor Cyan
-$unifiedGroups = Get-UnifiedGroup -Resultsize Unlimited
 
 #Create Blank Table
 
