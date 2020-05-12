@@ -46,9 +46,9 @@ $SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.Recipien
 $csvLine = New-Object PSObject
 $csvTable = @()
 $SharedMailboxes | ForEach-Object {
-    $mailbox = Get-Mailbox -Identity $_.Alias -ResultSize Unlimited
+    $mailbox = Get-Mailbox -Identity $_.Alias
     $Members = Get-MailboxPermission -Identity $mailbox.Alias
-    $Members = $Members | Where-Object {$_.User -like "*@*.com"}
+    $Members = $Members | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
     
     #Separate each User in the mailbox and add to the table
     foreach ($user in $Members) {
@@ -88,27 +88,6 @@ foreach ($group in $ddGroup)
 $CSV = New-Object PSObject
 $csvTable = @()
 
-foreach ($group in $unifiedGroups)
-    {
-    #Write-Host "Processing $group" -ForegroundColor Yellow
-    #Get Group's Members
-    $members = Get-UnifiedGroupLinks -LinkType Member -Identity $group.PrimarySmtpAddress
-    #Process Each Member for each group"
-    foreach ($member in $members)
-        {
-        $CSV | Add-Member -NotePropertyName 'GroupName' -NotePropertyValue $group.DisplayName -Force
-        $CSV | Add-Member -NotePropertyName 'GroupEmail' -NotePropertyValue $group.PrimarySmtpAddress -Force
-        $CSV | Add-Member -NotePropertyName 'MemberName' -NotePropertyValue $member.Name -Force
-        $CSV | Add-Member -NotePropertyName 'MemberEmail' -NotePropertyValue $member.PrimarySmtpAddress -Force
-
-        #Export Data to table
-        $csvTable += @($CSV)
-        $CSV = New-Object PSObject
-        }
-    }
-#Export Table to CSV File
-Write-Host "Exporting Data to Office365Groups.csv" -ForegroundColor Cyan
-$csvTable | Export-Csv -NoTypeInformation .\ReconGroups\Office365Groups.csv
 
 #Gather Public Folders
 Write-Host "Gathering Public Folders" -ForegroundColor Magenta
