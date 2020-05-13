@@ -1,12 +1,11 @@
-Write-Host "Use this script to get email messages sent to distribution groups over the past 30 Days." -ForegroundColor Green
+Write-Host "Use this script to get email messages sent to shared mailboxes over the past 30 Days." -ForegroundColor Green
 
 #Make new session
-Write-Host "Connecting to Office 365" -ForegroundColor Yellow
 $Session = Get-PSSession | where {$_.ConfigurationName -eq "Microsoft.Exchange"}
 
 if ($session -eq $null)
 {
-    Connect-ExchangeOnline
+    Write-Host "No Exchange Session Established..." -foregroundcolor Red
 }
 
 
@@ -22,8 +21,8 @@ $dateEnd = get-date
 $dateStart = $dateEnd.AddDays(-30)
 
 #Get Groups and Message trace
-$Mailboxes = Get-Mailbox
-$Mailboxes | ForEach-Object {Get-MessageTrace -RecipientAddress $_.primarysmtpaddress -startDate $dateStart -EndDate $dateEnd | Export-Csv -NoTypeInformation .\output.csv}
+$Mailboxes = Get-Mailbox | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
+$Mailboxes | ForEach-Object {Get-MessageTrackingLog -Recipients $_.primarysmtpaddress -start $dateStart -End $dateEnd | Export-Csv -NoTypeInformation .\output.csv -append}
 
 
 #Show Unique addresses
