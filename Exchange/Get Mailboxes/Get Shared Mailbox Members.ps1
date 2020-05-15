@@ -1,6 +1,6 @@
-﻿$PSSession = Get-PSSession | where {$_.configurationName -like "*exchange"}
+﻿$PSSession = Get-PSSession | Where-Object {$_.configurationName -like "*exchange"}
 
-if ($PSSession -eq $null)
+if ($null -eq $PSSession)
 {
     Connect-ExchangeOnlineShell
     $SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
