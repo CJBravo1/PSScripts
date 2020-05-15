@@ -1,9 +1,9 @@
 Write-Host "Use this script to get email messages sent to shared mailboxes over the past 30 Days." -ForegroundColor Green
 
 #Make new session
-$Session = Get-PSSession | where {$_.ConfigurationName -eq "Microsoft.Exchange"}
+$Session = Get-PSSession | Where-Object {$_.ConfigurationName -eq "Microsoft.Exchange"}
 
-if ($session -eq $null)
+if ($null -eq $session)
 {
     Write-Host "No Exchange Session Established..." -foregroundcolor Red
 }
@@ -27,7 +27,7 @@ $Mailboxes | ForEach-Object {Get-MessageTrackingLog -Recipients $_.primarysmtpad
 
 #Show Unique addresses
 $data = Import-Csv .\output.csv
-$data = $data | select recipientaddress -Unique 
+$data = $data | Select-Object recipientaddress -Unique 
 $data | Export-Csv .\UniqueAddresses.csv
 
 #Launch Excel

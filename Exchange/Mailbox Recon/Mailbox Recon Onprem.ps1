@@ -7,9 +7,9 @@ $host.ui.RawUI.WindowTitle = "Mailbox Recon"
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Exchange resources"
 
-$PSSession = Get-PSSession | where {$_.configurationName -like "*exchange"}
+$PSSession = Get-PSSession | Where-Object {$_.configurationName -like "*exchange"}
 
-if ($PSSession -eq $null)
+if ($null -eq $PSSession)
 {
     $ExchServer = Read-Host "Enter Exchange Server"
     $ExchSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "http://$ExchServer/powershell"

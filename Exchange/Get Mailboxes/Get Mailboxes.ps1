@@ -19,10 +19,10 @@ $mailboxes = get-Mailbox -ResultSize Unlimited
 
 #Separate Mailboxes
 Write-Host "Separating Mailboxes" -ForegroundColor Green
-$UserMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "UserMailbox"}
-$SharedMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "SharedMailbox"}
-$RoomMailboxes = $mailboxes | where {$_.RecipientTypeDetails -eq "RoomMailbox"}
+$UserMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "UserMailbox"}
+$SharedMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
+$RoomMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox"}
 
-$UserMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\UserMailboxes.csv -NoTypeInformation
-$SharedMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\SharedMailboxes.csv -NoTypeInformation
-$RoomMailboxes | select name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\RoomMailboxes.csv -NoTypeInformation
+$UserMailboxes | Select-Object name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\UserMailboxes.csv -NoTypeInformation
+$SharedMailboxes | Select-Object name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\SharedMailboxes.csv -NoTypeInformation
+$RoomMailboxes | Select-Object name,alias,primarysmtpaddress,RecipientTypeDetails,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\RoomMailboxes.csv -NoTypeInformation

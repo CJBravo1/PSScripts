@@ -7,9 +7,9 @@ $host.ui.RawUI.WindowTitle = "Mailbox Recon"
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Office 365 resources"
 
-$PSSession = Get-PSSession | where {$_.ComputerName -eq "outlook.office365.com"}
+$PSSession = Get-PSSession | Where-Object {$_.ComputerName -eq "outlook.office365.com"}
 
-if ($PSSession -eq $null)
+if ($null -eq $PSSession)
     {
     #Make new session
     Write-Host "Connect to Exchange Online" -ForegroundColor Yellow

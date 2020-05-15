@@ -2,9 +2,9 @@ Write-Host "Use this script to get email messages sent to distribution groups ov
 
 #Make new session
 Write-Host "Connecting to Office 365" -ForegroundColor Yellow
-$Session = Get-PSSession | where {$_.ConfigurationName -eq "Microsoft.Exchange"}
+$Session = Get-PSSession | Where-Object {$_.ConfigurationName -eq "Microsoft.Exchange"}
 
-if ($session -eq $null)
+if ($null -eq $session)
 {
     Connect-ExchangeOnline
 }
@@ -14,8 +14,8 @@ if ($session -eq $null)
 $outputCSV = Test-Path .\output.csv
 $uniqueAddressesCSV = Test-Path .\UniqueAddresses.csv
 
-if ($outputCSV -eq $true) {rm .\output.csv}
-if ($uniqueAddressesCSV -eq $true) {rm .\UniqueAddresses.csv}
+if ($outputCSV -eq $true) {Remove-Item .\output.csv}
+if ($uniqueAddressesCSV -eq $true) {Remove-Item .\UniqueAddresses.csv}
 
 #Get End Date and Start Date
 $dateEnd = get-date
@@ -28,7 +28,7 @@ $Mailboxes | ForEach-Object {Get-MessageTrace -RecipientAddress $_.primarysmtpad
 
 #Show Unique addresses
 $data = Import-Csv .\output.csv
-$data = $data | select recipientaddress -Unique 
+$data = $data | Select-Object recipientaddress -Unique 
 $data | Export-Csv .\UniqueAddresses.csv
 
 #Launch Excel
