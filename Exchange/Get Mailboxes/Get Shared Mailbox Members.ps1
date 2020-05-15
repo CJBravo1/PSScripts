@@ -1,17 +1,18 @@
-﻿Write-Host "I need Your Office 365 Credentials" -ForegroundColor Green
-$ExchangeSession = Connect-ExchangeOnlineShell
+﻿$PSSession = Get-PSSession | where {$_.configurationName -like "*exchange"}
 
-if ($ExchangeSession -ne $null) {
-    $SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
+if ($PSSession -eq $null)
+{
+    Connect-ExchangeOnlineShell
+    $SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
     $SharedMailboxes | ForEach-Object {
         $mailbox = Get-mailbox -Identity $_.Alias -ResultSize Unlimited
-        $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*"}
+        $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
         Write-Host "Gathering $mailbox Members" -ForegroundColor Cyan 
         Write-Host "Showing "$members.count "Users" -ForegroundColor Yellow
-        $members | Select-Object Identity,User,AccessRights | export-csv  -NoTypeInformation .\Export.csv -Append
+        $members | Select-Object Identity,User,AccessRights | export-csv  -NoTypeInformation .\SharedMailboxMemberExport.csv -Append
         }
 }
 
 else {
-    Write-Error "No Session Was established. Please Run Connect-ExchangeOnlineShell"
-}
+   Write-Error "No Session Was established. Please Run Connect-ExchangeOnlineShell"
+    }
