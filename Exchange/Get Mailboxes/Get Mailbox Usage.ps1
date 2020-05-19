@@ -22,8 +22,10 @@ $dateEnd = get-date
 $dateStart = $dateEnd.AddDays(-30)
 
 #Get Groups and Message trace
-$Mailboxes = Get-Mailbox
-$Mailboxes | ForEach-Object {Get-MessageTrace -RecipientAddress $_.primarysmtpaddress -startDate $dateStart -EndDate $dateEnd | Export-Csv -NoTypeInformation .\output.csv}
+$Mailboxes = Get-Mailbox -RecipientTypeDetails SharedMailbox
+$Mailboxes | ForEach-Object {
+    Write-Host $_.DisplayName -ForegroundColor Cyan 
+    Get-MessageTrace -RecipientAddress $_.primarysmtpaddress -startDate $dateStart -EndDate $dateEnd | Export-Csv -NoTypeInformation .\output.csv}
 
 
 #Show Unique addresses
