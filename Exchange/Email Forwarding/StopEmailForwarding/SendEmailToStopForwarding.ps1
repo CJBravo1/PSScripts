@@ -59,7 +59,7 @@ foreach($User in $import)
 	$recipient = Get-ADUser -Filter {name -eq $Destination} -Properties * | Select UserPrincipalName
 	if($recipient -eq $null)
 	{
-		$recipient = $Destination + "@accruent.com"
+		$recipient = $Destination + "@CompanyName.com"
 	}
 	#$recipient
 	
@@ -67,7 +67,7 @@ foreach($User in $import)
 	$Body = "Our records indicate $termedUser was terminated and their emails began forwarding to you on $forwardStart. Would you like to disable this forwarding?
 			<br>If NO, no further action is required
 			<br>If YES, click 
-			 <a href= `"mailto:helpdesk1@accruent.com?
+			 <a href= `"mailto:helpdesk1@CompanyName.com?
 			subject= ACTION | Stop email forwarding - $termedUser&
 			body= 
 			@priority= Low (15 Bus Days) 
@@ -78,6 +78,6 @@ foreach($User in $import)
 	
 	if(($User.Forwarding -eq "Y") -and ($User.ForwardEndDate -le $currentDate))
 	{
-		Send-MailMessage -To $recipient -From $UserCredential.UserName -Cc "regan.a.vecera@accruent.com" -Subject $Subject -Body $Body -BodyAsHtml -Credential $UserCredential -SmtpServer smtp.office365.com -UseSsl
+		Send-MailMessage -To $recipient -From $UserCredential.UserName -Cc "regan.a.vecera@CompanyName.com" -Subject $Subject -Body $Body -BodyAsHtml -Credential $UserCredential -SmtpServer smtp.office365.com -UseSsl
 	}
 }

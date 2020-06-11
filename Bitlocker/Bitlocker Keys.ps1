@@ -1,9 +1,8 @@
 ﻿$testconnection = Test-Connection -ComputerName Deepthought -Count 1 -ErrorAction Stop
-$Comp = "Deepthought"
+$Comp = "SERVERNAME"
 if ($testconnection -ne $null) 
 	{
 	#Test Connectivity and Get Credentails
-	Write-Host "Deepthought is Online" -ForegroundColor Green
 	Write-Host "I need your AD Password" -ForegroundColor Yellow
 	$cred = Get-Credential cyberdyne.com\cjorenby
 	Switch ($lockUnlock = Read-Host "1.Lock or 2.Unlock Bitlocker Drives?" )

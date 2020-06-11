@@ -4,15 +4,15 @@
 
 # This script is to assign licenses in bulk. Usually used after an acquistition.
 # The names will be read from a csv file with the columns titled FirstName, LastName, and NickName
-# Naming standard: firstname.lastname@accruent.com unless they have a nickname in which case they are nickname.lastname@accruent.com
+# Naming standard: firstname.lastname@CompanyName.com unless they have a nickname in which case they are nickname.lastname@CompanyName.com
 # These accounts must already exist in active directory
 # The only variables that will need to be changed are $csv and $oldSuffix
 
 #Name of CSV file with all the email addresses
-$csv = '.\lovejoyusers.csv'
+$csv = '.\filename.csv'
 $import = Import-Csv -LiteralPath $csv
-$oldSuffix = "lucernex.com"
-$newSuffix = "accruent.com"
+$oldSuffix = "OldCompanyName.com"
+$newSuffix = "CompanyName.com"
 $count = 0
 
 #Connect to O365
@@ -46,11 +46,11 @@ foreach ($user in $import)
 	
 	if($nick -eq "")
 	{
-		$email = $first + "." + $last + "@accruent.com"
+		$email = $first + "." + $last + "@CompanyName.com"
 	}
 	else
 	{
-		$email = $nick + "." + $last + "@accruent.com"
+		$email = $nick + "." + $last + "@CompanyName.com"
 	}
 	$email
 	
@@ -58,7 +58,7 @@ foreach ($user in $import)
 	Set-MsolUser -UserPrincipalName $email -UsageLocation US
 	try
 	{
-		Set-MsolUserLicense -UserPrincipalName $email -AddLicenses "accruentatlas:EMS","accruentatlas:ENTERPRISEPACK"
+		Set-MsolUserLicense -UserPrincipalName $email -AddLicenses "CompanyNameatlas:EMS","CompanyNameatlas:ENTERPRISEPACK"
 		#Set-Mailbox -Identity $email -DeliverToMailboxAndForward $false -ForwardingAddress $oldEmail
 	}
 	catch

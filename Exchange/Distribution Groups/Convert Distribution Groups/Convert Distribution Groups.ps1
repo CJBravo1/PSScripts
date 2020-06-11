@@ -4,7 +4,7 @@
 
 clear
 #Below Directory Used for Testing
-#cd 'C:\Users\cjorenby.ACCRUENT\OneDrive - Accruent, LLC\Scripts\Powershell\IT Scripts\it_scripts\o365-exchange scripts\Convert Distribution Groups' -ErrorAction SilentlyContinue
+#cd 'C:\Users\cjorenby.CompanyName\OneDrive - CompanyName, LLC\Scripts\Powershell\IT Scripts\it_scripts\o365-exchange scripts\Convert Distribution Groups' -ErrorAction SilentlyContinue
 
 Write-Host "Remove Local Distribution Group to replace with Office 365 Distribution Group" -ForegroundColor Cyan
 
@@ -13,7 +13,7 @@ $msolcred = Get-Credential -Message "Enter Office 365 Admin Password"
 
 
 #Identify Modules
-$AccruentExchange = New-PSSession -ConfigurationName microsoft.exchange -ConnectionUri http://exs41.accruent.com/powershell  -AllowRedirection
+$CompanyNameExchange = New-PSSession -ConfigurationName microsoft.exchange -ConnectionUri http://exs41.CompanyName.com/powershell  -AllowRedirection
 $CloudExchangeSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell-liveid/ -Credential $msolcred -Authentication Basic -AllowRedirection
 
 #Identify Variables
@@ -27,7 +27,7 @@ Write-Host "Active Directory" -ForegroundColor Yellow
 Import-Module ActiveDirectory
 
 Write-Host "Microsoft Exchange" -ForegroundColor Yellow
-Import-PSSession $AccruentExchange -DisableNameChecking -WarningAction SilentlyContinue -AllowClobber | out-null
+Import-PSSession $CompanyNameExchange -DisableNameChecking -WarningAction SilentlyContinue -AllowClobber | out-null
 Write-Host "Office 365 Exchange" -ForegroundColor Yellow
 Import-PSSession $CloudExchangeSession -DisableNameChecking -WarningAction SilentlyContinue -AllowClobber | out-null
 
@@ -43,8 +43,8 @@ foreach ($localgroup in $distroGroupList)
     $localgroupEmail = $localgroup.DistroEmail
     
     #Get Distribution Group and Members
-    $localdistroGroup = Invoke-Command -Session $AccruentExchange -ScriptBlock {Get-DistributionGroup -Identity $args[0]} -ArgumentList $localgroupDistroName
-    $localdistroGroupMembers = Invoke-Command -Session $AccruentExchange -ScriptBlock {Get-DistributionGroupMember -Identity $args[0]} -ArgumentList $localgroupDistroName
+    $localdistroGroup = Invoke-Command -Session $CompanyNameExchange -ScriptBlock {Get-DistributionGroup -Identity $args[0]} -ArgumentList $localgroupDistroName
+    $localdistroGroupMembers = Invoke-Command -Session $CompanyNameExchange -ScriptBlock {Get-DistributionGroupMember -Identity $args[0]} -ArgumentList $localgroupDistroName
             
      #For each member in the distribution group, add them to a the array
      foreach ($member in $localdistroGroupMembers)  
@@ -61,14 +61,14 @@ foreach ($localgroup in $distroGroupList)
 
     #Remove Local Distribution Groups
     Write-Host "Removing $localgroupDistroName from Local Exchange Server" -ForegroundColor Magenta
-    Invoke-Command -Session $AccruentExchange -ScriptBlock {Remove-DistributionGroup -Identity $args[0] -Confirm:$false} -ArgumentList $localgroupDistroName 
+    Invoke-Command -Session $CompanyNameExchange -ScriptBlock {Remove-DistributionGroup -Identity $args[0] -Confirm:$false} -ArgumentList $localgroupDistroName 
     }
 
 
 #Show Table
 $ArrayTable
 #Sync All Domain Controllers
-Write-Host "Syncing Accruent.com Domain Controllers" -ForegroundColor Yellow
+Write-Host "Syncing CompanyName.com Domain Controllers" -ForegroundColor Yellow
 Write-Host "No output will be displayed" -ForegroundColor Yellow
 Write-Host "And this will take some time..." -ForegroundColor Yellow
 Write-Host "I think there's Coffee in the break room..." -ForegroundColor White
@@ -84,9 +84,9 @@ Write-Host "Confirm the distribution group has been removed from Office 365 and 
 pause
 
 #Sync Local AD with Office 365
-Write-Host "Syncing With Office 365 via boscorpaadc.accruent.com" -ForegroundColor Magenta
+Write-Host "Syncing With Office 365 via boscorpaadc.CompanyName.com" -ForegroundColor Magenta
 Write-Host "Please enter your DA Credentials to Access the Necessary Server" -ForegroundColor Yellow
-Invoke-Command -ComputerName boscorpaadc.accruent.com -ScriptBlock {Start-AdsyncSyncCycle -PolicyType Delta} -Credential accruent\da_
+Invoke-Command -ComputerName boscorpaadc.CompanyName.com -ScriptBlock {Start-AdsyncSyncCycle -PolicyType Delta} -Credential CompanyName\da_
 
 Start-Sleep -Seconds 120
 

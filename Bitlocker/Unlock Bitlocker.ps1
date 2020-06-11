@@ -1,5 +1,6 @@
-﻿$testconnection = Test-Connection -ComputerName Deepthought.cyberdyne.com -Count 1 -ErrorAction Stop
-$Comp = "Deepthought.cyberdyne.com"
+﻿$Comp = "SERVERNAME"
+$testconnection = Test-Connection -ComputerName $COMP -Count 1 -ErrorAction Stop
+
 if ($testconnection -ne $null) 
 	{
 	Write-Host "Deepthought is Online" -ForegroundColor Green
