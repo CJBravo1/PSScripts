@@ -52,14 +52,14 @@ Connect-MsolService -Credential $UserCredential
 foreach ($user in $stopList)
 {
 	$username = $user.Name
-	$useremail = $username + "@accruent.com"
+	$useremail = $username + "@CompanyName.com"
 	
 	#Turn off the forwarding
 	Set-Mailbox -Identity $useremail -DeliverToMailboxAndForward $false -ForwardingAddress $null
 	
 	#Take away any licenses they may still have
 	try{
-		Set-MsolUserLicense -UserPrincipalName $useremail -RemoveLicenses "accruentatlas:ENTERPRISEPACK","accruentatlas:EMS","accruentatlas:STANDARDPACK"
+		Set-MsolUserLicense -UserPrincipalName $useremail -RemoveLicenses "CompanyNameatlas:ENTERPRISEPACK","CompanyNameatlas:EMS","CompanyNameatlas:STANDARDPACK"
 	}
 	catch
 	{
