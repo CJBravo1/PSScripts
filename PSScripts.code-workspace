@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\Surescripts\\powershell"
-		},
-		{
-			"path": "..\\Surescripts\\it-internal"
 		}
 	],
 	"settings": {}
