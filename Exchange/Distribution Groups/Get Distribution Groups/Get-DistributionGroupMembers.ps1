@@ -43,13 +43,13 @@ if (([string]::IsNullOrEmpty($Office365Username) -eq $false) -and ([string]::IsN
 else
 {
 	#Build credentials object 
-    $Office365Credentials  = Get-Credential
+    #$Office365Credentials  = Get-Credential
 }
 #Create remote Powershell session 
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Office365credentials -Authentication Basic –AllowRedirection         
-
+#$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Office365credentials -Authentication Basic –AllowRedirection         
+Connect-ExchangeOnline
 #Import the session 
-Import-PSSession $Session -AllowClobber | Out-Null          
+#Import-PSSession $Session -AllowClobber | Out-Null          
  
 #Prepare Output file with headers 
 Out-File -FilePath $OutputFile -InputObject "Distribution Group DisplayName,Distribution Group Email,Member DisplayName, Member Email, Member Type" -Encoding UTF8 
