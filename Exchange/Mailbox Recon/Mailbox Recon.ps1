@@ -70,7 +70,14 @@ Write-Host "Gathering Distribution Groups"
 New-Item -Path .\ -Name ReconGroups -ItemType Directory > $null
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
 $distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
-Write-Host "Use the Get-DistributionGroupMembers.ps1 script to get Group Members" -ForegroundColor Yellow
+Write-Host "Processing Group Memberships" -ForegroundColor Yellow
+foreach ($group in $distroGroups)
+{
+    $groupName = $group.Name
+    #Write-Host "Processing $groupName" -ForegroundColor Cyan
+    $groupMembers = Get-DistributionGroupMember -Identity "$group"
+    $groupMembers | Export-Csv -NoTypeInformation ".\ReconGroups\ReconGroupMembers\$groupName.csv"
+}
 
 #Get Dynamic Distribution Groups
 mkdir .\ReconGroups\DynamicDistributionGroupMembers > $null
@@ -119,14 +126,20 @@ $csvTable | Export-Csv -NoTypeInformation .\ReconGroups\Office365Groups.csv
 
 #Gather Public Folders
 Write-Host "Gathering Public Folders" -ForegroundColor Magenta
-mkdir .\PublicFolders
-$publicFolders = get-PublicFolder -Recurse
-$publicFolders | Export-Csv -NoTypeInformation.PublicFolders\PublicFolders.csv
-$publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation .\PublicFolders\ContactFolders.csv
-$publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation .\PublicFolders\NoteFolders.csv
-$publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation .\PublicFolders\CalendarFolders.csv
-$publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation .\PublicFolders\JournalFolders.csv
-$publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation .\PublicFolders\StikcyNotes.csv
-$publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation .\PublicFolders\TasksFolder.csv
+if ($null -eq $publicFolders)
+{
+    Write-Host "No Public Folders Were Found!" -ForegroundColor Red
+}
 
+else 
+{
+    mkdir .\PublicFolders
+    $publicFolders | Export-Csv -NoTypeInformation.PublicFolders\PublicFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation .\PublicFolders\ContactFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation .\PublicFolders\NoteFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation .\PublicFolders\CalendarFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation .\PublicFolders\JournalFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation .\PublicFolders\StikcyNotes.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation .\PublicFolders\TasksFolder.csv
+}
 Write-Host "End of Recon" -ForegroundColor Green -BackgroundColor Blue
