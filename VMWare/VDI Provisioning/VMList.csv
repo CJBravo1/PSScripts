@@ -1,0 +1,3 @@
+VMUser,VMType,VMEnvironment,Email
+user.name,SVDI,MN,Yes
+user.name,PVDI,VA,No
