@@ -2,10 +2,9 @@
 if ($null -eq $adminCreds)
 {
     $adminCreds = Get-Credential -Message "Enter Teams Credentials"
-    Connect-MicrosoftTeams -Credential $adminCreds
 }
-
-#Is Teams Connected?
+#Connect Teams
+Connect-MicrosoftTeams -Credential $adminCreds
 $TeamsTenant = get-cstenant
 
 #if ($null -eq $TeamsTenant)
