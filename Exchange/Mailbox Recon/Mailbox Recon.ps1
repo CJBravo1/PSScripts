@@ -2,7 +2,7 @@
 #Written by Chris Jorenby
 
 #Change Window Title
-$host.ui.RawUI.WindowTitle = "Mailbox Recon"
+#$host.ui.RawUI.WindowTitle = "Mailbox Recon"
 #Clear-Host
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Office 365 resources"
@@ -68,6 +68,7 @@ $SharedMailboxes | ForEach-Object {
 #Get Distribution Groups
 Write-Host "Gathering Distribution Groups"
 New-Item -Path .\ -Name ReconGroups -ItemType Directory > $null
+New-Item -Path .\ReconGroups\ -Name ReconGroupMembers -ItemType Directory > $null
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
 $distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
 Write-Host "Processing Group Memberships" -ForegroundColor Yellow
