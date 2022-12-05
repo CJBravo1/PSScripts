@@ -35,7 +35,7 @@ $mailboxes = Get-EXOMailbox -ResultSize Unlimited
 
 #Separate Mailboxes
 Write-Host "Separating Mailboxes" -ForegroundColor Yellow
-New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory > $null
+New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
 $UserMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "UserMailbox"}
 $SharedMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
 $RoomMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox"}
@@ -87,7 +87,7 @@ foreach ($group in $distroGroups)
 }
 
 #Get Dynamic Distribution Groups
-mkdir .\ReconGroups\DynamicDistributionGroupMembers > $null
+$ReconDynamicGroupExportDirectory = New-Item -path $ReconGroupExportDirectory -Name DynamicDistributionGroupMembers -ItemType Directory
 Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Cyan
 $ddGroup = Get-DynamicDistributionGroup -Resultsize Unlimited
 
@@ -96,7 +96,7 @@ foreach ($group in $ddGroup)
     {
     $groupAlias = $group.Alias
     Write-Host "Processing $groupAlias" -ForegroundColor Yellow
-    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\DynamicDistributionGroupMembers\$groupAlias.csv"
+    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation "$ReconDynamicGroupExportDirectory\$groupAlias.csv"
     }
 
 
