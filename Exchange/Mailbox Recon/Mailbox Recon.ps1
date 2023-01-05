@@ -73,7 +73,7 @@ $SharedMailboxes | ForEach-Object {
     }
 
 #Get Distribution Groups
-Write-Host "Gathering Distribution Groups"
+Write-Host "Gathering Distribution Groups" -ForegroundColor Cyan
 $ReconGroupExportDirectory = New-Item -Path $ExportDirectory -Name "ReconGroups" -Type Directory 
 $ReconGroupMembersExportDirectory = New-Item -Path "$ReconGroupExportDirectory" -Name "ReconGroupMembers" -Type Directory 
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
