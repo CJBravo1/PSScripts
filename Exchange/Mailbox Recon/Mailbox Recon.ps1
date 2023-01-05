@@ -41,6 +41,7 @@ $SharedMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "Share
 $RoomMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox"}
 $EquipmentMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "EquipmentMailbox"}
 
+#Export to CSV files
 $UserMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\UserMailboxes.csv" -NoTypeInformation
 $SharedMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\SharedMailboxes.csv" -NoTypeInformation
 $RoomMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\RoomMailboxes.csv" -NoTypeInformation
