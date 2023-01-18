@@ -5,17 +5,25 @@
 #$host.ui.RawUI.WindowTitle = "Mailbox Recon"
 #Clear-Host
 Write-Host "Mailbox Recon" -ForegroundColor Green
-Write-Host "Use this script to gather all Microsoft Exchange Online Resources"
+Write-Host "Use this script to gather all Microsoft Exchange Online Resources" -ForegroundColor Yellow
 
-$PSSession = Get-PSSession | Where-Object {$_.ComputerName -eq "outlook.office365.com"}
+#Check for $adminCreds
+$CurrentUser = $env:USERNAME
+if ($null -eq $adminCreds)
+{
+    $adminCreds =  Get-Credential -Message "Enter Microsoft 365 Credentials"
+}
+
+#Check for Current Exchange PSSession
+$PSSession = Get-AcceptedDomain
 
 if ($null -eq $PSSession)
     {
     #Make new session
     Write-Host "Connect to Exchange Online" -ForegroundColor Yellow
-    Connect-ExchangeOnlineShell
+    Connect-ExchangeOnline -Credential $adminCreds
     Write-Host "Connect to Microsoft Online" -ForegroundColor Yellow
-    Connect-MsolService
+    Connect-MsolService -Credential $adminCreds
     }
 
 #Write-Host "Clearing ALL current csv files in this directory" -ForegroundColor Yellow -BackgroundColor Red
@@ -30,7 +38,7 @@ Remove-Item .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
 
 #Get Mailboxes
-Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
+Write-Host "Gathering Mailboxes" -ForegroundColor Green
 $mailboxes = Get-EXOMailbox -ResultSize Unlimited
 
 #Separate Mailboxes
@@ -48,48 +56,35 @@ $RoomMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,user
 $EquipmentMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\EquipmentMailboxes.csv" -NoTypeInformation
 
 #Gather Shared Mailbox Members
-Write-host "Gathering Shared Mailbox and their members" -foregroundcolor Cyan
-$SharedMailboxes = Get-EXOMailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
-
-#Gather Shared Mailbox Members
-$csvLine = New-Object PSObject
-$csvTable = @()
+Write-host "Gathering Shared Mailbox and Members" -foregroundcolor Green
+$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
 $SharedMailboxes | ForEach-Object {
-    $mailbox = Get-EXOMailbox -Identity $_.Alias -ResultSize Unlimited
-    $Members = Get-EXOMailboxPermission -Identity $mailbox.Alias
-    $Members = $Members | Where-Object {$_.User -like "*@*.com"}
-    
-    #Separate each User in the mailbox and add to the table
-    foreach ($user in $Members) {
-        $csvLine | Add-Member -NotePropertyName "MailboxName" -NotePropertyValue $mailbox.Alias
-        $csvLine | Add-Member -NotePropertyName "Member" -NotePropertyValue $User.User
-        $csvLine | Add-Member -NotePropertyName "AccessRights" -NotePropertyValue $user.AccessRights
-        $csvTable += @($csvLine)
-        $csvLine = New-Object PSObject
-        }
-    
-    #Export the Table to a CSV file    
-    $csvTable | Export-Csv -NoTypeInformation "$ExportDirectory\ReconMailboxes\SharedMailboxMembers.csv" -Append
+    $mailbox = Get-mailbox -Identity $_.Alias -ResultSize Unlimited
+    $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
+    #Write-Host "Gathering $mailbox Members" -ForegroundColor Green 
+    #Write-Host "Showing "$members.count "Users" -ForegroundColor Yellow
+    $members | Select-Object Identity,User,AccessRights | export-csv  -NoTypeInformation "$ExportDirectory\ReconMailboxes\SharedMailboxMembers.csv" -Append
     }
 
+
 #Get Distribution Groups
-Write-Host "Gathering Distribution Groups" -ForegroundColor Cyan
+Write-Host "Gathering Distribution Groups" -ForegroundColor Green
 $ReconGroupExportDirectory = New-Item -Path $ExportDirectory -Name "ReconGroups" -Type Directory 
 $ReconGroupMembersExportDirectory = New-Item -Path "$ReconGroupExportDirectory" -Name "ReconGroupMembers" -Type Directory 
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
 $distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation "$ReconGroupExportDirectory\DistributionGroups.csv"
-Write-Host "Processing Group Memberships" -ForegroundColor Yellow
+Write-Host "Gathering Group Membership" -ForegroundColor Green
 foreach ($group in $distroGroups)
 {
     $groupName = $group.Name
-    #Write-Host "Processing $groupName" -ForegroundColor Cyan
+    #Write-Host "Processing $groupName" -ForegroundColor Green
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
     $groupMembers | Export-Csv -NoTypeInformation "$ReconGroupMembersExportDirectory\$groupName.csv"
 }
 
 #Get Dynamic Distribution Groups
 $ReconDynamicGroupExportDirectory = New-Item -path $ReconGroupExportDirectory -Name DynamicDistributionGroupMembers -ItemType Directory
-Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Cyan
+Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Green
 $ddGroup = Get-DynamicDistributionGroup -Resultsize Unlimited
 
 #Get Group Members and Export as separate CSV Files
@@ -102,7 +97,7 @@ foreach ($group in $ddGroup)
 
 
 #Gather Office 365 Groups
-Write-Host "Gathering Office 365 Groups" -ForegroundColor Cyan
+Write-Host "Gathering Office 365 Groups" -ForegroundColor Green
 $unifiedGroups = Get-UnifiedGroup -Resultsize Unlimited
 
 #Create Blank Table
@@ -129,11 +124,11 @@ foreach ($group in $unifiedGroups)
         }
     }
 #Export Table to CSV File
-Write-Host "Exporting Data to Office365Groups.csv" -ForegroundColor Cyan
+Write-Host "Exporting Data to Office365Groups.csv" -ForegroundColor Green
 $csvTable | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\Office365Groups.csv"
 
 #Gather Public Folders
-Write-Host "Gathering Public Folders" -ForegroundColor Magenta
+Write-Host "Gathering Public Folders" -ForegroundColor Green
 if ($null -eq $publicFolders)
 {
     Write-Host "No Public Folders Were Found!" -ForegroundColor Red
@@ -150,4 +145,5 @@ else
     $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\StikcyNotes.csv"
     $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\TasksFolder.csv"
 }
-Write-Host "End of Recon" -ForegroundColor Green -BackgroundColor Blue
+Write-Host "End of Recon" -ForegroundColor Green
+Write-Host "Export Directory is "$ExportDirectory.FullName -ForegroundColor Yellow
