@@ -25,17 +25,21 @@ if ($null -eq $PSSession)
     Write-Host "Connect to Microsoft Online" -ForegroundColor Yellow
     Connect-MsolService -Credential $adminCreds
     }
-
-#Write-Host "Clearing ALL current csv files in this directory" -ForegroundColor Yellow -BackgroundColor Red
 #Get Exchange Domains
 $domains = Get-AcceptedDomain
-$PrimaryDomain = $domains[0]
+$PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.Default -eq $true}
 
 #Create Export Directory
 $ExportDirectory = New-Item ".\$primaryDomain" -Type Directory
-Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
-Remove-Item .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
-Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
+
+#Export Primary Domains
+Write-Host "Primary Domain: $PrimaryDomain" -ForegroundColor Yellow
+Write-Host "Exporting Accepted Domains" -ForegroundColor Green
+$domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
+
+#Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
+#Remove-Item .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
+#Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
 
 #Get Mailboxes
 Write-Host "Gathering Mailboxes" -ForegroundColor Green
