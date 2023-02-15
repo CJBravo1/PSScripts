@@ -1,7 +1,5 @@
-function ConnectTo-Graph {
-    param ([Parameter()] [switch] $Write)
-    #Check if Microsof.Graph and Azure Powershell Module are Installed.
-    if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue))
+#Check if Microsof.Graph and Azure Powershell Module are Installed.
+if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue))
     {
         Write-Host "Installing Microsoft Graph Powershell Modules" -ForegroundColor Green
         Install-Module Microsoft.Graph -Scope CurrentUser
@@ -11,21 +9,22 @@ function ConnectTo-Graph {
         Write-Host "Installing Azure Powershell Module" -ForegroundColor Green
         Install-Module az -Scope CurrentUser
     }
-
     #Check for current Graph Connections
     $MGContext = Get-MgContext
     if ($null -eq $MGContext)
     {
+        Read-Host "Read or Write?"
         switch ($write)
         {
-            $true
+            "Write"
             {
                 Connect-MgGraph -Scopes 'Directory.ReadWrite.All','User.ReadWrite.All'
             }
-            $false
+            "Read"
             {
                 Connect-MgGraph -Scopes User.Read.All, Directory.AccessAsUser.All, User.ReadBasic.All, User.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All
             }
+            
         }
     }
     else 
@@ -34,6 +33,6 @@ function ConnectTo-Graph {
         $MGContext.Scopes
         Write-Host "Use Disconnect-MGGraph to Sign Out..." -ForegroundColor Red
     }
-}
+
 
 ConnectTo-Graph
