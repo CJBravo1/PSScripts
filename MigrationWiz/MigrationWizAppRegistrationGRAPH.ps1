@@ -3,7 +3,7 @@
 #Used for Modern Authentication in Exchange Online
 
 # Install the Microsoft Graph PowerShell module if not already installed
-if (-not (Get-Module -ListAvailable Microsoft.graph)) {
+if ($null -eq (Get-Module -ListAvailable Microsoft.graph)) {
     Write-Host "Installing Microsoft Graph PSModule" -ForegroundColor Green
     Install-Module Microsoft.Graph -Scope CurrentUser
 }
