@@ -7,7 +7,7 @@ $redirectUri = "urn:ietf:wg:oauth:2.0:oob"
 $scope = "EWS.AccessAsUser.All"
 
 # Register the application
-$app = New-AzureADApplication -DisplayName $appName -PublicClient $false -ReplyURLs $redirectUri
+$app = New-AzureADApplication -DisplayName $appName -PublicClient $true -ReplyURLs $redirectUri
 
 # Add the required resource access
 $resourceAppId1 = "00000002-0000-0ff1-ce00-000000000000"
