@@ -77,7 +77,7 @@ foreach ($mailbox in $Mailboxes)
             MailboxType = $mailbox.RecipientTypeDetails
             AccessRights = $AccessRights
             }
-    $Table
+    #$Table
     $Table | Export-Csv -NoTypeInformation "$ExportDirectory\ReconMailboxes\MailboxPermissions.csv" -Append
     }
 }
