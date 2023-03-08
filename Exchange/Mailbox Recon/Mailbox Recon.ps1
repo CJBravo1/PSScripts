@@ -37,39 +37,50 @@ Write-Host "Primary Domain: $PrimaryDomain" -ForegroundColor Yellow
 Write-Host "Exporting Accepted Domains" -ForegroundColor Green
 $domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
 
-#Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
-#Remove-Item .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
-#Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
-
 #Get Mailboxes
 Write-Host "Gathering Mailboxes" -ForegroundColor Green
-$mailboxes = Get-EXOMailbox -ResultSize Unlimited
+$Mailboxes = Get-EXOMailbox -ResultSize Unlimited
 
 #Separate Mailboxes
 Write-Host "Separating Mailboxes" -ForegroundColor Yellow
 New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
-$UserMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "UserMailbox"}
-$SharedMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
-$RoomMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox"}
-$EquipmentMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "EquipmentMailbox"}
 
-#Export to CSV files
-$UserMailboxes | Select-Object DisplayName,name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\UserMailboxes.csv" -NoTypeInformation
-$SharedMailboxes | Select-Object DisplayName,name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\SharedMailboxes.csv" -NoTypeInformation
-$RoomMailboxes | Select-Object DisplayName,name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\RoomMailboxes.csv" -NoTypeInformation
-$EquipmentMailboxes | Select-Object DisplayName,name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv "$ExportDirectory\ReconMailboxes\EquipmentMailboxes.csv" -NoTypeInformation
-
-#Gather Shared Mailbox Members
-Write-host "Gathering Shared Mailbox and Members" -foregroundcolor Green
-$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
-$SharedMailboxes | ForEach-Object {
-    $mailbox = Get-mailbox -Identity $_.Alias -ResultSize Unlimited
-    $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
-    #Write-Host "Gathering $mailbox Members" -ForegroundColor Green 
-    #Write-Host "Showing "$members.count "Users" -ForegroundColor Yellow
-    $members | Select-Object Identity,User,AccessRights | export-csv  -NoTypeInformation "$ExportDirectory\ReconMailboxes\SharedMailboxMembers.csv" -Append
+#Export All Mailboxes
+foreach ($mailbox in $Mailboxes)
+{
+    $Mailboxstatistics = Get-Mailbox $mailbox | Get-MailboxStatistics
+    $Table = [PSCustomObject]@{
+        DisplayName =$mailbox.DisplayName
+        Name = $mailbox.Name
+        Alias = $mailbox.Alias
+        #samaccountname = $mailbox.samaccountname
+        primarysmtpaddress = $mailbox.primarysmtpaddress
+        userprincipalname = $mailbox.userprincipalname
+        RecipientTypeDetails = $mailbox.RecipientTypeDetails
+        GrantSendOnBehalfTo = $mailbox.GrantSendOnBehalfTo
+        ForwardingAddress = $mailbox.ForwardingAddress
+        ForwardingSMTPAddress = $mailbox.ForwardingSmtpAddress
+        MailboxSize = $Mailboxstatistics.TotalItemSize.Value
+        EmailAddresses = $mailbox.EmailAddresses
     }
+    #Export to CSV files
+    $Table | Export-Csv "$ExportDirectory\ReconMailboxes\AllMailboxes.csv" -NoTypeInformation -Append
 
+    #Gather Mailbox Permissions
+    $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
+    foreach ($member in $members)
+    {
+        $AccessRights = $members.AccessRights | Out-String
+        $Table = [PSCustomObject]@{
+            Identity = $member.Identity
+            User = $member.User
+            MailboxType = $mailbox.RecipientTypeDetails
+            AccessRights = $AccessRights
+            }
+    $Table
+    $Table | Export-Csv -NoTypeInformation "$ExportDirectory\ReconMailboxes\MailboxPermissions.csv" -Append
+    }
+}
 
 #Get Distribution Groups
 Write-Host "Gathering Distribution Groups" -ForegroundColor Green
@@ -81,7 +92,6 @@ Write-Host "Gathering Group Membership" -ForegroundColor Green
 foreach ($group in $distroGroups)
 {
     $groupName = $group.Name
-    #Write-Host "Processing $groupName" -ForegroundColor Green
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
     $groupMembers | Export-Csv -NoTypeInformation "$ReconGroupMembersExportDirectory\$groupName.csv"
 }
@@ -111,7 +121,6 @@ $csvTable = @()
 
 foreach ($group in $unifiedGroups)
     {
-    #Write-Host "Processing $group" -ForegroundColor Yellow
     #Get Group's Members
     $members = Get-UnifiedGroupLinks -LinkType Member -Identity $group.PrimarySmtpAddress
     #Process Each Member for each group"
