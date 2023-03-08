@@ -8,7 +8,7 @@ Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Microsoft Exchange Online Resources" -ForegroundColor Yellow
 
 #Check for $adminCreds
-$CurrentUser = $env:USERNAME
+#$CurrentUser = $env:USERNAME
 if ($null -eq $adminCreds)
 {
     $adminCreds =  Get-Credential -Message "Enter Microsoft 365 Credentials"
