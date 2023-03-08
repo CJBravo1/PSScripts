@@ -16,77 +16,72 @@ if ($null -eq $PSSession)
     Import-PSSession $ExchSession
 }
 
-#Get Exchange Domains
-$domains = Get-AcceptedDomain
-$PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.Default -eq $true}
-
-#Create Export Directory
-$ExportDirectory = New-Item ".\$primaryDomain" -Type Directory
-
-#Export Primary Domains
-Write-Host "Primary Domain: $PrimaryDomain" -ForegroundColor Yellow
-Write-Host "Exporting Accepted Domains" -ForegroundColor Green
-$domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
+#Write-Host "Clearing ALL current csv files in this directory" -ForegroundColor Yellow -BackgroundColor Red
+Write-Host "Removing Previous Recon Directories" -ForegroundColor Red
+Remove-Item .\ReconGroups -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item .\ReconMailboxes -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item .\PublicFolders -Recurse -Force -ErrorAction SilentlyContinue
 
 #Get Mailboxes
-Write-Host "Gathering Mailboxes" -ForegroundColor Green
-$Mailboxes = Get-EXOMailbox -ResultSize Unlimited
+Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
+$mailboxes = get-Mailbox -ResultSize Unlimited
 
-#Export All Mailboxes
-New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
-foreach ($mailbox in $Mailboxes)
-{
-    $Mailboxstatistics = Get-Mailbox $mailbox | Get-MailboxStatistics
-    $Table = [PSCustomObject]@{
-        DisplayName =$mailbox.DisplayName
-        Name = $mailbox.Name
-        Alias = $mailbox.Alias
-        #samaccountname = $mailbox.samaccountname
-        primarysmtpaddress = $mailbox.primarysmtpaddress
-        userprincipalname = $mailbox.userprincipalname
-        RecipientTypeDetails = $mailbox.RecipientTypeDetails
-        GrantSendOnBehalfTo = $mailbox.GrantSendOnBehalfTo
-        ForwardingAddress = $mailbox.ForwardingAddress
-        ForwardingSMTPAddress = $mailbox.ForwardingSmtpAddress
-        MailboxSize = $Mailboxstatistics.TotalItemSize.Value
-        EmailAddresses = $mailbox.EmailAddresses
-    }
-    #Export to CSV files
-    $Table | Export-Csv "$ExportDirectory\ReconMailboxes\AllMailboxes.csv" -NoTypeInformation -Append
+#Separate Mailboxes
+Write-Host "Separating Mailboxes" -ForegroundColor Yellow
+New-Item -Path .\ -Name ReconMailboxes -ItemType Directory > $null
+$UserMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "UserMailbox"}
+$SharedMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "SharedMailbox"}
+$RoomMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox"}
+$EquipmentMailboxes = $mailboxes | Where-Object {$_.RecipientTypeDetails -eq "EquipmentMailbox"}
 
-    #Gather Mailbox Permissions
-    $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
-    Write-Host "Gathering Mailbox Permissions" -ForegroundColor Green
-    foreach ($member in $members)
-    {
-        $AccessRights = $members.AccessRights | Out-String
-        $Table = [PSCustomObject]@{
-            Identity = $member.Identity
-            User = $member.User
-            MailboxType = $mailbox.RecipientTypeDetails
-            AccessRights = $AccessRights
-            }
-    $Table | Export-Csv -NoTypeInformation "$ExportDirectory\ReconMailboxes\MailboxPermissions.csv" -Append
-    }
+$UserMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,ServerName,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\UserMailboxes.csv -NoTypeInformation
+$SharedMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,ServerName,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\SharedMailboxes.csv -NoTypeInformation
+$RoomMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,ServerName,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\RoomMailboxes.csv -NoTypeInformation
+$EquipmentMailboxes | Select-Object name,alias,samaccountname,primarysmtpaddress,userprincipalname,RecipientTypeDetails,ServerName,Database,GrantSendOnBehalfTo,EmailAddresses,ForwardingAddress,ForwardingSMTPAddress | Export-Csv .\ReconMailboxes\EquipmentMailboxes.csv -NoTypeInformation
+
+#Gather Shared Mailbox Members
+Write-host "Gathering Shared Mailbox and their members" -foregroundcolor Cyan
+$SharedMailboxes = Get-Mailbox -ResultSize Unlimited | Where-Object {$_.RecipientTypeDetails -eq "RoomMailbox" -or $_.RecipientTypeDetails -eq "SharedMailbox"}
+
+#Create Table
+$csvLine = New-Object PSObject
+$csvTable = @()
+$SharedMailboxes | ForEach-Object {
+    $mailbox = Get-Mailbox -Identity $_.Alias
+    $Members = Get-MailboxPermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
+    #$Members = $Members | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
+    
+    #Separate each User in the mailbox and add to the table
+    foreach ($user in $Members) {
+        $csvLine | Add-Member -NotePropertyName "MailboxName" -NotePropertyValue $mailbox.Alias
+        $csvLine | Add-Member -NotePropertyName "Member" -NotePropertyValue $User.User
+        $csvLine | Add-Member -NotePropertyName "AccessRights" -NotePropertyValue $user.AccessRights
+        $csvTable += @($csvLine)
+        $csvLine = New-Object PSObject
+        }
 }
+    #Export the Table to a CSV file    
+    $csvTable | Export-Csv -NoTypeInformation .\ReconMailboxes\SharedMailboxMembers.csv 
+    
 
 #Get Distribution Groups
-Write-Host "Gathering Distribution Groups" -ForegroundColor Green
-$ReconGroupExportDirectory = New-Item -Path $ExportDirectory -Name "ReconGroups" -Type Directory 
-$ReconGroupMembersExportDirectory = New-Item -Path "$ReconGroupExportDirectory" -Name "ReconGroupMembers" -Type Directory 
+Write-Host "Gathering Distribution Groups" -ForegroundColor Cyan
+New-Item -Path .\ -Name ReconGroups -ItemType Directory > $null
+New-Item -Path .\ReconGroups -Name ReconGroupMembers -ItemType Directory > $null
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
-$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation "$ReconGroupExportDirectory\DistributionGroups.csv"
-Write-Host "Gathering Group Membership" -ForegroundColor Green
+$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
+Write-Host "Processing Group Memberships" -ForegroundColor Yellow
 foreach ($group in $distroGroups)
 {
     $groupName = $group.Name
+    #Write-Host "Processing $groupName" -ForegroundColor Cyan
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
-    $groupMembers | Export-Csv -NoTypeInformation "$ReconGroupMembersExportDirectory\$groupName.csv"
+    $groupMembers | Export-Csv -NoTypeInformation ".\ReconGroups\ReconGroupMembers\$groupName.csv"
 }
 
 #Get Dynamic Distribution Groups
-$ReconDynamicGroupExportDirectory = New-Item -path $ReconGroupExportDirectory -Name DynamicDistributionGroupMembers -ItemType Directory
-Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Green
+mkdir .\ReconGroups\DynamicDistributionGroupMembers > $null
+Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Cyan
 $ddGroup = Get-DynamicDistributionGroup -Resultsize Unlimited
 
 #Get Group Members and Export as separate CSV Files
@@ -94,42 +89,12 @@ foreach ($group in $ddGroup)
     {
     $groupAlias = $group.Alias
     Write-Host "Processing $groupAlias" -ForegroundColor Yellow
-    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation "$ReconDynamicGroupExportDirectory\$groupAlias.csv"
+    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation .\ReconGroups\DynamicDistributionGroupMembers\"$groupAlias.csv"
     }
-
-
-#Gather Office 365 Groups
-Write-Host "Gathering Office 365 Groups" -ForegroundColor Green
-$unifiedGroups = Get-UnifiedGroup -Resultsize Unlimited
-
-#Create Blank Table
-
-$CSV = New-Object PSObject
-$csvTable = @()
-
-foreach ($group in $unifiedGroups)
-    {
-    #Get Group's Members
-    $members = Get-UnifiedGroupLinks -LinkType Member -Identity $group.PrimarySmtpAddress
-    #Process Each Member for each group"
-    foreach ($member in $members)
-        {
-        $CSV | Add-Member -NotePropertyName 'GroupName' -NotePropertyValue $group.DisplayName -Force
-        $CSV | Add-Member -NotePropertyName 'GroupEmail' -NotePropertyValue $group.PrimarySmtpAddress -Force
-        $CSV | Add-Member -NotePropertyName 'MemberName' -NotePropertyValue $member.Name -Force
-        $CSV | Add-Member -NotePropertyName 'MemberEmail' -NotePropertyValue $member.PrimarySmtpAddress -Force
-
-        #Export Data to table
-        $csvTable += @($CSV)
-        $CSV = New-Object PSObject
-        }
-    }
-#Export Table to CSV File
-Write-Host "Exporting Data to Office365Groups.csv" -ForegroundColor Green
-$csvTable | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\Office365Groups.csv"
 
 #Gather Public Folders
-Write-Host "Gathering Public Folders" -ForegroundColor Green
+Write-Host "Gathering Public Folders" -ForegroundColor Magenta
+$publicFolders = get-PublicFolder -Recurse
 if ($null -eq $publicFolders)
 {
     Write-Host "No Public Folders Were Found!" -ForegroundColor Red
@@ -139,12 +104,12 @@ else
 {
     mkdir .\PublicFolders
     $publicFolders | Export-Csv -NoTypeInformation.PublicFolders\PublicFolders.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\ContactFolders.csv"
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\NoteFolders.csv"
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\CalendarFolders.csv"
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\JournalFolders.csv"
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\StikcyNotes.csv"
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\TasksFolder.csv"
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation .\PublicFolders\ContactFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation .\PublicFolders\NoteFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation .\PublicFolders\CalendarFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation .\PublicFolders\JournalFolders.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation .\PublicFolders\StikcyNotes.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation .\PublicFolders\TasksFolder.csv
 }
-Write-Host "End of Recon" -ForegroundColor Green
-Write-Host "Export Directory is "$ExportDirectory.FullName -ForegroundColor Yellow
+Write-Host "End of Recon" -ForegroundColor Green -BackgroundColor Blue
+
