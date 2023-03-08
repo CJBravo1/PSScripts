@@ -7,13 +7,6 @@
 Write-Host "Mailbox Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Microsoft Exchange Online Resources" -ForegroundColor Yellow
 
-#Check for $adminCreds
-#$CurrentUser = $env:USERNAME
-if ($null -eq $adminCreds)
-{
-    $adminCreds =  Get-Credential -Message "Enter Microsoft 365 Credentials"
-}
-
 #Check for Current Exchange PSSession
 $PSSession = Get-AcceptedDomain
 
@@ -21,10 +14,11 @@ if ($null -eq $PSSession)
     {
     #Make new session
     Write-Host "Connect to Exchange Online" -ForegroundColor Yellow
-    Connect-ExchangeOnline -Credential $adminCreds
+    Connect-ExchangeOnline 
     Write-Host "Connect to Microsoft Online" -ForegroundColor Yellow
-    Connect-MsolService -Credential $adminCreds
+    Connect-MsolService
     }
+
 #Get Exchange Domains
 $domains = Get-AcceptedDomain
 $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.Default -eq $true}
