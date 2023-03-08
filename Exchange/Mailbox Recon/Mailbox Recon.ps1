@@ -59,7 +59,6 @@ foreach ($mailbox in $Mailboxes)
 
     #Gather Mailbox Permissions
     $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
-    Write-Host "Gathering Mailbox Permissions" -ForegroundColor Green
     foreach ($member in $members)
     {
         $AccessRights = $members.AccessRights | Out-String
