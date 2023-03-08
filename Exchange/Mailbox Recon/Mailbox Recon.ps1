@@ -41,11 +41,8 @@ $domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
 Write-Host "Gathering Mailboxes" -ForegroundColor Green
 $Mailboxes = Get-EXOMailbox -ResultSize Unlimited
 
-#Separate Mailboxes
-Write-Host "Separating Mailboxes" -ForegroundColor Yellow
-New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
-
 #Export All Mailboxes
+New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
 foreach ($mailbox in $Mailboxes)
 {
     $Mailboxstatistics = Get-Mailbox $mailbox | Get-MailboxStatistics
@@ -68,6 +65,7 @@ foreach ($mailbox in $Mailboxes)
 
     #Gather Mailbox Permissions
     $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
+    Write-Host "Gathering Mailbox Permissions" -ForegroundColor Green
     foreach ($member in $members)
     {
         $AccessRights = $members.AccessRights | Out-String
@@ -77,7 +75,6 @@ foreach ($mailbox in $Mailboxes)
             MailboxType = $mailbox.RecipientTypeDetails
             AccessRights = $AccessRights
             }
-    #$Table
     $Table | Export-Csv -NoTypeInformation "$ExportDirectory\ReconMailboxes\MailboxPermissions.csv" -Append
     }
 }
