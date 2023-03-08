@@ -11,7 +11,7 @@ $objectId = $user.ObjectId
 $roleDefs = Get-AzureADMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId $tenantId
 
 # Specify Your Role
-$roleDefs | select DisplayName
+$roleDefs | Select-Object DisplayName
 $roleToActivate = Read-Host "Enter Your Requested Role"
 
 $roleDefinition = $roleDefs | Where-Object { $_.DisplayName -eq $roleToActivate }
