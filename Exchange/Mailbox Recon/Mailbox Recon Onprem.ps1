@@ -66,14 +66,14 @@ Write-Host "Gathering Distribution Groups" -ForegroundColor Cyan
 New-Item -Path .\ -Name ReconGroups -ItemType Directory > $null
 New-Item -Path .\ReconGroups -Name ReconGroupMembers -ItemType Directory > $null
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
-$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation .\ReconGroups\DistributionGroups.csv
+$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\DistributionGroups.csv"
 Write-Host "Processing Group Memberships" -ForegroundColor Yellow
 foreach ($group in $distroGroups)
 {
     $groupName = $group.Name
     #Write-Host "Processing $groupName" -ForegroundColor Cyan
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
-    $groupMembers | Export-Csv -NoTypeInformation ".\ReconGroups\ReconGroupMembers\$groupName.csv"
+    $groupMembers | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\ReconGroupMembers\$groupName.csv"
 }
 
 #Get Dynamic Distribution Groups
@@ -86,7 +86,7 @@ foreach ($group in $ddGroup)
     {
     $groupAlias = $group.Alias
     Write-Host "Processing $groupAlias" -ForegroundColor Yellow
-    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation .\ReconGroups\DynamicDistributionGroupMembers\"$groupAlias.csv"
+    Get-Recipient -RecipientPreviewFilter $group.RecipientFilter -OrganizationalUnit $group.RecipientContainer | Select-Object Name,DisplayName,Alias,Identity,Company,Office,PrimarySMTPAddress,UserPrincipalName,AcceptMessagesOnlyFromSendersOrMembers  | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\DynamicDistributionGroupMembers\$groupAlias.csv"
     }
 
 #Gather Public Folders
@@ -101,11 +101,45 @@ else
 {
     mkdir .\PublicFolders
     $publicFolders | Export-Csv -NoTypeInformation.PublicFolders\PublicFolders.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation .\PublicFolders\ContactFolders.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation .\PublicFolders\NoteFolders.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation .\PublicFolders\CalendarFolders.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation .\PublicFolders\JournalFolders.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation .\PublicFolders\StikcyNotes.csv
-    $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation .\PublicFolders\TasksFolder.csv
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\ContactFolders.csv"
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\NoteFolders.csv"
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\CalendarFolders.csv"
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\JournalFolders.csv"
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\StikcyNotes.csv"
+    $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\TasksFolder.csv"
 }
+
+#Gather Server Information
+$ExchangeServers = Get-ExchangeServer 
+$ExchangeServers | Select-Object Name, Edition, AdminDisplayVersion, ServerRole, OperatingSystem, ExchangeVersion, IsHubTransportServer, IsClientAccessServer, IsEdgeServer, IsMailboxServer, AdminDisplayVersion | Export-Csv -NoTypeInformation "$ExportDirectory\ExchangeServers.csv"
+
+foreach ($Server in $ExchangeServers)
+{
+    # Get internal and external URLs
+    $ECPVirtualDirectory = Get-ECPVirtualDirectory -Server $Server 
+    $OWAVirtualDirectory = Get-OWAVirtualDirectory -Server $Server 
+    
+    $Results = @{
+        Server = $Server.Name
+        Domain = $Server.Domain
+        OperatingSystem = $Server.OperatingSystem
+        Edition = $Server.Edition
+        ExchangeVersion = $Server.AdminDisplayVersion
+        Roles = $server.Roles
+        ECPInternalURL = $ECPVirtualDirectory.InternalUrl
+        ECPExternalURL = $ECPVirtualDirectory.ExternalUrl
+        OWAInternalURL = $OWAVirtualDirectory.InternalUrl
+        OWAExternalURL = $OWAVirtualDirectory.ExternalUrl
+        DefaultDomain = $OWAVirtualDirectory.DefaultDomain
+    }
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\Serverinfo.csv"
+}
+
+$ExchangeCertificate = Get-ExchangeCertificate -Server $server  | Export-Csv -NoTypeInformation "$ExportDirectory\Certificates.csv"
+
+# Get the list of send and receive connectors
+$SendConnectors = Get-SendConnector | Select-Object Identity, Name, Enabled, DnsRoutingEnabled, SmartHosts, AddressSpaces, SourceTransportServers, TlsDomain, MaxMessageSize, PermissionGroups
+$ReceiveConnectors = Get-ReceiveConnector | Select-Object Identity, Name, Enabled, Bindings, PermissionGroups, RemoteIPRanges, TlsCertificateName, MaxMessageSize, ProtocolLoggingLevel
+
+
 Write-Host "End of Recon" -ForegroundColor Green -BackgroundColor Blue
