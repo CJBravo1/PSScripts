@@ -15,12 +15,12 @@ if ($null -eq $mgContext)
 }
 $Licenses = Get-MgSubscribedSku
 
-# Calculate the total and consumed license counts
-$TotalLicenses = $Licenses.ActiveUnits | Measure-Object -Sum | Select-Object -ExpandProperty Sum
-$ConsumedLicenses = $Licenses.ConsumedUnits | Measure-Object -Sum | Select-Object -ExpandProperty Sum
-
-# Display the results
-Write-Host "Total licenses: $TotalLicenses"
-Write-Host "Consumed licenses: $ConsumedLicenses"
-Write-Host ""
-$Licenses | Format-Table -AutoSize
+foreach ($license in $license)
+{
+    $Results @{
+        licenseName = $License.SkuPartNumber
+        licensesinUse = $License.consumedUnits
+        licenseTotal = $license.PrepaidUnits.Enabled
+    }
+    $Results
+}
