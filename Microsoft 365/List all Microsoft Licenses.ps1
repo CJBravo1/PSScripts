@@ -4,12 +4,6 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
         Write-Host "Installing Microsoft Graph Powershell Modules" -ForegroundColor Green
         Install-Module Microsoft.Graph -Scope CurrentUser
     } 
-    if  ($null -eq (Get-InstalledModule Az -ErrorAction SilentlyContinue))
-    {
-        Write-Host "Installing Azure Powershell Module" -ForegroundColor Green
-        Install-Module az -Scope CurrentUser
-    }
-    
 #Retrieve all Microsoft Licenses
 $mgContext = Get-MgContext
 
