@@ -15,12 +15,14 @@ if ($null -eq $mgContext)
 }
 $Licenses = Get-MgSubscribedSku
 
-foreach ($license in $license)
+foreach ($license in $Licenses)
 {
-    $Results @{
+    $Results = @(
+    @{
         licenseName = $License.SkuPartNumber
         licensesinUse = $License.consumedUnits
         licenseTotal = $license.PrepaidUnits.Enabled
     }
+    )
     $Results
 }
