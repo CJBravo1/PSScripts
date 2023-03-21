@@ -13,7 +13,7 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
     $MGContext = Get-MgContext
     if ($null -eq $MGContext)
     {
-        Read-Host "Read or Write?"
+       $Write =  Read-Host "Read or Write?"
         switch ($write)
         {
             "Write"
@@ -33,6 +33,3 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
         $MGContext.Scopes
         Write-Host "Use Disconnect-MGGraph to Sign Out..." -ForegroundColor Red
     }
-
-
-ConnectTo-Graph
