@@ -77,7 +77,7 @@ Write-Host "Gathering Distribution Groups" -ForegroundColor Green
 $ReconGroupExportDirectory = New-Item -Path $ExportDirectory -Name "ReconGroups" -Type Directory 
 $ReconGroupMembersExportDirectory = New-Item -Path "$ReconGroupExportDirectory" -Name "ReconGroupMembers" -Type Directory 
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
-$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress | Export-Csv -NoTypeInformation "$ReconGroupExportDirectory\DistributionGroups.csv"
+$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress,EmailAddresses | Export-Csv -NoTypeInformation "$ReconGroupExportDirectory\DistributionGroups.csv"
 Write-Host "Gathering Group Membership" -ForegroundColor Green
 foreach ($group in $distroGroups)
 {
