@@ -26,7 +26,10 @@ $ExportDirectory = New-Item ".\$primaryDomain" -Type Directory
 #Get Mailboxes
 Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
 $mailboxes = get-Mailbox -ResultSize Unlimited
+Write-Host "Creating Directories" -ForegroundColor Green
 New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
+New-Item -Path $ExportDirectory -Name ReconGroups -ItemType Directory
+New-Item -Path "$ExportDirectory\ReconGroups" -Name ReconGroupMembers -ItemType Directory
 foreach ($mailbox in $Mailboxes)
 {
     $Mailboxstatistics = Get-Mailbox $mailbox.Identity | Get-MailboxStatistics
@@ -46,7 +49,7 @@ foreach ($mailbox in $Mailboxes)
     }
     #Export to CSV files
     $Table | Export-Csv "$ExportDirectory\ReconMailboxes\AllMailboxes.csv" -NoTypeInformation -Append
-}
+
     #Gather Mailbox Permissions
     $members = get-Mailboxpermission -Identity $mailbox.Alias | Where-Object {$_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*"}
     foreach ($member in $members)
@@ -60,6 +63,7 @@ foreach ($mailbox in $Mailboxes)
             }
     $Table | Export-Csv -NoTypeInformation "$ExportDirectory\ReconMailboxes\MailboxPermissions.csv" -Append
     }
+}
 
 #Get Distribution Groups
 Write-Host "Gathering Distribution Groups" -ForegroundColor Cyan
@@ -73,7 +77,7 @@ foreach ($group in $distroGroups)
     $groupName = $group.Name
     #Write-Host "Processing $groupName" -ForegroundColor Cyan
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
-    $groupMembers | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\ReconGroupMembers\$groupName.csv"
+    $groupMembers | select Name,Displayname,UserPrincipalname,primarySMTPAddress | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\ReconGroupMembers\$groupName.csv"
 }
 
 #Get Dynamic Distribution Groups
