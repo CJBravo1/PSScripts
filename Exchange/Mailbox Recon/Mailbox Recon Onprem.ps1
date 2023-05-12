@@ -17,7 +17,7 @@ if ($null -eq $PSSession)
 }
 
 #Get Exchange Domains
-$domains = Get-AcceptedDomain
+#$domains = Get-AcceptedDomain
 $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.Default -eq $true}
 
 #Create Export Directory
@@ -77,7 +77,7 @@ foreach ($group in $distroGroups)
     $groupName = $group.Name
     #Write-Host "Processing $groupName" -ForegroundColor Cyan
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
-    $groupMembers | select Name,Displayname,UserPrincipalname,primarySMTPAddress | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\ReconGroupMembers\$groupName.csv"
+    $groupMembers | Select-Object Name,Displayname,UserPrincipalname,primarySMTPAddress | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\ReconGroupMembers\$groupName.csv"
 }
 
 #Get Dynamic Distribution Groups
@@ -139,11 +139,11 @@ foreach ($Server in $ExchangeServers)
     $Results | Export-Csv -NoTypeInformation "$ExportDirectory\Serverinfo.csv"
 }
 
-$ExchangeCertificate = Get-ExchangeCertificate -Server $server  | Export-Csv -NoTypeInformation "$ExportDirectory\Certificates.csv"
+Get-ExchangeCertificate -Server $server  | Export-Csv -NoTypeInformation "$ExportDirectory\Certificates.csv"
 
 # Get the list of send and receive connectors
-$SendConnectors = Get-SendConnector | Select-Object Identity, Name, Enabled, DnsRoutingEnabled, SmartHosts, AddressSpaces, SourceTransportServers, TlsDomain, MaxMessageSize, PermissionGroups
-$ReceiveConnectors = Get-ReceiveConnector | Select-Object Identity, Name, Enabled, Bindings, PermissionGroups, RemoteIPRanges, TlsCertificateName, MaxMessageSize, ProtocolLoggingLevel
+Get-SendConnector | Select-Object Identity, Name, Enabled, DnsRoutingEnabled, SmartHosts, AddressSpaces, SourceTransportServers, TlsDomain, MaxMessageSize, PermissionGroups | Export-Csv -NoTypeInformation "$ExportDirectory\SendConnectors.csv" 
+Get-ReceiveConnector | Select-Object Identity, Name, Enabled, Bindings, PermissionGroups, RemoteIPRanges, TlsCertificateName, MaxMessageSize, ProtocolLoggingLevel | Export-Csv -NoTypeInformation "$ExportDirectory\ReceiveConnectors.csv"
 
 
 Write-Host "End of Recon" -ForegroundColor Green -BackgroundColor Blue
