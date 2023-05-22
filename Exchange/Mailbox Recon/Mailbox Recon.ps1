@@ -4,7 +4,7 @@
 #Change Window Title
 #$host.ui.RawUI.WindowTitle = "Mailbox Recon"
 #Clear-Host
-Write-Host "Mailbox Recon" -ForegroundColor Green
+Write-Host "Exchange Online Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Microsoft Exchange Online Resources" -ForegroundColor Yellow
 
 #Check for Current Exchange PSSession
@@ -22,6 +22,7 @@ if ($null -eq $PSSession)
 #Get Exchange Domains
 $domains = Get-AcceptedDomain
 $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.Default -eq $true}
+Write-Host "Primary Domain $PrimaryDomain" -ForegroundColor Yellow
 
 #Create Export Directory
 $ExportDirectory = New-Item ".\$primaryDomain" -Type Directory
@@ -89,7 +90,7 @@ foreach ($group in $distroGroups)
 #Get Dynamic Distribution Groups
 $ReconDynamicGroupExportDirectory = New-Item -path $ReconGroupExportDirectory -Name DynamicDistributionGroupMembers -ItemType Directory
 Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Green
-$ddGroup = Get-DynamicDistributionGroup -Resultsize Unlimited
+$ddGroup = Get-DynamicDistributionGroup -Resultsize Unlimited -ErrorAction SilentlyContinue
 
 #Get Group Members and Export as separate CSV Files
 foreach ($group in $ddGroup) 
@@ -147,6 +148,45 @@ else
     $publicFolders | Where-Object {$_.folderType -eq "IPF.Journal"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\JournalFolders.csv"
     $publicFolders | Where-Object {$_.folderType -eq "IPF.StickyNote"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\StikcyNotes.csv"
     $publicFolders | Where-Object {$_.folderType -eq "IPF.Task"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\TasksFolder.csv"
+}
+
+# Get the list of send and receive connectors
+Write-Host "Gathering Inbound Connectors" -ForegroundColor Green
+$InboundConnectors = Get-InboundConnector
+foreach ($Connector in $InboundConnectors)
+{
+    $Results = [PSCustomObject]@{
+        Identity = $Connector.Identity
+        Name = $Connector.Name
+        Enabled = $Connector.Enabled
+        ConnectorType = $Connector.ConnectorType
+        AssociatedAcceptedDomains = $Connector.AssociatedAcceptedDomains
+        RequireTls = $Connector.RequireTls
+        TlsSenderCertificateName = $connector.TlsSenderCertificateName
+        RestrictDomainsToIPAddresses = $Connector.RestrictDomainsToIPAddresses
+        RestrictDomainsToCertificate = $connector.RestrictDomainsToCertificate
+        SenderDomains = $Connector.SenderDomains -join '; '
+        SenderIPAddresses = $Connector.SenderIPAddresses -join ', '
+    }
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\InboundConnectors.csv" -Append
+}
+
+$OutboundConnectors = Get-OutboundConnector
+Write-Host "Gathering Outbound Connectors" -ForegroundColor Green
+foreach ($Connector in $OutboundConnectors)
+{
+    $Results = [PSCustomObject]@{
+        Identity = $Connector.Identity
+        Name = $Connector.Name
+        Enabled = $Connector.Enabled
+        ConnectorType = $Connector.ConnectorType
+        SmartHosts = $Connector.SmartHosts
+        TlsDomain = $Connector.TlsDomain
+        TlsSettings = $Connector.TlsSettings
+        AllAcceptedDomains = $Connector.AllAcceptedDomains
+        
+    }
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\ReceiveConnectors.csv" -Append
 }
 Write-Host "End of Recon" -ForegroundColor Green
 Write-Host "Export Directory is "$ExportDirectory.FullName -ForegroundColor Yellow
