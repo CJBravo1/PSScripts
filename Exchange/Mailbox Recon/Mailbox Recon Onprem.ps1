@@ -4,7 +4,7 @@
 #Change Window Title
 #$host.ui.RawUI.WindowTitle = "Mailbox Recon"
 #Clear-Host
-Write-Host "Mailbox Recon" -ForegroundColor Green
+Write-Host "Exchange Recon" -ForegroundColor Green
 Write-Host "Use this script to gather all Exchange resources"
 
 $PSSession = Get-PSSession | Where-Object {$_.configurationName -like "*exchange"}
@@ -19,12 +19,13 @@ if ($null -eq $PSSession)
 #Get Exchange Domains
 #$domains = Get-AcceptedDomain
 $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.Default -eq $true}
+Write-Host "Primary Domain $PrimaryDomain" -ForegroundColor Yellow
 
 #Create Export Directory
 $ExportDirectory = New-Item ".\$primaryDomain" -Type Directory
 
 #Get Mailboxes
-Write-Host "Gathering Mailboxes" -ForegroundColor Cyan
+Write-Host "Gathering Mailboxes" -ForegroundColor Green
 $mailboxes = get-Mailbox -ResultSize Unlimited
 Write-Host "Creating Directories" -ForegroundColor Green
 New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
@@ -66,23 +67,21 @@ foreach ($mailbox in $Mailboxes)
 }
 
 #Get Distribution Groups
-Write-Host "Gathering Distribution Groups" -ForegroundColor Cyan
-New-Item -Path .\ -Name ReconGroups -ItemType Directory > $null
-New-Item -Path .\ReconGroups -Name ReconGroupMembers -ItemType Directory > $null
+Write-Host "Gathering Distribution Groups" -ForegroundColor Green
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
 $distroGroups | Select-Object name,displayname,alias,primarysmtpaddress,EmailAddresses | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\DistributionGroups.csv"
 Write-Host "Processing Group Memberships" -ForegroundColor Yellow
 foreach ($group in $distroGroups)
 {
     $groupName = $group.Name
-    #Write-Host "Processing $groupName" -ForegroundColor Cyan
+    #Write-Host "Processing $groupName" -ForegroundColor Green
     $groupMembers = Get-DistributionGroupMember -Identity "$group"
     $groupMembers | Select-Object Name,Displayname,UserPrincipalname,primarySMTPAddress | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\ReconGroupMembers\$groupName.csv"
 }
 
 #Get Dynamic Distribution Groups
-mkdir .\ReconGroups\DynamicDistributionGroupMembers > $null
-Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Cyan
+New-Item -Path "$ExportDirectory\ReconGroups\DynamicDistributionGroupMembers" -Name ReconGroupMembers -ItemType Directory
+Write-Host "Gathering Dynamic Distribution Groups" -ForegroundColor Green
 $ddGroup = Get-DynamicDistributionGroup -Resultsize Unlimited
 
 #Get Group Members and Export as separate CSV Files
@@ -95,7 +94,7 @@ foreach ($group in $ddGroup)
 
 #Gather Public Folders
 Write-Host "Gathering Public Folders" -ForegroundColor Magenta
-$publicFolders = get-PublicFolder -Recurse
+$publicFolders = get-PublicFolder -Recurse -ErrorAction SilentlyContinue
 if ($null -eq $publicFolders)
 {
     Write-Host "No Public Folders Were Found!" -ForegroundColor Red
@@ -114,8 +113,9 @@ else
 }
 
 #Gather Server Information
+Write-Host "Gathering Exchange Servers" -ForegroundColor Green 
 $ExchangeServers = Get-ExchangeServer 
-$ExchangeServers | Select-Object Name, Edition, AdminDisplayVersion, ServerRole, OperatingSystem, ExchangeVersion, IsHubTransportServer, IsClientAccessServer, IsEdgeServer, IsMailboxServer, AdminDisplayVersion | Export-Csv -NoTypeInformation "$ExportDirectory\ExchangeServers.csv"
+$ExchangeServers | Select-Object Name, Edition, AdminDisplayVersion, ServerRole, OperatingSystem, ExchangeVersion, IsHubTransportServer, IsClientAccessServer, IsEdgeServer, IsMailboxServer | Export-Csv -NoTypeInformation "$ExportDirectory\ExchangeServers.csv"
 
 foreach ($Server in $ExchangeServers)
 {
@@ -123,27 +123,73 @@ foreach ($Server in $ExchangeServers)
     $ECPVirtualDirectory = Get-ECPVirtualDirectory -Server $Server 
     $OWAVirtualDirectory = Get-OWAVirtualDirectory -Server $Server 
     
-    $Results = @{
+    #Certificates
+    $Certificates = Get-ExchangeCertificate -Server $Server
+    $PrimaryCertificate = $Certificates | Where-Object {$_.CertificateDomains -like $PrimaryDomain.Name -and $_.Status -eq "Valid"}
+
+    $Results = [PSCustomObject]@{
         Server = $Server.Name
         Domain = $Server.Domain
+        FQDN = $Server.FQDN
         OperatingSystem = $Server.OperatingSystem
         Edition = $Server.Edition
         ExchangeVersion = $Server.AdminDisplayVersion
-        Roles = $server.Roles
+        Roles = $server.ServerRole.toString()
         ECPInternalURL = $ECPVirtualDirectory.InternalUrl
         ECPExternalURL = $ECPVirtualDirectory.ExternalUrl
         OWAInternalURL = $OWAVirtualDirectory.InternalUrl
         OWAExternalURL = $OWAVirtualDirectory.ExternalUrl
-        DefaultDomain = $OWAVirtualDirectory.DefaultDomain
+        OWADefaultDomain = $OWAVirtualDirectory.DefaultDomain
+        CertificateDomains = $PrimaryCertificate.CertificateDomains.Address -join ', '
+        CertificateIssuer = $PrimaryCertificate.Issuer
+        CertificateSubject = $PrimaryCertificate.Subject
+        CertificateStatus = $PrimaryCertificate.Status
+        CertificateStartDate = $PrimaryCertificate.NotBefore
+        CertificateEndDate = $PrimaryCertificate.NotAfter
+        CertificateServices =  $PrimaryCertificate.Services
+        CertificateKeySize = $PrimaryCertificate.PublicKeySize
     }
-    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\Serverinfo.csv"
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\Serverinfo.csv" -Append
+}
+# Get the list of send and receive connectors
+Write-Host "Gathering Send Connectors" -ForegroundColor Green
+$SendConnectors = Get-SendConnector 
+foreach ($Connector in $SendConnectors)
+{
+    $Results = [PSCustomObject]@{
+        Identity = $Connector.Identity
+        Name = $Connector.Name
+        Enabled = $Connector.Enabled
+        DnsRoutingEnabled = $Connector.DnsRoutingEnabled
+        SmartHosts = $Connector.SmartHosts
+        AddressSpaceAddress = $Connector.AddressSpaces.Address
+        AddressSpaceType = $Connector.Address.Type
+        SourceIP = $connector.SourceIPAddress.IPAddressToString
+        SourceTransportServers = $connector.SourceTransportServers.name
+        TlsDomainAddress = $connector.TlsDomain.Address
+        TLSDomainDomain = $connector.TlsDomain.domain
+        TLSCertificateName = $connector.TlsCertificateName.CertificateSubject
+        TLSCertificateIssuer = $connector.TlsCertificateName.CertificateIssuer
+    }
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\SendConnectors.csv" -Append
 }
 
-Get-ExchangeCertificate -Server $server  | Export-Csv -NoTypeInformation "$ExportDirectory\Certificates.csv"
-
-# Get the list of send and receive connectors
-Get-SendConnector | Select-Object Identity, Name, Enabled, DnsRoutingEnabled, SmartHosts, AddressSpaces, SourceTransportServers, TlsDomain, MaxMessageSize, PermissionGroups | Export-Csv -NoTypeInformation "$ExportDirectory\SendConnectors.csv" 
-Get-ReceiveConnector | Select-Object Identity, Name, Enabled, Bindings, PermissionGroups, RemoteIPRanges, TlsCertificateName, MaxMessageSize, ProtocolLoggingLevel | Export-Csv -NoTypeInformation "$ExportDirectory\ReceiveConnectors.csv"
-
+$ReceiveConnectors = Get-ReceiveConnector
+Write-Host "Gathering Receive Connectors" -ForegroundColor Green
+foreach ($Connector in $ReceiveConnectors)
+{
+    $Results = [PSCustomObject]@{
+        Identity = $Connector.Identity
+        Name = $Connector.Name
+        Enabled = $Connector.Enabled
+        Server = $Connector.Server
+        TransportRole = $Connector.TransportRole
+        FQDN = $connector.FQDN.domain
+        BindingsAddressFamilyIPv4 = ($Connector.Bindings| Where-Object {$_.Addressfamily -eq "InterNetwork"}).Addressfamily
+        BindingsAddressIPv4 = ($Connector.Bindings| Where-Object {$_.Addressfamily -eq "InterNetwork"}).Address.IPAddressToString
+        BindingsPortIPv4 = ($Connector.Bindings| Where-Object {$_.Addressfamily -eq "InterNetwork"}).Port 
+    }
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\ReceiveConnectors.csv" -Append
+}
 
 Write-Host "End of Recon" -ForegroundColor Green -BackgroundColor Blue
