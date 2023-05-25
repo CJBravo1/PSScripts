@@ -18,5 +18,5 @@ foreach ($Directory in $HomeDirectories)
     $HomeDirectoryACL.SetAccessRule($rule)
 
     #Set ACL Rule
-    Set-Acl -Path $Directory.FullName -AclObject $HomeDirectoryACL
+    Set-Acl -Path $Directory.FullName -AclObject $HomeDirectoryACL -WhatIf
 }
