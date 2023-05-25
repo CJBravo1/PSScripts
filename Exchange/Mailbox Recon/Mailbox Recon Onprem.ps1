@@ -123,7 +123,7 @@ foreach ($Server in $ExchangeServers)
     $ECPVirtualDirectory = Get-ECPVirtualDirectory -Server $Server 
     $OWAVirtualDirectory = Get-OWAVirtualDirectory -Server $Server 
     
-    #Certificates
+    #Servers and Certificates
     $Certificates = Get-ExchangeCertificate -Server $Server
     $PrimaryCertificate = $Certificates | Where-Object {$_.CertificateDomains -like $PrimaryDomain.Name -and $_.Status -eq "Valid"}
 
@@ -149,7 +149,7 @@ foreach ($Server in $ExchangeServers)
         CertificateServices =  $PrimaryCertificate.Services
         CertificateKeySize = $PrimaryCertificate.PublicKeySize
     }
-    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\Serverinfo.csv" -Append
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\ServersandCertificates.csv" -Append
 }
 # Get the list of send and receive connectors
 Write-Host "Gathering Send Connectors" -ForegroundColor Green
