@@ -15,8 +15,6 @@ if ($null -eq $PSSession)
     #Make new session
     Write-Host "Connect to Exchange Online" -ForegroundColor Yellow
     Connect-ExchangeOnline 
-    Write-Host "Connect to Microsoft Online" -ForegroundColor Yellow
-    Connect-MsolService
     }
 
 #Get Exchange Domains
@@ -40,7 +38,7 @@ $Mailboxes = Get-EXOMailbox -ResultSize Unlimited
 New-Item -Path $ExportDirectory -Name ReconMailboxes -ItemType Directory 
 foreach ($mailbox in $Mailboxes)
 {
-    $Mailboxstatistics = Get-Mailbox $mailbox | Get-MailboxStatistics
+    $Mailboxstatistics = Get-MailboxStatistics -Identity $mailbox.Identity
     $Table = [PSCustomObject]@{
         DisplayName =$mailbox.DisplayName
         Name = $mailbox.Name
@@ -184,9 +182,9 @@ foreach ($Connector in $OutboundConnectors)
         TlsDomain = $Connector.TlsDomain
         TlsSettings = $Connector.TlsSettings
         AllAcceptedDomains = $Connector.AllAcceptedDomains
-        
+
     }
-    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\ReceiveConnectors.csv" -Append
+    $Results | Export-Csv -NoTypeInformation "$ExportDirectory\OutboundConnectors.csv" -Append
 }
 Write-Host "End of Recon" -ForegroundColor Green
 Write-Host "Export Directory is "$ExportDirectory.FullName -ForegroundColor Yellow
