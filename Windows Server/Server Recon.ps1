@@ -1,5 +1,4 @@
 $serverlist = cat C:\Temp\serverlist.txt
-#$serverlist = "surmndcaw01"
 
 foreach ($RemoteServer in $serverlist)
 {
