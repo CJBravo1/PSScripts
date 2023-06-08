@@ -8,8 +8,14 @@ if ($null -eq $PSSession)
     {
     #Make new session
     Write-Host "Connect to Exchange Online" -ForegroundColor Yellow
-    Connect-ExchangeOnline 
+    #Connect-ExchangeOnline 
     }
+        # Export Primary Domains
+        $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.default -eq $true}
+        Write-Host "Primary Domain: $PrimaryDomain" -ForegroundColor Yellow
+        Write-Host "Exporting Accepted Domains" -ForegroundColor Green
+        $domains = Get-AcceptedDomain
+        $domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
 
     function Export-MailboxReconData {
         param (
@@ -19,14 +25,7 @@ if ($null -eq $PSSession)
             [Parameter(Mandatory = $true)]
             [string]$PrimaryDomain
         )
-    
-        # Export Primary Domains
-        $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.default -eq $true}
-        Write-Host "Primary Domain: $PrimaryDomain" -ForegroundColor Yellow
-        Write-Host "Exporting Accepted Domains" -ForegroundColor Green
-        $domains = Get-AcceptedDomain
-        $domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
-    
+        
         # Get Mailboxes
         Write-Host "Gathering Mailboxes" -ForegroundColor Green
         $Mailboxes = Get-EXOMailbox -ResultSize Unlimited
@@ -82,13 +81,14 @@ if ($null -eq $PSSession)
         $reconGroupExportDir = New-Item -Path $ExportDirectory -Name "ReconGroups" -ItemType Directory
         $reconGroupMembersExportDir = New-Item -Path $reconGroupExportDir -Name "ReconGroupMembers" -ItemType Directory
         $distroGroups = Get-DistributionGroup -ResultSize unlimited
+        $distroGroups | Select-Object name,displayname,alias,primarysmtpaddress,EmailAddresses | Export-Csv -NoTypeInformation "$reconGroupExportDir\DistributionGroups.csv"
         $totalGroups = $distroGroups.Count
         $progress = 0
         foreach ($group in $distroGroups) {
             $progress++
             Write-Progress -Activity "Exporting Distribution Groups" -Status "Progress: $progress / $totalGroups" -PercentComplete (($progress / $totalGroups) * 100)
             
-            $groupName = $group.Name
+            $groupName = $group.Alias
             $groupMembers = Get-DistributionGroupMember -Identity $group.PrimarySmtpAddress
             $groupMembers | Export-Csv -NoTypeInformation "$reconGroupMembersExportDir\$groupName.csv"
         }
@@ -192,11 +192,11 @@ if ($null -eq $PSSession)
         # Get Inbound Connectors
         Write-Host "Gathering Inbound Connectors" -ForegroundColor Green
         $inboundConnectors = Get-InboundConnector
-        $totalConnectors = $inboundConnectors.Count
+        #$totalConnectors = $inboundConnectors.Count
         $progress = 0
         $results = foreach ($connector in $inboundConnectors) {
             $progress++
-            Write-Progress -Activity "Exporting Inbound Connectors" -Status "Progress: $progress / $totalConnectors" -PercentComplete (($progress / $totalConnectors) * 100)
+            #Write-Progress -Activity "Exporting Inbound Connectors" -Status "Progress: $progress / $totalConnectors" -PercentComplete (($progress / $totalConnectors) * 100)
             
             [PSCustomObject]@{
                 Identity = $connector.Identity
@@ -223,12 +223,12 @@ if ($null -eq $PSSession)
     
         # Get Outbound Connectors
         Write-Host "Gathering Outbound Connectors" -ForegroundColor Green
-        $outboundConnectors = Get-OutboundConnector
-        $totalConnectors = $outboundConnectors.Count
+        $outboundConnectors = Get-OutboundConnector -IncludeTestModeConnectors $true
+        #$totalConnectors = $outboundConnectors.Count
         $progress = 0
         $results = foreach ($connector in $outboundConnectors) {
             $progress++
-            Write-Progress -Activity "Exporting Outbound Connectors" -Status "Progress: $progress / $totalConnectors" -PercentComplete (($progress / $totalConnectors) * 100)
+            #Write-Progress -Activity "Exporting Outbound Connectors" -Status "Progress: $progress / $totalConnectors" -PercentComplete (($progress / $totalConnectors) * 100)
             
             [PSCustomObject]@{
                 Identity = $connector.Identity
@@ -250,7 +250,7 @@ if ($null -eq $PSSession)
     
     # Check for Current Exchange PSSession
     if (!(Get-PSSession | Where-Object { $_.ConfigurationName -eq "Microsoft.Exchange" })) {
-        Connect-ExchangeOnline
+        #Connect-ExchangeOnline
     }
     
     # Create Export Directory
