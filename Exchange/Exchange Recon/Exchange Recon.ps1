@@ -14,8 +14,16 @@ if ($null -eq $PSSession)
         $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.default -eq $true}
         Write-Host "Primary Domain: $PrimaryDomain" -ForegroundColor Yellow
         Write-Host "Exporting Accepted Domains" -ForegroundColor Green
-        $domains = Get-AcceptedDomain
-        $domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
+        
+
+        function Export-AcceptedDomains {
+            param (
+                [Parameter(Mandatory = $true)]
+                [string]$ExportDirectory
+            )
+            $domains = Get-AcceptedDomain
+            $domains | Export-Csv -NoTypeInformation "$ExportDirectory\AcceptedDomains.csv"
+        }
 
     function Export-MailboxReconData {
         param (
@@ -264,6 +272,7 @@ if ($null -eq $PSSession)
     Export-PublicFolders -ExportDirectory $exportDirectory
     Export-InboundConnectors -ExportDirectory $exportDirectory
     Export-OutboundConnectors -ExportDirectory $exportDirectory
+    Export-AcceptedDomains -ExportDirectory $exportDirectory
     
     Write-Host "End of Recon" -ForegroundColor Green
     Write-Host "Export Directory: $exportDirectory" -ForegroundColor Yellow
