@@ -102,8 +102,8 @@ if ($null -eq $publicFolders)
 
 else 
 {
-    mkdir .\PublicFolders
-    $publicFolders | Export-Csv -NoTypeInformation.PublicFolders\PublicFolders.csv
+    New-Item -Path $ExportDirectory -Name "PublicFolders" -ItemType Directory
+    $publicFolders | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\PublicFolders.csv"
     $publicFolders | Where-Object {$_.folderType -eq "IPF.Contact"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\ContactFolders.csv"
     $publicFolders | Where-Object {$_.folderType -eq "IPF.Note"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\NoteFolders.csv"
     $publicFolders | Where-Object {$_.folderType -eq "IPF.Appointment"} | Export-Csv -NoTypeInformation "$ExportDirectory\PublicFolders\CalendarFolders.csv"
