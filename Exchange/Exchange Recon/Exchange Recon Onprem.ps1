@@ -39,10 +39,11 @@ foreach ($mailbox in $Mailboxes)
         Name = $mailbox.Name
         Alias = $mailbox.Alias
         #samaccountname = $mailbox.samaccountname
+        database = $mailbox.Database.name
         primarysmtpaddress = $mailbox.primarysmtpaddress
         userprincipalname = $mailbox.userprincipalname
         RecipientTypeDetails = $mailbox.RecipientTypeDetails
-        GrantSendOnBehalfTo = $mailbox.GrantSendOnBehalfTo
+        GrantSendOnBehalfTo = $mailbox.GrantSendOnBehalfTo.Name
         ForwardingAddress = $mailbox.ForwardingAddress
         ForwardingSMTPAddress = $mailbox.ForwardingSmtpAddress
         MailboxSize = $Mailboxstatistics.TotalItemSize.Value
