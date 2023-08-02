@@ -3,7 +3,7 @@ function Write-Green {
     param([string]$Text)
     Write-Host $Text -ForegroundColor Green
 }
-
+$ErrorActionPreference="SilentlyContinue"
 # Get basic server information
 Write-Green "Gathering basic server information..."
 $hostname = $env:COMPUTERNAME
