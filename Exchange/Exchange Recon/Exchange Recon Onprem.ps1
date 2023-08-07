@@ -47,7 +47,7 @@ foreach ($mailbox in $Mailboxes)
         ForwardingAddress = $mailbox.ForwardingAddress
         ForwardingSMTPAddress = $mailbox.ForwardingSmtpAddress
         MailboxSize = $Mailboxstatistics.TotalItemSize.Value
-        EmailAddresses = $mailbox.EmailAddresses
+        EmailAddresses = $mailbox.EmailAddresses.ToStringArray()
     }
     #Export to CSV files
     $Table | Export-Csv "$ExportDirectory\ReconMailboxes\AllMailboxes.csv" -NoTypeInformation -Append
@@ -70,7 +70,7 @@ foreach ($mailbox in $Mailboxes)
 #Get Distribution Groups
 Write-Host "Gathering Distribution Groups" -ForegroundColor Green
 $distroGroups = Get-DistributionGroup -ResultSize unlimited
-$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress,EmailAddresses | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\DistributionGroups.csv"
+$distroGroups | Select-Object name,displayname,alias,primarysmtpaddress,EmailAddresses,DistinguishedName | Export-Csv -NoTypeInformation "$ExportDirectory\ReconGroups\DistributionGroups.csv"
 Write-Host "Processing Group Memberships" -ForegroundColor Yellow
 foreach ($group in $distroGroups)
 {
