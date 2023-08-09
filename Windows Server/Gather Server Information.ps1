@@ -1,3 +1,6 @@
+#Gather Windows Server Information
+#V.2 - Correct Applications not being displayed in the ApplicationsInstalled Field. 
+
 # Define a function to display text in green
 function Write-Green {
     param([string]$Text)
@@ -26,9 +29,9 @@ $ramUsageGB = [Math]::Round($ramUsage / 1GB, 2)
 
 # Get installed applications
 Write-Green "Gathering installed applications..."
-$applications = Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* |
-                Where-Object { $_.DisplayName -ne $null } |
-                Select-Object DisplayName, Publisher, InstallDate
+$applications = Get-WmiObject win32_product | 
+                Where-Object {$_.Name -ne $null} | 
+                Select-Object Name,Vendor,InstallDate
 
 # Convert the applications to plain text representation
 $applicationsText = $applications | ForEach-Object {
@@ -37,7 +40,7 @@ $applicationsText = $applications | ForEach-Object {
         $installDate = [DateTime]::ParseExact($installDate, "yyyyMMdd", $null).ToString("yyyy-MM-dd")
     }
 
-    "{0} (Publisher: {1}, Install Date: {2})" -f $_.DisplayName, $_.Publisher, $installDate
+    "{0} (Publisher: {1}, Install Date: {2})" -f $_.Name, $_.Vendor, $installDate
 }
 
 # Get installed server roles
