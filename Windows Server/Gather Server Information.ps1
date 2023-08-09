@@ -167,3 +167,8 @@ $driversExportFilePath = Join-Path -Path $scriptDirectory -ChildPath $driversExp
 $drivers | Export-Csv -Path $driversExportFilePath -NoTypeInformation
 
 Write-Green "Driver information has been exported to $driversExportFilePath."
+
+$hostname = hostnmame
+$CSVDirectory = New-Item -Path .\$hostname -ItemType Directory -Verbose
+Move-Item *.csv $CSVDirectory
+Compress-Archive $CSVDirectory $CSVDirectory".zip" -Verbose
