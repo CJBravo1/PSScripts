@@ -64,7 +64,7 @@ if ($null -eq $PSSession)
             $table | Export-Csv -NoTypeInformation "$reconMailboxesDir\AllMailboxes.csv" -Append
     
             # Gather Mailbox Permissions
-            $members = Get-MailboxPermission -Identity $mailbox.Alias | Where-Object { $_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*" }
+            $members = Get-MailboxPermission -Identity $mailbox.Alias #| Where-Object { $_.User -like "*@*.com" -or $_.User -like "*\*" -and $_.User -notlike "NT AUTHORITY\*" }
             foreach ($member in $members) {
                 $accessRights = $members.AccessRights | Out-String
                 $table = [PSCustomObject]@{
