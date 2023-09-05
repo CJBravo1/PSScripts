@@ -69,6 +69,7 @@ if ($null -eq $PSSession)
                 $accessRights = $members.AccessRights | Out-String
                 $table = [PSCustomObject]@{
                     Identity = $member.Identity
+                    Displayname = $member.DisplayName
                     User = $member.User
                     MailboxType = $mailbox.RecipientTypeDetails
                     AccessRights = $accessRights
