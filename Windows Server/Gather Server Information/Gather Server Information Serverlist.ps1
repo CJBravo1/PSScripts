@@ -172,7 +172,11 @@ $drivers | Export-Csv -Path $driversExportFilePath -NoTypeInformation
 
 Write-Green "Driver information has been exported to $driversExportFilePath."
 
-$CSVDirectory = New-Item -Path .\$server -ItemType Directory -Verbose
-Move-Item *.csv $CSVDirectory
-Compress-Archive $CSVDirectory $CSVDirectory".zip" -Verbose
+#Put server exports into CSV files
+#$CSVDirectory = New-Item -Path .\$server -ItemType Directory -Verbose
+#Move-Item *.csv $CSVDirectory
+#Compress-Archive $CSVDirectory $CSVDirectory".zip" -Verbose
 }
+
+#Put all Server info in one single CSV File
+Get-ChildItem -Recurse | Where-Object {$_.name -like "*serverinfo*"} | ForEach-Object {Import-Csv $_.FUllName | Export-Csv -NoTypeInformation .\AllServerInfo.csv -Append -Verbose}
