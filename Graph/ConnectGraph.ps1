@@ -33,3 +33,10 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
         $MGContext.Scopes
         Write-Host "Use Disconnect-MGGraph to Sign Out..." -ForegroundColor Red
     }
+
+    #Output Connection Information
+    $MgDomains = Get-MgDomain
+    $DefaultMgDomain = $MgDomains | Where-Object {$_.IsDefault -eq $true}
+    $DefaultMgDomain.Id 
+    $MGContext.Account
+    $mgContext | Select-Object -ExpandProperty scopes
