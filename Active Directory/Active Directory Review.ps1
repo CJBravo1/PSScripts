@@ -20,7 +20,7 @@ $ADDomainControllers | Select-Object Name,OperatingSystem,OperationMasterRoles >
 
 # Run replication testing and review DCDiag/Repadmin results
 Write-Host "Testing Active Directory Replication" -ForegroundColor Green 
-#dcdiag /e /c /v >> $DcDiagFile
+dcdiag /e /c /v >> $DcDiagFile
 
 
 
