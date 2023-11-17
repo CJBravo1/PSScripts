@@ -17,16 +17,26 @@ foreach ($User in $Users) {
     $EmailAddress = $User.EmailAddress
     $SkuPartNumber = $User.SkuPartNumber
 
-    # Get the user object from Microsoft Graph
-    $UserObject = Get-MgUser -UserId $EmailAddress
+        # Get the user object from Microsoft Graph
+        $UserObject = Get-MgUser -UserId $EmailAddress
 
-    # Get the SkuId from Microsoft Graph
-    $SKULicense = Get-MgSubscribedSku | Where-Object {$_.SkuPartNumber -eq "$SkuPartNumber"}
-    $SkuId = $SKULicense.SkuId
+        # Get the SkuId from Microsoft Graph
+        $SKULicense = Get-MgSubscribedSku | Where-Object {$_.SkuPartNumber -eq "$SkuPartNumber"}
 
-    # Set the license to add
-    $RemoveLicense = @{SkuId = $SkuId; DisabledPlans = @()}
+        # Check if the user has the license we are trying to remove
+        if ($UserObject.AssignedLicenses.LicensedProducts.SkuId -notcontains $SKULicense.SkuId) {
+            Write-Host "$EmailAddress" -ForegroundColor Green
+            Write-Host "No License Found" -ForegroundColor Red
+            continue
+        }
 
-    # Add the license to the user
-    Set-MguserLicense -UserId $UserObject.Id -RemoveLicenses $RemoveLicense -RemoveLicenses @()
-}
+        $SkuId = $SKULicense.SkuId
+
+        # Set the license to add
+        Write-Host "$EmailAddress" -ForegroundColor Green
+        $RemoveLicense = @{SkuId = $SkuId; DisabledPlans = @()}
+        Write-Host "License Removed" -ForegroundColor Cyan
+
+        # Add the license to the user
+        Set-MguserLicense -UserId $UserObject.Id -RemoveLicenses $SkuId -AddLicenses @()
+    }
