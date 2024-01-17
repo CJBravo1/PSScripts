@@ -18,11 +18,11 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
         {
             "Write"
             {
-                Connect-MgGraph -Scopes 'Directory.ReadWrite.All','User.ReadWrite.All'
+                Connect-MgGraph -Scopes 'Directory.ReadWrite.All','User.ReadWrite.All','Group.ReadWrite.All'
             }
             "Read"
             {
-                Connect-MgGraph -Scopes User.Read.All, Directory.AccessAsUser.All, User.ReadBasic.All, User.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All
+                Connect-MgGraph -Scopes 'User.Read.All', 'Directory.AccessAsUser.All', 'User.ReadBasic.All', 'User.ReadWrite.All', 'Directory.Read.All', 'Directory.ReadWrite.All'
             }
             
         }
