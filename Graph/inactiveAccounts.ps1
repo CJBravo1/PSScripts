@@ -29,4 +29,5 @@ foreach ($MGAccount in $InactiveMicrosoftAccounts)
         Licenses = $AssignedLicenses.SkuPartNumber -join ', '
     }
     $Table
+    $Table | Export-Csv -NoTypeInformation ~\Desktop\InactiveMicrosoftAccounts.csv -Append
 }
