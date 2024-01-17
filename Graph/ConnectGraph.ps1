@@ -2,13 +2,13 @@
 if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue))
     {
         Write-Host "Installing Microsoft Graph Powershell Modules" -ForegroundColor Green
-        Install-Module Microsoft.Graph -Scope CurrentUser
+        Install-Module Microsoft.Graph -Scope CurrentUser -Verbose
     } 
-    if  ($null -eq (Get-InstalledModule Az -ErrorAction SilentlyContinue))
-    {
-        Write-Host "Installing Azure Powershell Module" -ForegroundColor Green
-        Install-Module az -Scope CurrentUser
-    }
+    #if  ($null -eq (Get-InstalledModule Az -ErrorAction SilentlyContinue))
+    #{
+        #Write-Host "Installing Azure Powershell Module" -ForegroundColor Green
+        #Install-Module az -Scope CurrentUser -Verbose
+    #}
     #Check for current Graph Connections
     $MGContext = Get-MgContext
     if ($null -eq $MGContext)
