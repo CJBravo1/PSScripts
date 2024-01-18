@@ -3,6 +3,8 @@ if ($null -eq (Get-MGContext))
 {
     Connect-MgGraph -Scopes 'User.Read.All', 'Directory.AccessAsUser.All', 'User.ReadBasic.All', 'User.ReadWrite.All', 'Directory.Read.All', 'Directory.ReadWrite.All', 'Group.Read.All', 'User.Export.All','AuditLog.Read.All'
 }
+
+$CSVOutputFile = "~\Desktop\InactiveMicrosoftAccounts.csv"
 #Gather Microsoft Accounts
 $Userproperties = @(
     'AccountEnabled',
@@ -29,5 +31,6 @@ foreach ($MGAccount in $InactiveMicrosoftAccounts)
         Licenses = $AssignedLicenses.SkuPartNumber -join ', '
     }
     $Table
-    $Table | Export-Csv -NoTypeInformation ~\Desktop\InactiveMicrosoftAccounts.csv -Append
+    $Table | Export-Csv -NoTypeInformation $CSVOutputFile -Append 
 }
+Write-Host "CSV Outputed to $csvOutputFile" -ForegroundColor Green
