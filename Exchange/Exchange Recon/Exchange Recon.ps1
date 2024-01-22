@@ -8,7 +8,7 @@ if ($null -eq $PSSession)
     {
     #Make new session
     Write-Host "Connect to Exchange Online" -ForegroundColor Yellow
-    #Connect-ExchangeOnline 
+    Connect-ExchangeOnline 
     }
         # Export Primary Domains
         $PrimaryDomain = Get-AcceptedDomain | Where-Object {$_.default -eq $true}
