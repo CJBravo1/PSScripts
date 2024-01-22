@@ -27,4 +27,4 @@ $User = Get-MgUser -UserId $UserId
 Update-MGUser -UserId $User.Id -UsageLocation $UsageLocation
 
 # Add the license to the user
-Set-MguserLicense -UserId $User.Id -AddLicenses $AddLicense -RemoveLicenses @()
+Set-MguserLicense -UserId $User.Id -AddLicenses @{SkuId = $AddLicense.SkuId} -RemoveLicenses @()
