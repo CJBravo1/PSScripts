@@ -1,4 +1,4 @@
-function Add-MgLicense {
+function Remove-MgLicense {
     param (
         [Parameter(Mandatory = $true)]
         [string]$User,
@@ -11,8 +11,5 @@ function Add-MgLicense {
     $licenses = Get-MgSubscribedSku 
 
     $selectedLicense = $licenses | Where-Object {$_.SkuPartNumber -eq $License}
-
-    #$addLicenseParams = @{SkuId = $selectedLicense.skuId}
-
-    Set-MgUserLicense -Userid $MGUser.id -AddLicense @{SkuId = $selectedLicense.skuId} -RemoveLicenses @()
+    Set-MgUserLicense -Userid $MGUser.id -AddLicense @() -RemoveLicenses $selectedLicense.SkuId
 }
