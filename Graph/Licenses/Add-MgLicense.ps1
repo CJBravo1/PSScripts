@@ -1,4 +1,4 @@
-function Add-MgLicense {
+
     param (
         [Parameter(Mandatory = $true)]
         [string]$User,
@@ -6,7 +6,7 @@ function Add-MgLicense {
         [Parameter(Mandatory = $true)]
         [string]$License
     )
-
+    function Add-MgLicense {
     $MGuser = Get-MgUser -UserId $User
     $licenses = Get-MgSubscribedSku 
 

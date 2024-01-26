@@ -1,4 +1,4 @@
-function Remove-MgLicense {
+
     param (
         [Parameter(Mandatory = $true)]
         [string]$User,
@@ -6,7 +6,7 @@ function Remove-MgLicense {
         [Parameter(Mandatory = $true)]
         [string]$License
     )
-
+    function Remove-MgLicense {
     $MGuser = Get-MgUser -UserId $User
     $licenses = Get-MgSubscribedSku 
 
