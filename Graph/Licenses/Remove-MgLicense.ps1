@@ -13,3 +13,4 @@
     $selectedLicense = $licenses | Where-Object {$_.SkuPartNumber -eq $License}
     Set-MgUserLicense -Userid $MGUser.id -AddLicense @() -RemoveLicenses $selectedLicense.SkuId
 }
+Remove-MgLicense -User $User -License $License 

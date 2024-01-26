@@ -16,3 +16,4 @@
 
     Set-MgUserLicense -Userid $MGUser.id -AddLicense @{SkuId = $selectedLicense.skuId} -RemoveLicenses @()
 }
+Add-MgLicense -User $User -License $License
