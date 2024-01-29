@@ -40,3 +40,6 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
     $DefaultMgDomain.Id 
     $MGContext.Account
     $mgContext | Select-Object -ExpandProperty scopes
+
+    #Set Window Title
+    $host.ui.RawUI.WindowTitle = $DefaultMgDomain.Id
