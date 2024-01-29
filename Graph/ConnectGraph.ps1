@@ -13,18 +13,39 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
     $MGContext = Get-MgContext
     if ($null -eq $MGContext)
     {
-       $Write =  Read-Host "Read or Write?"
+        $Write =  Read-Host "Read or Write?"
         switch ($write)
         {
             "Write"
             {
-                Connect-MgGraph -Scopes 'Directory.ReadWrite.All','User.ReadWrite.All','Group.ReadWrite.All','User.Export.All','User.Read.All','Directory.AccessAsUser.All','User.ReadBasic.All','Directory.Read.All','AuditLog.Read.All'
+                $scopes = @(
+                    'Directory.ReadWrite.All',
+                    'User.ReadWrite.All',
+                    'Group.ReadWrite.All',
+                    'User.Export.All',
+                    'User.Read.All',
+                    'Directory.AccessAsUser.All',
+                    'User.ReadBasic.All',
+                    'Directory.Read.All',
+                    'AuditLog.Read.All'
+                )
+                Connect-MgGraph -Scopes $scopes
             }
             "Read"
             {
-                Connect-MgGraph -Scopes 'User.Read.All', 'Directory.AccessAsUser.All', 'User.ReadBasic.All', 'User.ReadWrite.All', 'Directory.Read.All', 'Directory.ReadWrite.All', 'Group.Read.All', 'User.Export.All','AuditLog.Read.All'
+                $scopes = @(
+                    'User.Read.All',
+                    'Directory.AccessAsUser.All',
+                    'User.ReadBasic.All',
+                    'User.ReadWrite.All',
+                    'Directory.Read.All',
+                    'Directory.ReadWrite.All',
+                    'Group.Read.All',
+                    'User.Export.All',
+                    'AuditLog.Read.All'
+                )
+                Connect-MgGraph -Scopes $scopes
             }
-            
         }
     }
     else 
