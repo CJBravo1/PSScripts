@@ -19,15 +19,25 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
             "Write"
             {
                 $scopes = @(
-                    'Directory.ReadWrite.All',
-                    'User.ReadWrite.All',
-                    'Group.ReadWrite.All',
-                    'User.Export.All',
-                    'User.Read.All',
+                    'Application.Read.All',
+                    'AppRoleAssignment.ReadWrite.All',
+                    'AuditLog.Read.All',
                     'Directory.AccessAsUser.All',
-                    'User.ReadBasic.All',
                     'Directory.Read.All',
-                    'AuditLog.Read.All'
+                    'Directory.ReadWrite.All',
+                    'Group.Read.All',
+                    'Group.ReadWrite.All',
+                    'Mail.ReadWrite',
+                    'Mail.Send',
+                    'Mail.Send.Shared',
+                    'Organization.Read.All',
+                    'Sites.ReadWrite.All',
+                    'User.Export.All',
+                    'User.Read',
+                    'User.Read.All',
+                    'User.ReadBasic.All',
+                    'User.ReadWrite.All'
+                    
                 )
                 Connect-MgGraph -Scopes $scopes
             }
