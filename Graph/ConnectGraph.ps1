@@ -39,7 +39,7 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
                     'User.ReadWrite.All'
                     
                 )
-                Connect-MgGraph -Scopes $scopes
+                Connect-MgGraph -Scopes $scopes -ContextScope Process
             }
             "Read"
             {
@@ -54,7 +54,7 @@ if ($null -eq (Get-InstalledModule microsoft.graph -ErrorAction SilentlyContinue
                     'User.Export.All',
                     'AuditLog.Read.All'
                 )
-                Connect-MgGraph -Scopes $scopes
+                Connect-MgGraph -Scopes $scopes -ContextScope Process
             }
         }
     }
