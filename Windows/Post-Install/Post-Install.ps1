@@ -35,6 +35,7 @@ function Install-WingetApps
     Write-Host "Installing Apps" -ForegroundColor Green
     $apps = @(
         "Google.Chrome"
+        "GitHub.cli"
         "Microsoft.OneDrive"
         "Microsoft.Powershell"
         "Microsoft.PowerToys"
@@ -42,7 +43,6 @@ function Install-WingetApps
         "Microsoft.WindowsTerminal"
         "Spotify.Spotify"
         "Valve.Steam"
-        "Microsoft.Office"
     )
 
         foreach ($app in $apps) 
@@ -51,6 +51,7 @@ function Install-WingetApps
             winget install --id $app  --accept-package-agreements --accept-source-agreements
         }
 
+        Start-Job -ScriptBlock {winget install microsoft.office --accept-package-agreements --accept-source-agreements}
 }
 
 function Install-Optionals {
