@@ -186,6 +186,20 @@ function Set-TaskBarSettings
     Write-Host "Hiding Start Menu app list" -ForegroundColor Green
     Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowStartMenuAppList" -Value 0
 
+    Write-Host "Hiding Copilot button" -ForegroundColor Green
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowCopilotButton" -Value 0
+
+    Write-Host "Hiding Weather button" -ForegroundColor Green
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarDa" -Value 0
+
+    Write-Host "Unpinning all items from the taskbar except File Explorer and Microsoft Edge" -ForegroundColor Green
+    $taskbarItems = (New-Object -ComObject Shell.Application).Namespace(0).Items() | Where-Object { $_.IsPinnedToTaskbar }
+    foreach ($item in $taskbarItems) {
+        if ($item.Name -ne "File Explorer" -and $item.Name -ne "Microsoft Edge") {
+            $item.InvokeVerb("taskbarunpin")
+        }
+    }
+    
     Write-Host "Moving all items to the left of the taskbar" -ForegroundColor Green
     Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAl" -Value 0
 
