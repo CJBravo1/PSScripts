@@ -24,7 +24,9 @@ function Install-WindowsUpdates
 function Install-Winget {
         #Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
         #Reset Windows Store. 
+        Write-Host "Resetting Windows Store" -ForegroundColor Green
         wsreset -i
+        Start-Sleep -Seconds 60 -Verbose
         $wingetPath = "https://aka.ms/getwinget"
         Add-AppxPackage -Path $wingetPath
     }
@@ -43,8 +45,6 @@ function Install-WingetApps
         "Microsoft.PowerToys"
         "Microsoft.VisualStudioCode"
         "Microsoft.WindowsTerminal"
-        "Spotify.Spotify"
-        "Valve.Steam"
     )
 
         foreach ($app in $apps) 
@@ -52,8 +52,36 @@ function Install-WingetApps
             Write-Host "Installing $app" -ForegroundColor Green
             winget install --id $app  --accept-package-agreements --accept-source-agreements
         }
+        # Set Google Chrome as the default browser
+        $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+        if (Test-Path $chromePath) {
+            Start-Process $chromePath -ArgumentList "--make-default-browser" -NoNewWindow -Wait
+            Write-Host "Google Chrome has been set as the default browser" -ForegroundColor Green
+        } else {
+            Write-Host "Google Chrome is not installed, cannot set as default browser" -ForegroundColor Red
+        }
+}
 
-        Start-Job -ScriptBlock {winget install microsoft.office --accept-package-agreements --accept-source-agreements}
+function Install-Office {
+    $installOffice = Read-Host "Do you want to install an Office Suite? (y/n)"
+    if ($installOffice -eq 'y') {
+        $officeChoice = Read-Host "Which Office Suite do you want to install? (1) Microsoft Office (2) LibreOffice"
+        switch ($officeChoice) {
+            1 {
+                Write-Host "Installing Microsoft Office Suite" -ForegroundColor Green
+                Start-Job -ScriptBlock {winget install microsoft.office --accept-package-agreements --accept-source-agreements} -Name "Microsoft Office"
+            }
+            2 {
+                Write-Host "Installing LibreOffice Suite" -ForegroundColor Green
+                winget install --id TheDocumentFoundation.LibreOffice --accept-package-agreements --accept-source-agreements
+            }
+            default {
+                Write-Host "Invalid choice. Skipping Office Suite installation" -ForegroundColor Yellow
+            }
+        }
+    } else {
+        Write-Host "Skipping Office Suite installation" -ForegroundColor Yellow
+    }
 }
 
 function Install-Optionals {
@@ -66,6 +94,14 @@ function Install-Optionals {
         Write-Host "Skipping WSL installation" -ForegroundColor Yellow
     }
 
+    $installSteam = Read-Host "Do you want to install Steam? (y/n)"
+    if ($installSteam -eq 'y') {
+        Write-Host "Installing Steam" -ForegroundColor Green
+        winget install --id Valve.Steam --accept-package-agreements --accept-source-agreements
+    } else {
+        Write-Host "Skipping Steam installation" -ForegroundColor Yellow
+    }
+    
     # Prompt to install Docker Desktop
     $installDocker = Read-Host "Do you want to install Docker Desktop? (y/n)"
     if ($installDocker -eq 'y') {
@@ -84,11 +120,20 @@ function Install-Optionals {
         Write-Host "Skipping Tailscale installation" -ForegroundColor Yellow
     }
 
+    # Prompt to install Windows Sandbox
+    $installSandbox = Read-Host "Do you want to install Windows Sandbox? (y/n)"
+    if ($installSandbox -eq 'y') {
+        Write-Host "Installing Windows Sandbox" -ForegroundColor Green
+        Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
+    } else {
+        Write-Host "Skipping Windows Sandbox installation" -ForegroundColor Yellow
+    }
+
     # Prompt to install Hyper-V
     $installHyperV = Read-Host "Do you want to install Hyper-V? (y/n)"
     if ($installHyperV -eq 'y') {
         Write-Host "Installing Hyper-V" -ForegroundColor Green
-        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRestart
     } else {
         Write-Host "Skipping Hyper-V installation" -ForegroundColor Yellow
     }
@@ -210,9 +255,18 @@ function Set-TaskBarSettings
     $null = (New-Object -ComObject Shell.Application).Namespace(0).ParseName($Path).InvokeVerb("taskbarpin")
 }
 
+function Set-DesktopSettings
+{
+    Write-Host "Setting Default Windows Mode to Dark and Default App Mode to Light" -ForegroundColor Green
 
+    # Set Default Windows Mode to Dark
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "SystemUsesLightTheme" -Value 0
 
-#Start of script
+    # Set Default App Mode to Light
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "AppsUseLightTheme" -Value 1
+}
+
+#####Start of Script#####
 
 #Configure Windows
 Write-Host "Setting UAC Settings" -ForegroundColor Cyan
@@ -220,6 +274,9 @@ Set-UACSettings
 
 Write-Host "Disabling Telemetry" -ForegroundColor Cyan
 Disable-Telemetry
+
+Write-Host "Setting Desktop Settings" -ForegroundColor Cyan
+Set-DesktopSettings
 
 Write-Host "Setting Window Snapping Settings" -ForegroundColor Cyan
 Set-WindowSnapping
@@ -232,7 +289,7 @@ Disable-XboxGameBar
 
 #App Installations
 Write-Host "Installing Windows Updates" -ForegroundColor Cyan
-Start-Job -ScriptBlock { Install-WindowsUpdates }
+Start-Job -ScriptBlock { Install-WindowsUpdates } -Name "Windows Updates"
 
 Write-Host "Removing Windows Bloatware" -ForegroundColor Cyan
 Remove-WindowsBloat
@@ -243,7 +300,24 @@ Install-Winget
 Write-Host "Installing Winget Apps" -ForegroundColor Cyan
 Install-WingetApps
 
+Write-Host "Installing Office Suite" -ForegroundColor Cyan
+Install-Office
+
 Write-Host "Installing Optional Components" -ForegroundColor Cyan
 Install-Optionals
 
-Write-Host "Windows Configuration Complete!" -ForegroundColor Cyan
+#Remove Items from Desktop
+Write-Host "Removing all items from the Desktop" -ForegroundColor Cyan
+$desktopPaths = @(
+    [System.Environment]::GetFolderPath('Desktop'),
+    "$env:PUBLIC\Desktop"
+)
+foreach ($path in $desktopPaths) {
+    Get-ChildItem -Path $path | Remove-Item -Force -Recurse
+}
+
+
+#####End of Script#####
+Write-Host "Windows Configuration Complete!" -ForegroundColor Green
+Write-Host "Rebooting your computer..." -ForegroundColor Green
+shutdown -r
