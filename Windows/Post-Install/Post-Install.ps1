@@ -23,6 +23,8 @@ function Install-WindowsUpdates
 
 function Install-Winget {
         #Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
+        #Reset Windows Store. 
+        wsreset -i
         $wingetPath = "https://aka.ms/getwinget"
         Add-AppxPackage -Path $wingetPath
     }
